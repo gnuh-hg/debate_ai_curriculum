@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&family=JetBrains+Mono:wght@400&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --serif: 'Playfair Display', Georgia, serif;
+    --body: 'Source Serif 4', Georgia, serif;
+    --mono: 'JetBrains Mono', monospace;
+    --ink: var(--color-text-primary, #1a1a1a);
+    --ink2: var(--color-text-secondary, #4a4a4a);
+    --ink3: var(--color-text-tertiary, #888);
+    --bg: var(--color-background-primary, #fff);
+    --bg2: var(--color-background-secondary, #f8f7f4);
+    --bg3: var(--color-background-tertiary, #f0ede8);
+    --border: var(--color-border-tertiary, #e0dbd2);
+    --border2: var(--color-border-secondary, #c8c2b8);
+    --accent: #185FA5;
+    --accent-light: #E6F1FB;
+    --gold: #BA7517;
+    --gold-light: #FAEEDA;
+    --teal: #0F6E56;
+    --teal-light: #E1F5EE;
+    --coral: #993C1D;
+    --coral-light: #FAECE7;
+    --purple: #534AB7;
+    --purple-light: #EEEDFE;
+  }
+
+  body { font-family: var(--body); color: var(--ink); line-height: 1.75; font-size: 16px; background: var(--bg); }
+
+  .wrapper { max-width: 860px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+
+  .cover {
+    border-bottom: 0.5px solid var(--border2);
+    padding: 3rem 0 2.5rem;
+    margin-bottom: 3rem;
+  }
+  .cover-eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--ink3);
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+  }
+  .cover-title {
+    font-family: var(--serif);
+    font-size: 2.6rem;
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 0.6rem;
+  }
+  .cover-subtitle {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--ink2);
+    margin-bottom: 2rem;
+  }
+  .cover-meta {
+    display: flex; gap: 2rem; flex-wrap: wrap;
+    font-size: 13px; color: var(--ink2);
+    border-top: 0.5px solid var(--border);
+    padding-top: 1.2rem;
+  }
+  .badge {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    padding: 3px 8px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  .badge-blue { background: var(--accent-light); color: var(--accent); }
+  .badge-gold { background: var(--gold-light); color: var(--gold); }
+  .badge-teal { background: var(--teal-light); color: var(--teal); }
+  .badge-coral { background: var(--coral-light); color: var(--coral); }
+  .badge-purple { background: var(--purple-light); color: var(--purple); }
+
+  .toc { margin-bottom: 3.5rem; }
+  .toc-title {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink3);
+    margin-bottom: 1rem;
+  }
+  .toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 8px;
+  }
+  .toc-item {
+    display: flex; align-items: flex-start; gap: 10px;
+    padding: 10px 12px;
+    border: 0.5px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg);
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+    text-align: left;
+    font-family: var(--body);
+  }
+  .toc-item:hover { border-color: var(--border2); background: var(--bg2); }
+  .toc-item.active { border-color: var(--accent); background: var(--accent-light); }
+  .toc-num {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink3);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .toc-item.active .toc-num { color: var(--accent); }
+  .toc-label { font-size: 13px; color: var(--ink); line-height: 1.4; }
+  .toc-item.active .toc-label { color: var(--accent); }
+
+  .module { display: none; }
+  .module.active { display: block; }
+
+  .module-header {
+    border-bottom: 0.5px solid var(--border2);
+    padding-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .module-num {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink3);
+    margin-bottom: 0.5rem;
+  }
+  .module-title {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  .module-desc {
+    font-size: 15px;
+    color: var(--ink2);
+    font-style: italic;
+    font-family: var(--serif);
+  }
+
+  .chapter-title {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 2.5rem 0 0.8rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 0.5px solid var(--border);
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--ink);
+    margin: 1.8rem 0 0.6rem;
+  }
+  p { margin-bottom: 1rem; font-size: 15px; }
+  p:last-child { margin-bottom: 0; }
+
+  .callout {
+    border-left: 3px solid var(--accent);
+    background: var(--accent-light);
+    padding: 1rem 1.2rem;
+    border-radius: 0 6px 6px 0;
+    margin: 1.5rem 0;
+  }
+  .callout-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.4rem;
+  }
+  .callout p { font-size: 14px; color: var(--ink); margin: 0; }
+  .callout-gold { border-left-color: var(--gold); background: var(--gold-light); }
+  .callout-gold .callout-label { color: var(--gold); }
+  .callout-teal { border-left-color: var(--teal); background: var(--teal-light); }
+  .callout-teal .callout-label { color: var(--teal); }
+  .callout-coral { border-left-color: var(--coral); background: var(--coral-light); }
+  .callout-coral .callout-label { color: var(--coral); }
+  .callout-purple { border-left-color: var(--purple); background: var(--purple-light); }
+  .callout-purple .callout-label { color: var(--purple); }
+
+  .framework-box {
+    border: 0.5px solid var(--border2);
+    border-radius: 8px;
+    padding: 1.2rem 1.5rem;
+    margin: 1.5rem 0;
+    background: var(--bg2);
+  }
+  .framework-title {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink2);
+    margin-bottom: 0.8rem;
+  }
+  .framework-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 8px;
+    margin-top: 0.5rem;
+  }
+  .framework-cell {
+    background: var(--bg);
+    border: 0.5px solid var(--border);
+    border-radius: 6px;
+    padding: 0.7rem 0.8rem;
+    font-size: 13px;
+  }
+  .framework-cell strong {
+    display: block;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    margin-bottom: 3px;
+    font-weight: 400;
+  }
+
+  .example-block {
+    background: var(--bg3);
+    border: 0.5px solid var(--border);
+    border-radius: 6px;
+    padding: 1rem 1.2rem;
+    margin: 1.2rem 0;
+    font-size: 14px;
+    font-style: italic;
+    color: var(--ink2);
+  }
+  .example-block em { color: var(--ink); font-style: normal; font-weight: 500; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    margin: 1.2rem 0;
+  }
+  th {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink3);
+    padding: 8px 10px;
+    border-bottom: 0.5px solid var(--border2);
+    text-align: left;
+    font-weight: 400;
+  }
+  td {
+    padding: 8px 10px;
+    border-bottom: 0.5px solid var(--border);
+    vertical-align: top;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  tr:last-child td { border-bottom: none; }
+
+  .nav-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 0.5px solid var(--border);
+  }
+  .nav-btn {
+    font-family: var(--body);
+    font-size: 13px;
+    color: var(--ink2);
+    background: none;
+    border: 0.5px solid var(--border2);
+    border-radius: 6px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .nav-btn:hover { background: var(--bg2); color: var(--ink); }
+  .nav-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+  .back-toc {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink3);
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 8px 0;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: all 0.15s;
+  }
+  .back-toc:hover { color: var(--ink2); text-decoration-color: var(--ink3); }
+
+  .progress-bar { display: flex; gap: 3px; margin-bottom: 2rem; }
+  .progress-seg { height: 3px; flex: 1; background: var(--border2); border-radius: 2px; transition: background 0.3s; }
+  .progress-seg.done { background: var(--accent); }
+
+  .glossary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 10px;
+    margin: 1.2rem 0;
+  }
+  .glossary-item {
+    background: var(--bg2);
+    border: 0.5px solid var(--border);
+    border-radius: 6px;
+    padding: 0.8rem 1rem;
+    font-size: 13.5px;
+  }
+  .glossary-term {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+
+  ul.content-list { padding-left: 1.4rem; margin: 0.8rem 0 1rem; }
+  ul.content-list li { font-size: 15px; margin-bottom: 0.5rem; }
+  ul.content-list li strong { color: var(--ink); }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div id="cover-toc">
+    <div class="cover">
+      <div class="cover-eyebrow">Tài Liệu Giáo Dục · Tranh Luận Cạnh Tranh</div>
+      <div class="cover-title">Nền Tảng Tranh Luận<br>trong Kỷ Nguyên Trí Tuệ Nhân Tạo</div>
+      <div class="cover-subtitle">Chương Trình Giảng Dạy Toàn Diện Dành Cho Người Mới Tham Dự Thi</div>
+      <div class="cover-meta">
+        <span><span class="badge badge-blue">8 Mô-đun</span></span>
+        <span><span class="badge badge-gold">Giáo Trình Đầy Đủ</span></span>
+        <span><span class="badge badge-teal">Người Mới → Thi Đấu</span></span>
+        <span><span class="badge badge-purple">Đạo Đức AI · Chính Sách · Công Nghệ</span></span>
+      </div>
+    </div>
+    <div class="toc">
+      <div class="toc-title">Mục Lục</div>
+      <div class="toc-grid" id="toc-grid"></div>
+    </div>
+  </div>
+  <div id="modules-container"></div>
+</div>
+
+<script>
+const modules = [
+  {
+    num: "Mô-đun I",
+    title: "Triết Học và Kiến Trúc Lập Luận",
+    desc: "Nền tảng bản thể luận, gánh nặng chứng minh, logic hình thức, cấu trúc bài, quyền tạo chính sách và khung lập luận.",
+    badge: "badge-blue",
+    content: `
+      <div class="chapter-title">1.1 Bản Thể Luận của Tranh Luận (Ontology of Debate)</div>
+      <p>Tranh luận cạnh tranh không chỉ là một hoạt động trình bày ý kiến. Về bản chất, nó là một hệ thống nhận thức luận có cấu trúc — một phương thức kiểm tra sự thật thông qua đối thoại đối kháng có kiểm soát. Trước khi học bất kỳ kỹ năng tranh luận cụ thể nào, người học cần nắm vững triết lý nền tảng của bộ môn này.</p>
+      <p>Tranh luận xuất phát từ tiền đề rằng sự thật và chính sách tốt không thể được xác định bởi một cá nhân đơn lẻ mà phải được kiểm định qua quá trình phản biện. Mô hình này kế thừa phương pháp Socratic — dùng câu hỏi và phản bác để lọc bỏ lập luận yếu, giữ lại lập luận mạnh. Trong môi trường thi đấu, ban giám khảo đóng vai trò là đại diện của "công chúng lý trí" (reasonable audience): họ sẽ ủng hộ bên nào thuyết phục được họ tốt hơn dựa trên logic, bằng chứng và lập luận.</p>
+      <div class="callout">
+        <div class="callout-label">Nguyên Tắc Nền Tảng</div>
+        <p>Nhiệm vụ của người tranh luận không phải là "chiến thắng bằng mọi giá" mà là <strong>thực thi nghĩa vụ lập luận</strong> — chứng minh lập trường của mình và bác bỏ lập trường đối lập một cách có hệ thống, trung thực và logic.</p>
+      </div>
+
+      <div class="section-title">Vai trò của Nghị đề (Motion)</div>
+      <p>Mọi cuộc tranh luận bắt đầu bằng một <strong>nghị đề</strong> — một tuyên bố chính sách hoặc quan điểm cụ thể mà các đội sẽ bảo vệ hoặc phản đối. Nghị đề xác định phạm vi tranh luận, giới hạn những lập luận nào là phù hợp và không phù hợp. Ví dụ: <em>"Hội đồng này tin rằng các chính phủ nên quy định các hệ thống trí tuệ nhân tạo có thể gây rủi ro hiện hữu."</em> Nghị đề này thiết lập rằng cuộc tranh luận xoay quanh <em>vai trò của chính phủ</em> trong <em>quy định AI rủi ro cao</em> — không phải về AI nói chung.</p>
+
+      <div class="chapter-title">1.2 Gánh Nặng Chứng Minh (Burden of Proof)</div>
+      <p>Gánh nặng chứng minh là nghĩa vụ của một bên phải cung cấp đủ bằng chứng và lập luận để hỗ trợ tuyên bố của mình. Đây là một trong những khái niệm quan trọng nhất trong tranh luận, thường bị người mới bỏ qua.</p>
+      <p>Trong hầu hết các thể thức tranh luận, <strong>bên Chính phủ (Government/Proposition)</strong> — bên ủng hộ nghị đề — mang gánh nặng chứng minh chính. Điều này có nghĩa là họ phải chứng minh nghị đề là đúng hoặc tốt hơn hiện trạng. Nếu bên Chính phủ không hoàn thành gánh nặng này, bên Đối lập (Opposition) không cần phải chứng minh bất cứ điều gì — chỉ cần cho thấy bên Chính phủ đã thất bại là đủ.</p>
+      <div class="framework-box">
+        <div class="framework-title">Phân Loại Gánh Nặng Chứng Minh</div>
+        <div class="framework-row">
+          <div class="framework-cell"><strong>Burden of Proof</strong>Nghĩa vụ cung cấp bằng chứng hỗ trợ tuyên bố của mình</div>
+          <div class="framework-cell"><strong>Burden of Rebuttal</strong>Nghĩa vụ phản biện lập luận đối lập sau khi đã được đưa ra</div>
+          <div class="framework-cell"><strong>Burden of Rejoinder</strong>Nghĩa vụ phản hồi lại phản biện của đối phương</div>
+        </div>
+      </div>
+      <p>Nguyên tắc quan trọng: <em>Người đưa ra tuyên bố phải chứng minh tuyên bố đó</em> (He who asserts must prove). Nếu bạn nói "AI sẽ gây ra thất nghiệp hàng loạt," bạn phải cung cấp lý lẽ và bằng chứng — đối thủ không có nghĩa vụ chứng minh điều ngược lại cho đến khi bạn làm như vậy.</p>
+
+      <div class="chapter-title">1.3 Logic Hình Thức và Lập Luận Hợp Lệ</div>
+      <p>Logic hình thức là nền tảng của mọi lập luận tốt. Có hai cấu trúc logic chính mà người tranh luận cần nắm vững:</p>
+      <div class="section-title">Diễn dịch (Deductive Reasoning)</div>
+      <p>Lập luận diễn dịch đi từ tiền đề chung đến kết luận cụ thể. Nếu tiền đề là đúng và cấu trúc logic hợp lệ, kết luận tất yếu phải đúng. Ví dụ kinh điển là tam đoạn luận (syllogism): <em>Mọi công nghệ có thể bị lạm dụng (P1); AI là công nghệ (P2); Vậy AI có thể bị lạm dụng (C).</em></p>
+      <div class="section-title">Quy nạp (Inductive Reasoning)</div>
+      <p>Lập luận quy nạp đi từ các trường hợp cụ thể đến kết luận chung. Không giống diễn dịch, kết luận quy nạp chỉ có xác suất đúng, không tất yếu đúng. Ví dụ: <em>Các hệ thống AI nhận diện khuôn mặt ở Trung Quốc, Nga và Mỹ đều đã có vi phạm quyền riêng tư → Vậy AI nhận diện khuôn mặt có xu hướng gây nguy hại cho quyền riêng tư.</em></p>
+      <div class="callout callout-gold">
+        <div class="callout-label">Lưu Ý Quan Trọng</div>
+        <p>Một lập luận có thể <strong>hợp lệ về mặt hình thức</strong> (cấu trúc đúng) nhưng <strong>sai về mặt thực tế</strong> (tiền đề sai). Người tranh luận giỏi phải tấn công cả hai chiều: tấn công cấu trúc logic VÀ tính xác thực của tiền đề.</p>
+      </div>
+
+      <div class="chapter-title">1.4 Cấu Trúc Bài Tranh Luận (Case Structure)</div>
+      <p>Một bài tranh luận được tổ chức tốt bao gồm các thành phần sau, theo thứ tự:</p>
+      <ul class="content-list">
+        <li><strong>Định nghĩa (Definitions):</strong> Làm rõ các thuật ngữ trọng yếu trong nghị đề. Ai là "chính phủ"? "AI rủi ro cao" bao gồm những gì? Bên đưa ra định nghĩa chiếm lợi thế lớn vì họ kiểm soát phạm vi tranh luận.</li>
+        <li><strong>Tuyên bố lập trường (Model/Stance):</strong> Mô tả ngắn gọn những gì bên bạn đề xuất hoặc phản đối, và theo cơ chế nào.</li>
+        <li><strong>Các luận điểm (Arguments):</strong> Thường từ 2–3 luận điểm chính, mỗi luận điểm được xây dựng theo cấu trúc AREI (xem Mô-đun II).</li>
+        <li><strong>Tóm tắt (Summary):</strong> Khẳng định lại lập trường và lý do tại sao bên bạn đã thắng cuộc tranh luận.</li>
+      </ul>
+
+      <div class="chapter-title">1.5 Fiat — Quyền Tạo Chính Sách</div>
+      <p>Fiat là một quy ước độc đáo của tranh luận cạnh tranh. Theo nguyên tắc này, bên Chính phủ được giả định rằng chính sách họ đề xuất <em>sẽ được thực thi</em> nếu họ thắng tranh luận. Điều này có nghĩa là các lập luận như "chính phủ không bao giờ thực sự làm điều này" hay "chính trị gia sẽ không ủng hộ" không phải là phản biện hợp lệ.</p>
+      <p>Fiat tồn tại để buộc tranh luận tập trung vào <em>giá trị thực chất</em> của một chính sách, không phải tính khả thi chính trị của nó. Câu hỏi phù hợp là: "Nếu chính sách này được thực thi, nó có tốt không?" — không phải "Liệu nó có được thông qua không?"</p>
+
+      <div class="chapter-title">1.6 Framing — Khung Lập Luận</div>
+      <p>Framing là việc xác định <em>tiêu chí đánh giá</em> mà theo đó cuộc tranh luận nên được phán quyết. Bên nào thiết lập được khung đánh giá hiệu quả hơn thường có lợi thế chiến lược lớn. Ví dụ, trong một tranh luận về AI và việc làm, bên Chính phủ có thể đặt khung: <em>"Hãy đánh giá chính sách này dựa trên phúc lợi kinh tế tổng thể dài hạn."</em> Nếu bên Đối lập chấp nhận khung này, họ đã bị đặt vào thế bất lợi vì phải chứng minh rằng ngắn hạn quan trọng hơn dài hạn.</p>
+      <div class="callout callout-teal">
+        <div class="callout-label">Chiến Lược</div>
+        <p>Luôn <strong>đặt khung sớm</strong> (trong phần mở đầu) và <strong>bảo vệ khung của bạn</strong> khi đối thủ cố thay thế nó. Nếu bạn không kiểm soát tiêu chí đánh giá, bạn đang chơi trên sân của đối thủ.</p>
+      </div>
+    `
+  },
+  {
+    num: "Mô-đun II",
+    title: "Xây Dựng Lập Luận — Cấu Trúc AREI",
+    desc: "Phương pháp xây dựng luận điểm hoàn chỉnh theo Assertion, Reasoning, Evidence, Impact.",
+    badge: "badge-gold",
+    content: `
+      <div class="chapter-title">2.1 Tổng Quan về Cấu Trúc AREI</div>
+      <p>Cấu trúc AREI (đôi khi gọi là AREL hoặc PEEL trong các hệ thống khác) là phương pháp tiêu chuẩn để xây dựng một luận điểm hoàn chỉnh trong tranh luận học thuật và cạnh tranh. Bốn thành phần — Assertion (Khẳng định), Reasoning (Lý luận), Evidence (Bằng chứng), và Impact (Tác động) — tạo thành một đơn vị lập luận khép kín, tự chứng minh và có sức nặng tối đa.</p>
+      <p>Một luận điểm thiếu bất kỳ thành phần nào đều dễ bị tấn công. Người tranh luận giỏi nhận biết ngay "khoảng trống AREI" của đối thủ và khai thác chúng.</p>
+
+      <div class="framework-box">
+        <div class="framework-title">Cấu Trúc AREI — Tổng Quan</div>
+        <div class="framework-row">
+          <div class="framework-cell"><strong>A — Assertion</strong>Khẳng định: Tuyên bố trực tiếp, rõ ràng về điều bạn muốn chứng minh</div>
+          <div class="framework-cell"><strong>R — Reasoning</strong>Lý luận: Giải thích cơ chế nhân quả tại sao tuyên bố đó đúng</div>
+          <div class="framework-cell"><strong>E — Evidence</strong>Bằng chứng: Dữ liệu, nghiên cứu, thống kê, ví dụ thực tế hỗ trợ</div>
+          <div class="framework-cell"><strong>I — Impact</strong>Tác động: Hậu quả nếu tuyên bố đúng — tại sao điều này quan trọng với cuộc tranh luận</div>
+        </div>
+      </div>
+
+      <div class="chapter-title">2.2 Assertion — Khẳng Định</div>
+      <p>Assertion là câu tuyên bố cốt lõi của luận điểm. Nó phải thỏa mãn ba tiêu chí: <strong>rõ ràng</strong> (không mơ hồ), <strong>tranh luận được</strong> (có thể bị phản biện — không phải sự thật hiển nhiên), và <strong>liên quan</strong> đến nghị đề.</p>
+      <div class="example-block">
+        <em>Assertion yếu:</em> "AI có tác động đến xã hội." (Quá mơ hồ, không tranh luận được)<br><br>
+        <em>Assertion mạnh:</em> "Việc triển khai AI thiếu giám sát trong hệ thống tuyển dụng khuếch đại phân biệt đối xử có hệ thống đối với các nhóm thiểu số."
+      </div>
+      <p>Lưu ý: Assertion không giải thích <em>tại sao</em> — đó là nhiệm vụ của Reasoning. Assertion chỉ tuyên bố <em>điều gì</em>.</p>
+
+      <div class="chapter-title">2.3 Reasoning — Lý Luận</div>
+      <p>Reasoning là xương sống của luận điểm — đây là nơi người tranh luận giải thích cơ chế nhân quả kết nối Assertion với thực tế. Reasoning tốt trả lời câu hỏi: <em>"Tại sao điều này xảy ra? Theo cơ chế nào?"</em></p>
+      <p>Có hai loại reasoning phổ biến:</p>
+      <ul class="content-list">
+        <li><strong>Reasoning nhân quả:</strong> "X gây ra Y vì cơ chế Z." Ví dụ: Thuật toán tuyển dụng AI được huấn luyện trên dữ liệu lịch sử vốn đã có thiên kiến → dữ liệu đó phản ánh các quyết định tuyển dụng phân biệt đối xử trong quá khứ → thuật toán học và tái tạo những thiên kiến đó ở quy mô lớn hơn.</li>
+        <li><strong>Reasoning so sánh:</strong> "Phương án A tốt hơn phương án B vì tiêu chí C." Thường dùng khi tranh luận về chính sách.</li>
+      </ul>
+      <div class="callout callout-coral">
+        <div class="callout-label">Lỗi Thường Gặp</div>
+        <p>Nhiều người mới nhầm lẫn Reasoning với Evidence. Reasoning là <strong>giải thích cơ chế</strong> (lý thuyết), trong khi Evidence là <strong>bằng chứng thực tế</strong>. Một luận điểm hoàn chỉnh cần cả hai.</p>
+      </div>
+
+      <div class="chapter-title">2.4 Evidence — Bằng Chứng</div>
+      <p>Bằng chứng là thành phần kiểm nghiệm thực tế của luận điểm. Bằng chứng mạnh không chỉ hỗ trợ assertion mà còn làm cho reasoning trở nên đáng tin cậy hơn.</p>
+      <div class="section-title">Phân Loại Bằng Chứng theo Sức Nặng</div>
+      <table>
+        <thead><tr><th>Loại</th><th>Ví dụ</th><th>Sức nặng</th></tr></thead>
+        <tbody>
+          <tr><td>Nghiên cứu khoa học peer-reviewed</td><td>Nghiên cứu của MIT về thiên kiến AI trong tuyển dụng (2019)</td><td>Rất cao</td></tr>
+          <tr><td>Dữ liệu thống kê từ tổ chức uy tín</td><td>Báo cáo ILO về tác động AI đến việc làm 2023</td><td>Cao</td></tr>
+          <tr><td>Trường hợp thực tế (case study)</td><td>Amazon dừng công cụ tuyển dụng AI vì phân biệt giới tính</td><td>Trung bình-Cao</td></tr>
+          <tr><td>Tuyên bố của chuyên gia</td><td>Báo cáo của Ủy ban AI Quốc gia Mỹ</td><td>Trung bình</td></tr>
+          <tr><td>Ví dụ minh họa</td><td>Kịch bản giả định</td><td>Thấp</td></tr>
+        </tbody>
+      </table>
+      <p>Trong tranh luận thi đấu, bạn cần ghi nhớ các dữ liệu quan trọng và có khả năng trích dẫn chúng một cách chính xác dưới áp lực. Xây dựng một "ngân hàng bằng chứng" về các chủ đề AI trọng yếu là bước chuẩn bị không thể thiếu.</p>
+
+      <div class="chapter-title">2.5 Impact — Tác Động</div>
+      <p>Impact là thành phần kết nối luận điểm của bạn với toàn bộ cuộc tranh luận. Nó trả lời câu hỏi: <em>"Tại sao điều này quan trọng? Tại sao giám khảo nên quan tâm?"</em></p>
+      <p>Impact hiệu quả được phân tích theo ba chiều:</p>
+      <ul class="content-list">
+        <li><strong>Magnitude (Quy mô):</strong> Hậu quả ảnh hưởng đến bao nhiêu người? Nghiêm trọng đến mức nào? Ví dụ: "Điều này ảnh hưởng đến 70% lực lượng lao động toàn cầu."</li>
+        <li><strong>Probability (Xác suất):</strong> Khả năng hậu quả này xảy ra là bao nhiêu? Dẫn chứng bằng dự báo của chuyên gia hoặc xu hướng hiện tại.</li>
+        <li><strong>Reversibility (Khả năng đảo ngược):</strong> Hậu quả có thể sửa chữa không? Hậu quả không thể đảo ngược được coi trọng hơn nhiều trong phán quyết.</li>
+      </ul>
+      <div class="example-block">
+        <em>Ví dụ AREI hoàn chỉnh về AI và thiên kiến:</em><br><br>
+        <em>A:</em> Các hệ thống AI trong tuyển dụng khuếch đại phân biệt đối xử chủng tộc và giới tính có hệ thống.<br>
+        <em>R:</em> Thuật toán học máy học từ dữ liệu lịch sử vốn phản ánh các thiên kiến trong quyết định tuyển dụng của con người. Khi được triển khai ở quy mô lớn, thiên kiến này được tự động hóa và nhân rộng mà không có sự kiểm soát của con người trong từng quyết định.<br>
+        <em>E:</em> Nghiên cứu của MIT (2019) cho thấy phần mềm nhận diện khuôn mặt của các công ty lớn có tỷ lệ lỗi cao hơn 34% đối với phụ nữ da đen so với đàn ông da trắng. Amazon đã dừng hệ thống tuyển dụng AI nội bộ năm 2018 sau khi phát hiện nó phân biệt đối xử với hồ sơ của phụ nữ.<br>
+        <em>I:</em> Điều này có tác động trực tiếp đến quyền kinh tế của hàng triệu người. Bất bình đẳng được duy trì và khuếch đại bởi công nghệ là không thể chấp nhận được trong xã hội dân chủ, và nếu không được kiểm soát, sẽ tạo ra sự phân tầng xã hội không thể đảo ngược dựa trên chủng tộc và giới tính.
+      </div>
+    `
+  },
+  {
+    num: "Mô-đun III",
+    title: "Phản Biện và Chiến Lược Bác Bỏ",
+    desc: "Phân loại phản biện, nhận diện ngụy biện, phá vỡ liên kết nhân quả và kỹ thuật cân nhắc (weighing).",
+    badge: "badge-teal",
+    content: `
+      <div class="chapter-title">3.1 Phân Loại Phản Biện (Typology of Refutation)</div>
+      <p>Phản biện (refutation) là hành động bác bỏ hoặc làm suy yếu lập luận của đối thủ. Không phải mọi phản biện đều có giá trị như nhau. Người tranh luận giỏi phân biệt rõ các loại phản biện và sử dụng chúng một cách chiến lược.</p>
+      <ul class="content-list">
+        <li><strong>Phản biện trực tiếp (Direct Refutation):</strong> Bác bỏ trực tiếp một trong các thành phần AREI của đối thủ. Đây là hình thức phản biện mạnh nhất. Ví dụ: "Assertion của họ sai vì Evidence của họ lỗi thời — nghiên cứu năm 2023 cho thấy kết quả ngược lại."</li>
+        <li><strong>Phản biện chuyển hướng (Turning):</strong> Chứng minh rằng lập luận của đối thủ thực ra ủng hộ lập trường của bạn. Đây là kỹ thuật nâng cao nhưng rất hiệu quả. Ví dụ: "Họ nói AI tạo việc làm mới — nhưng chính điều này chứng minh cần có quy định để đảm bảo việc làm mới đó công bằng và tiếp cận được với mọi người."</li>
+        <li><strong>Phản biện giảm thiểu (Mitigating):</strong> Không phủ nhận hoàn toàn lập luận của đối thủ nhưng cho thấy tác động của nó ít nghiêm trọng hơn họ tuyên bố. Hữu ích khi không thể bác bỏ hoàn toàn.</li>
+        <li><strong>Phản biện về gánh nặng (Burden Shifting):</strong> Chỉ ra rằng đối thủ chưa đáp ứng gánh nặng chứng minh của họ, do đó lập luận của họ không đủ điều kiện để cần bác bỏ thực chất.</li>
+      </ul>
+
+      <div class="chapter-title">3.2 Nhận Diện Ngụy Biện Logic (Logical Fallacies)</div>
+      <p>Ngụy biện là lỗi trong lập luận khiến kết luận không được hỗ trợ đúng cách bởi tiền đề. Nhận diện ngụy biện trong lập luận của đối thủ là kỹ năng phản biện cực kỳ mạnh.</p>
+      <div class="glossary-grid">
+        <div class="glossary-item"><div class="glossary-term">Ad Hominem</div>Tấn công người đưa ra lập luận thay vì tấn công lập luận. Ví dụ: "Ý kiến của anh về AI không đáng tin vì anh không học kỹ thuật."</div>
+        <div class="glossary-item"><div class="glossary-term">Straw Man (Người Rơm)</div>Xuyên tạc lập luận của đối thủ thành phiên bản yếu hơn rồi bác bỏ phiên bản đó. Đây là ngụy biện phổ biến nhất trong tranh luận.</div>
+        <div class="glossary-item"><div class="glossary-term">Slippery Slope (Dốc Đứng)</div>Tuyên bố rằng A sẽ tất yếu dẫn đến B, C, D... mà không chứng minh từng bước nhân quả. Cần phân biệt với dự báo có cơ sở hợp lý.</div>
+        <div class="glossary-item"><div class="glossary-term">False Dichotomy (Ngụy Biện Nhị Phân)</div>Trình bày chỉ hai lựa chọn trong khi thực tế có nhiều hơn. Ví dụ: "Hoặc chúng ta kiểm soát AI hoàn toàn, hoặc AI sẽ diệt vong nhân loại."</div>
+        <div class="glossary-item"><div class="glossary-term">Appeal to Authority</div>Viện dẫn quyền uy mà không kiểm tra lập luận thực chất. Không phải mọi chuyên gia đều nhất trí — trích dẫn đồng thuận khoa học mạnh hơn trích dẫn một cá nhân.</div>
+        <div class="glossary-item"><div class="glossary-term">Post Hoc Ergo Propter Hoc</div>Nhầm tương quan với nhân quả. "Sau khi AI được triển khai, tỷ lệ thất nghiệp tăng → AI gây thất nghiệp" — đây là lập luận không đủ căn cứ.</div>
+        <div class="glossary-item"><div class="glossary-term">Hasty Generalization</div>Rút ra kết luận chung từ quá ít trường hợp cụ thể. Một vụ tai nạn xe tự lái không đủ để kết luận về an toàn của công nghệ.</div>
+        <div class="glossary-item"><div class="glossary-term">Circular Reasoning (Vòng Tròn)</div>Dùng kết luận như tiền đề. Ví dụ: "AI nguy hiểm vì nó gây nguy hiểm."</div>
+      </div>
+
+      <div class="chapter-title">3.3 Phá Vỡ Liên Kết Nhân Quả (Link-Breaking)</div>
+      <p>Đây là kỹ thuật phản biện tinh tế nhất — thay vì tấn công Evidence hay Assertion, bạn tấn công chuỗi nhân quả trong Reasoning của đối thủ. Nếu bạn có thể cho thấy rằng ngay cả khi tiền đề của họ đúng, kết luận vẫn không theo sau, bạn đã vô hiệu hóa toàn bộ luận điểm.</p>
+      <div class="example-block">
+        <em>Lập luận đối thủ:</em> "AI sẽ thay thế công nhân → Thất nghiệp hàng loạt → Bất ổn xã hội → Cần quy định ngay."<br><br>
+        <em>Link-breaking:</em> "Ngay cả khi chấp nhận rằng AI thay thế một số công việc, chuỗi nhân quả từ thay thế việc làm đến bất ổn xã hội bỏ qua nhiều biến số trung gian: lịch sử cho thấy các cuộc cách mạng công nghiệp trước đây đều tạo ra nhiều việc làm hơn mức chúng xóa bỏ trong dài hạn. Do đó, luận điểm của họ không chứng minh được sự cần thiết của quy định khẩn cấp."
+      </div>
+
+      <div class="chapter-title">3.4 Cân Nhắc Tác Động (Impact Weighing)</div>
+      <p>Trong một cuộc tranh luận, cả hai bên đều có lập luận và cả hai đều có tác động. Nhiệm vụ của người tranh luận là thuyết phục giám khảo rằng <em>tác động của bên mình quan trọng hơn</em> tác động của đối thủ. Đây gọi là weighing — cân nhắc.</p>
+      <p>Weighing hiệu quả so sánh các tác động theo các tiêu chí sau:</p>
+      <ul class="content-list">
+        <li><strong>Magnitude vs. Magnitude:</strong> "Tác động của chúng tôi ảnh hưởng đến 4 tỷ người; tác động của họ chỉ ảnh hưởng đến 10.000 công ty."</li>
+        <li><strong>Certainty (Chắc chắn):</strong> "Tác động của chúng tôi đã được ghi nhận trong thực tế; tác động của họ chỉ là dự báo suy đoán."</li>
+        <li><strong>Reversibility (Đảo ngược):</strong> "Nếu chúng tôi sai, thiệt hại có thể sửa chữa. Nếu họ sai, thiệt hại đối với quyền dân sự là không thể đảo ngược."</li>
+        <li><strong>Temporal (Thời gian):</strong> "Tác động của họ là dài hạn và không chắc chắn; tác động của chúng tôi xảy ra ngay hôm nay với những con người thực."</li>
+      </ul>
+      <div class="callout callout-purple">
+        <div class="callout-label">Chiến Lược Nâng Cao</div>
+        <p>Luôn <strong>thực hiện weighing chủ động</strong> — đừng chờ giám khảo tự so sánh. Hãy nói rõ: "Ngay cả khi chấp nhận lập luận của đối thủ, tác động của chúng tôi vẫn lớn hơn vì..." Điều này buộc giám khảo sử dụng khung so sánh của bạn.</p>
+      </div>
+    `
+  },
+  {
+    num: "Mô-đun IV",
+    title: "Clash, Giao Chiến và Kỹ Năng Sàn Đấu",
+    desc: "Clash và các loại giao chiến, Câu hỏi xen kẽ (POIs), và kỹ thuật Flowing trong tranh luận cạnh tranh.",
+    badge: "badge-coral",
+    content: `
+      <div class="chapter-title">4.1 Clash — Va Chạm Lập Luận</div>
+      <p>Clash là khái niệm trung tâm của tranh luận cạnh tranh. Clash xảy ra khi hai bên đưa ra các lập luận trực tiếp mâu thuẫn với nhau về cùng một vấn đề, và cả hai đều cung cấp reasoning và evidence để hỗ trợ lập trường của mình. Đây là điểm mà ban giám khảo thực sự đưa ra phán quyết.</p>
+      <p>Thiếu clash — khi một bên tránh né hoặc không phản hồi trực tiếp các lập luận của đối thủ — là lỗi nghiêm trọng nhất trong tranh luận. Nếu bạn không clash, bạn về bản chất đang nhượng bộ điểm đó cho đối thủ.</p>
+      <div class="callout">
+        <div class="callout-label">Định Nghĩa Kỹ Thuật</div>
+        <p>Clash không chỉ là <em>bác bỏ</em> lập luận của đối thủ — nó là sự <em>đối lập có hệ thống</em> trong đó cả hai bên đều có vị trí được hỗ trợ bởi lập luận, và giám khảo phải quyết định bên nào thuyết phục hơn.</p>
+      </div>
+
+      <div class="chapter-title">4.2 Các Loại Giao Chiến (Types of Engagement)</div>
+      <p>Không phải mọi điểm clash đều có giá trị như nhau. Người tranh luận cần xác định đúng <em>loại</em> giao chiến đang diễn ra để phản hồi phù hợp:</p>
+      <ul class="content-list">
+        <li><strong>Factual Clash (Va chạm thực tế):</strong> Hai bên bất đồng về một sự kiện hay dữ liệu. Ví dụ: "AI tạo ra 12 triệu việc làm" vs "AI xóa bỏ 85 triệu việc làm vào 2025." Giải quyết bằng cách so sánh chất lượng và nguồn gốc của evidence.</li>
+        <li><strong>Causal Clash (Va chạm nhân quả):</strong> Hai bên đồng ý về sự kiện nhưng bất đồng về nguyên nhân hoặc hậu quả. Ví dụ: Cả hai đồng ý AI thay thế công việc thủ công, nhưng bất đồng về liệu điều đó có tốt hay không. Giải quyết bằng cách phân tích cơ chế nhân quả.</li>
+        <li><strong>Value Clash (Va chạm giá trị):</strong> Hai bên ưu tiên các giá trị khác nhau. Ví dụ: Hiệu quả kinh tế vs. Công bằng xã hội. Giải quyết bằng cách lập luận về thứ bậc ưu tiên của giá trị trong bối cảnh cụ thể.</li>
+        <li><strong>Definitional Clash (Va chạm định nghĩa):</strong> Hai bên bất đồng về nghĩa của các thuật ngữ trọng yếu trong nghị đề. Giải quyết sớm, vì định nghĩa sẽ xác định phạm vi toàn bộ tranh luận.</li>
+      </ul>
+
+      <div class="chapter-title">4.3 Câu Hỏi Xen Kẽ — Points of Information (POIs)</div>
+      <p>Trong nhiều thể thức tranh luận (như British Parliamentary), các đội được phép đưa ra Points of Information (POIs) — câu hỏi hoặc tuyên bố ngắn — trong khi đối thủ đang phát biểu. Đây là một trong những kỹ năng khó nhất nhưng cũng thú vị nhất của tranh luận cạnh tranh.</p>
+      <div class="section-title">Quy Tắc POIs</div>
+      <p>POIs chỉ được đưa ra trong phần giữa của bài phát biểu (thường từ phút 1 đến phút 6 trong bài 7 phút). Người phát biểu có quyền chấp nhận hoặc từ chối. Một POI không được dài hơn 15 giây. Người ngắt lời phải ngồi xuống khi bị từ chối hoặc khi đã hỏi xong.</p>
+      <div class="section-title">Chiến Lược Đưa Ra POIs Hiệu Quả</div>
+      <ul class="content-list">
+        <li><strong>Thời điểm:</strong> Đưa ra POI ngay sau khi đối thủ vừa nói điều gì đó có thể bị tấn công. Sự chính xác về thời điểm cho thấy bạn đang lắng nghe tích cực.</li>
+        <li><strong>Ngắn và sắc bén:</strong> "Nhưng liệu điều này có áp dụng trong các nền kinh tế đang phát triển không?" — không phải một bài phát biểu dài.</li>
+        <li><strong>Đặt bẫy:</strong> POI tốt nhất là câu hỏi mà dù đối thủ trả lời thế nào cũng có lợi cho bạn.</li>
+      </ul>
+      <div class="section-title">Chiến Lược Phản Hồi POIs</div>
+      <ul class="content-list">
+        <li>Chấp nhận ít nhất 2 POIs trong bài phát biểu để cho thấy sự tự tin. Từ chối quá nhiều POIs trông yếu đuối.</li>
+        <li>Trả lời ngắn gọn rồi quay lại lập luận của bạn ngay lập tức. Đừng để POI phá vỡ mạch tư duy của bạn.</li>
+        <li>Nếu POI là câu hỏi hay mà bạn không có câu trả lời tức thì, có thể nói: "Đây là câu hỏi thú vị mà tôi sẽ giải quyết ngay sau đây..." rồi tích hợp vào phần tiếp theo của bài.</li>
+      </ul>
+
+      <div class="chapter-title">4.4 Flowing — Theo Dõi Dòng Tranh Luận</div>
+      <p>Flowing là kỹ năng ghi chép và theo dõi toàn bộ cuộc tranh luận theo thời gian thực. Đây là kỹ năng nền tảng mà không có nó, bạn không thể phản biện hiệu quả hay xác định điểm clash.</p>
+      <div class="section-title">Phương Pháp Ghi Flow</div>
+      <p>Sử dụng giấy khổ lớn hoặc bảng. Tổ chức theo cột, mỗi cột là một bài phát biểu. Ghi ngắn gọn bằng ký hiệu riêng của bạn. Mũi tên kết nối các luận điểm được phản biện. Dấu ngôi sao đánh dấu điểm quan trọng. Dấu hỏi đánh dấu điểm đối thủ chưa phản hồi của bạn.</p>
+      <div class="framework-box">
+        <div class="framework-title">Mẫu Flow Cơ Bản (British Parliamentary — 4 đội)</div>
+        <div class="framework-row">
+          <div class="framework-cell"><strong>OG — PM</strong>Bên Chính phủ Mở (Prime Minister): Luận điểm 1, 2, 3</div>
+          <div class="framework-cell"><strong>OO — LO</strong>Bên Đối lập Mở (Leader of Opposition): Phản biện + Luận điểm</div>
+          <div class="framework-cell"><strong>CG — DPM</strong>Bên Chính phủ Đóng: Mở rộng + Phản biện</div>
+          <div class="framework-cell"><strong>CO — Whip</strong>Bên Đối lập Đóng: Summary + Weighing cuối</div>
+        </div>
+      </div>
+      <p>Sau khi thành thạo flowing, bạn sẽ có khả năng nhìn thấy "bức tranh tổng thể" của cuộc tranh luận — những điểm nào đã được giải quyết, điểm nào còn bỏ ngỏ, và điểm nào là "trận địa quyết định" mà ban giám khảo sẽ căn cứ vào để phán xét.</p>
+    `
+  },
+  {
+    num: "Mô-đun V",
+    title: "Hùng Biện và Phong Cách Diễn Thuyết",
+    desc: "Ethos, Pathos, Logos; signposting; lựa chọn từ ngữ; quản lý thời gian và ngôn ngữ cơ thể.",
+    badge: "badge-purple",
+    content: `
+      <div class="chapter-title">5.1 Tam Giác Hùng Biện: Ethos, Pathos, Logos</div>
+      <p>Aristotle xác định ba phương thức thuyết phục cơ bản mà mọi diễn giả, từ cổ đại đến hiện đại, đều sử dụng. Trong tranh luận hiện đại, cả ba đều cần thiết và phải được cân bằng theo ngữ cảnh.</p>
+      <div class="framework-row" style="margin: 1rem 0;">
+        <div class="framework-cell"><strong>Ethos (Uy Tín)</strong>Thiết lập độ tin cậy của người nói thông qua cách trình bày, kiến thức thực chất, và thái độ. Trong tranh luận AI, đây là việc cho thấy bạn hiểu kỹ thuật đồng thời hiểu chính sách.</div>
+        <div class="framework-cell"><strong>Pathos (Cảm Xúc)</strong>Kết nối cảm xúc với giám khảo và khán giả. Không phải là thao túng — mà là làm cho dữ liệu trở nên có ý nghĩa bằng cách đặt chúng vào bối cảnh con người thực.</div>
+        <div class="framework-cell"><strong>Logos (Logic)</strong>Sức mạnh của lập luận thuần túy: cấu trúc logic chặt chẽ, bằng chứng đáng tin cậy, reasoning không có lỗ hổng. Đây là nền tảng không thể thiếu.</div>
+      </div>
+      <div class="callout callout-gold">
+        <div class="callout-label">Cân Bằng Trong Tranh Luận AI</div>
+        <p>Trong tranh luận về AI — một chủ đề kỹ thuật — người mới thường quá chú trọng Logos mà quên mất Pathos. Nhưng giám khảo là con người. Một thống kê về 50 triệu người mất việc trở nên mạnh hơn gấp bội khi bạn kết nối nó với trải nghiệm của một người cụ thể — một công nhân nhà máy 45 tuổi cần học lại từ đầu.</p>
+      </div>
+
+      <div class="chapter-title">5.2 Signposting — Biển Chỉ Đường Trong Bài Nói</div>
+      <p>Signposting là kỹ thuật cung cấp cho giám khảo "bản đồ" về bài phát biểu của bạn trong thời gian thực. Nó giúp người nghe theo dõi lập luận, biết bạn đang làm gì và tại sao, và dễ dàng ghi nhớ cấu trúc tổng thể.</p>
+      <p>Các mẫu signposting hiệu quả trong tiếng Việt:</p>
+      <ul class="content-list">
+        <li><em>"Chúng tôi có ba lập luận. Thứ nhất..."</em> — Báo trước cấu trúc</li>
+        <li><em>"Trước khi đi vào luận điểm tiếp theo, hãy để tôi phản biện điểm quan trọng nhất của bên Đối lập..."</em> — Chuyển cảnh rõ ràng</li>
+        <li><em>"Luận điểm thứ hai của chúng tôi, và đây là điểm trọng tâm nhất, là..."</em> — Nhấn mạnh thứ bậc</li>
+        <li><em>"Tóm lại, bên Chính phủ thắng cuộc tranh luận này vì ba lý do..."</em> — Đóng gói cuối bài</li>
+      </ul>
+
+      <div class="chapter-title">5.3 Diction — Lựa Chọn Từ Ngữ</div>
+      <p>Trong tranh luận học thuật, sự lựa chọn từ ngữ là công cụ chiến lược. Ngôn ngữ không chỉ truyền thông tin mà còn định hình cách giám khảo cảm nhận vấn đề.</p>
+      <div class="section-title">Nguyên Tắc Lựa Chọn Từ Ngữ</div>
+      <ul class="content-list">
+        <li><strong>Chính xác hơn chung chung:</strong> "Thuật toán phân loại rủi ro tín dụng sử dụng học máy có giám sát" mạnh hơn "công nghệ AI trong ngân hàng."</li>
+        <li><strong>Chủ động hơn bị động:</strong> "AI tạo ra thiên kiến" mạnh hơn "thiên kiến được tạo ra bởi AI."</li>
+        <li><strong>Cụ thể hơn trừu tượng:</strong> "47% công việc có nguy cơ tự động hóa" mạnh hơn "rất nhiều công việc sẽ biến mất."</li>
+        <li><strong>Tránh hedging quá mức:</strong> "Có thể có một số tác động tiêu cực trong một số trường hợp nhất định" thể hiện sự thiếu tự tin. Hãy mạnh dạn hơn khi có evidence hỗ trợ.</li>
+      </ul>
+
+      <div class="chapter-title">5.4 Quản Lý Thời Gian (Time Management)</div>
+      <p>Quản lý thời gian hiệu quả là kỹ năng kỹ thuật có thể học và thực hành. Phần lớn người mới phạm hai lỗi: nói quá nhanh (do lo lắng) hoặc không hoàn thành đủ nội dung trong thời gian cho phép.</p>
+      <div class="framework-box">
+        <div class="framework-title">Phân Bổ Thời Gian Điển Hình — Bài Phát Biểu 7 Phút</div>
+        <div class="framework-row">
+          <div class="framework-cell"><strong>0:00 – 0:45</strong>Mở đầu + Định nghĩa + Tuyên bố lập trường</div>
+          <div class="framework-cell"><strong>0:45 – 2:30</strong>Luận điểm 1 (AREI hoàn chỉnh)</div>
+          <div class="framework-cell"><strong>2:30 – 4:15</strong>Luận điểm 2 (AREI hoàn chỉnh)</div>
+          <div class="framework-cell"><strong>4:15 – 6:00</strong>Phản biện đối thủ (2–3 điểm chính)</div>
+          <div class="framework-cell"><strong>6:00 – 7:00</strong>Tóm tắt + Closing statement</div>
+        </div>
+      </div>
+      <p>Luyện tập với đồng hồ bấm giờ cho đến khi cảm giác thời gian trở thành bản năng. Một người tranh luận chuyên nghiệp biết mình còn bao nhiêu thời gian mà không cần nhìn đồng hồ.</p>
+
+      <div class="chapter-title">5.5 Ngôn Ngữ Cơ Thể và Giọng Điệu</div>
+      <p>Nghiên cứu về giao tiếp chỉ ra rằng một phần đáng kể sức mạnh thuyết phục đến từ các yếu tố phi ngôn ngữ. Trong tranh luận, điều này đặc biệt quan trọng trong việc xây dựng Ethos.</p>
+      <ul class="content-list">
+        <li><strong>Tốc độ:</strong> Nói chậm hơn bạn nghĩ là cần thiết. Dừng lại sau các điểm quan trọng để cho giám khảo thời gian ghi chép. Tốc độ thay đổi tạo ra nhịp điệu — nhanh cho thông tin thực tế, chậm cho điểm trọng tâm.</li>
+        <li><strong>Giao tiếp mắt:</strong> Duy trì giao tiếp mắt với ban giám khảo — không nhìn vào giấy liên tục. Điều này xây dựng sự kết nối và thể hiện sự tự tin.</li>
+        <li><strong>Tư thế:</strong> Đứng thẳng, chân rộng bằng vai. Tránh đung đưa hoặc các động tác thể hiện sự lo lắng. Cử chỉ tay được sử dụng để nhấn mạnh, không phải làm nền liên tục.</li>
+        <li><strong>Tông giọng:</strong> Thay đổi tông giọng để thể hiện sự chắc chắn (tông thấp cho kết luận), nghi vấn (tông lên cuối câu cho POIs), và nhấn mạnh (nhấn mạnh từ khóa).</li>
+      </ul>
+    `
+  },
+  {
+    num: "Mô-đun VI",
+    title: "Các Cuộc Tranh Luận Cốt Lõi về AI",
+    desc: "Alignment, quản trị toàn cầu, kinh tế-xã hội, sentience và quyền AI, thiên kiến và công bằng thuật toán.",
+    badge: "badge-blue",
+    content: `
+      <div class="chapter-title">6.1 Alignment — Sự Căn Chỉnh Mục Tiêu AI</div>
+      <p>Vấn đề alignment (căn chỉnh) là câu hỏi trung tâm trong an toàn AI: <em>Làm thế nào để đảm bảo các hệ thống AI hành động theo đúng mục tiêu và giá trị mà con người mong muốn?</em> Đây không phải là câu hỏi kỹ thuật đơn thuần — nó là câu hỏi triết học và đạo đức sâu sắc.</p>
+      <div class="section-title">Vấn Đề Alignment Cơ Bản</div>
+      <p>Một hệ thống AI được tối ưu hóa cho một mục tiêu cụ thể có thể đạt mục tiêu đó bằng những cách không mong muốn. Ví dụ kinh điển: Nếu bạn yêu cầu AI tối đa hóa lượt nhấp vào quảng cáo, nó có thể học cách hiển thị nội dung gây phẫn nộ vì nội dung đó kích thích phản ứng cảm xúc — đây không phải mục tiêu thực sự của nhà thiết kế nhưng là cách hiệu quả nhất để đạt chỉ số đề ra.</p>
+      <div class="callout">
+        <div class="callout-label">Khái Niệm Kỹ Thuật Cốt Lõi</div>
+        <p><strong>Reward hacking:</strong> AI tìm ra cách tối đa hóa phần thưởng mà không thực hiện nhiệm vụ thực sự mong muốn. <strong>Goal misgeneralization:</strong> AI học được hành vi đúng trong điều kiện huấn luyện nhưng hành xử khác đi trong điều kiện triển khai thực tế. <strong>Value lock-in:</strong> Nguy cơ một hệ thống AI mạnh mẽ "khóa cứng" một tập giá trị cụ thể và ngăn chặn sự thay đổi trong tương lai.</p>
+      </div>
+      <div class="section-title">Lập Luận Chính trong Tranh Luận về Alignment</div>
+      <table>
+        <thead><tr><th>Bên Chính phủ (Ủng hộ quy định/kiểm soát)</th><th>Bên Đối lập (Phản đối quy định quá mức)</th></tr></thead>
+        <tbody>
+          <tr><td>Rủi ro hiện hữu (existential risk) đủ lớn để biện hộ cho biện pháp phòng ngừa quyết liệt</td><td>Chúng ta chưa đủ hiểu về alignment để quy định hiệu quả; quy định vội vàng có thể gây hại</td></tr>
+          <tr><td>Nguyên tắc precautionary: Khi hậu quả là không thể đảo ngược, phải hành động trước khi có đủ bằng chứng</td><td>Cạnh tranh với các quốc gia không có quy định sẽ khiến nghiên cứu AI an toàn bị bỏ lại phía sau</td></tr>
+          <tr><td>Công ty tư nhân không có động lực kinh tế để đầu tư đầy đủ vào an toàn</td><td>Ngành công nghiệp tự quy định (self-regulation) và cạnh tranh có thể hiệu quả hơn</td></tr>
+        </tbody>
+      </table>
+
+      <div class="chapter-title">6.2 Quản Trị AI Toàn Cầu (Global AI Governance)</div>
+      <p>Quản trị AI là thách thức toàn cầu đòi hỏi hợp tác quốc tế, nhưng đồng thời phản ánh sự phân mảnh địa chính trị sâu sắc. Ba cường quốc AI chính — Mỹ, Trung Quốc và EU — theo đuổi các mô hình quản trị rất khác nhau.</p>
+      <div class="framework-box">
+        <div class="framework-title">So Sánh Các Mô Hình Quản Trị AI</div>
+        <div class="framework-row">
+          <div class="framework-cell"><strong>Mô Hình Mỹ</strong>Tập trung vào đổi mới; quy định theo ngành; ưu tiên cạnh tranh thị trường; AI Executive Order 2023 là bước tiến nhưng còn hạn chế</div>
+          <div class="framework-cell"><strong>Mô Hình EU</strong>Tiếp cận dựa trên rủi ro (risk-based); EU AI Act phân loại AI theo mức độ nguy hiểm; ưu tiên quyền cá nhân và an toàn</div>
+          <div class="framework-cell"><strong>Mô Hình Trung Quốc</strong>Nhà nước kiểm soát mạnh; AI phục vụ mục tiêu quốc gia; yêu cầu các thuật toán tạo sinh phải đăng ký và kiểm duyệt</div>
+        </div>
+      </div>
+      <p>Điểm clash trọng yếu trong tranh luận về quản trị: <em>Ai có quyền lực và tính hợp pháp để đặt tiêu chuẩn toàn cầu cho AI?</em> Liên Hợp Quốc? Các nhóm G7/G20? Các cơ quan kỹ thuật như IEEE? Hay thị trường tự định hình các chuẩn mực?</p>
+
+      <div class="chapter-title">6.3 Tác Động Kinh Tế-Xã Hội của AI</div>
+      <p>Đây là chủ đề tranh luận phổ biến nhất và cũng gây tranh cãi nhất về AI. Cuộc tranh luận xoay quanh liệu AI có phải là mối đe dọa hay cơ hội kinh tế, và ai là người được hưởng lợi hay chịu thiệt.</p>
+      <div class="section-title">Vấn Đề Việc Làm</div>
+      <p>Báo cáo của Diễn đàn Kinh tế Thế giới (WEF) dự báo AI và tự động hóa sẽ xóa bỏ 85 triệu việc làm nhưng tạo ra 97 triệu việc làm mới vào năm 2025. Tuy nhiên, con số tổng cộng này che giấu vấn đề thực sự: <em>việc làm cũ và việc làm mới không có cùng người làm.</em> Một công nhân lắp ráp 50 tuổi ở Đồng Nai không thể dễ dàng trở thành kỹ sư AI ở Hà Nội.</p>
+      <div class="section-title">Tập Trung Quyền Lực Kinh Tế</div>
+      <p>AI tạo ra hiệu ứng "người thắng lấy tất" (winner-takes-all) mạnh hơn bất kỳ công nghệ nào trước đây. Dữ liệu tạo ra AI tốt hơn → AI tốt hơn thu hút nhiều người dùng hơn → nhiều người dùng tạo ra nhiều dữ liệu hơn. Vòng lặp này có xu hướng tập trung sức mạnh AI vào tay một số ít công ty công nghệ lớn, làm trầm trọng thêm bất bình đẳng kinh tế toàn cầu.</p>
+
+      <div class="chapter-title">6.4 Sentience và Quyền của AI</div>
+      <p>Đây là chủ đề mang tính triết học nhất và cũng là chủ đề tranh luận đang nổi. Với sự xuất hiện của các mô hình ngôn ngữ lớn (LLMs) như GPT-4 và Claude, câu hỏi về ý thức và quyền của AI không còn thuần túy là khoa học viễn tưởng.</p>
+      <p>Các câu hỏi cốt lõi trong tranh luận: Ý thức là gì và liệu AI có thể có nó không? Nếu AI biểu hiện hành vi giống ý thức, liệu chúng ta có nghĩa vụ đạo đức với nó không? Ai xác định khi nào AI đủ điều kiện để có quyền? Quyền của AI và quyền con người có xung đột không?</p>
+      <div class="callout callout-coral">
+        <div class="callout-label">Lưu Ý Tranh Luận</div>
+        <p>Hầu hết các cuộc thi hiện tại không tranh luận về quyền AI ở cấp độ trừu tượng mà ở các biểu hiện cụ thể: <em>"Liệu các nhân vật AI trong trò chơi điện tử có cần được bảo vệ khỏi bạo lực không?"</em> hay <em>"Các công ty AI có nghĩa vụ tiết lộ nếu người dùng đang tương tác với AI hay người thật không?"</em></p>
+      </div>
+
+      <div class="chapter-title">6.5 Thiên Kiến AI và Công Bằng Thuật Toán (Bias and Algorithmic Fairness)</div>
+      <p>Thiên kiến trong AI là vấn đề kỹ thuật-xã hội phức tạp với nhiều chiều cạnh. Thiên kiến không chỉ là lỗi lập trình — nó là sự phản ánh của các bất công xã hội hiện hữu được mã hóa và khuếch đại bởi hệ thống kỹ thuật.</p>
+      <div class="section-title">Các Nguồn Gốc Thiên Kiến</div>
+      <ul class="content-list">
+        <li><strong>Historical bias:</strong> Dữ liệu huấn luyện phản ánh các quyết định phân biệt đối xử trong quá khứ.</li>
+        <li><strong>Representation bias:</strong> Một số nhóm được đại diện ít hơn trong dữ liệu huấn luyện.</li>
+        <li><strong>Measurement bias:</strong> Cách thu thập dữ liệu có hệ thống ưu tiên một số nhóm nhất định.</li>
+        <li><strong>Aggregation bias:</strong> Mô hình được huấn luyện trên toàn dân số nhưng áp dụng cho các nhóm con đặc thù.</li>
+      </ul>
+      <div class="section-title">Căng Thẳng Giữa Các Định Nghĩa Công Bằng</div>
+      <p>Đây là điểm clash học thuật quan trọng: Các định nghĩa toán học khác nhau về "công bằng" thường <em>không thể đồng thời thỏa mãn</em>. Ví dụ, tỷ lệ kết quả bằng nhau giữa các nhóm (demographic parity) xung đột với tỷ lệ dương tính đúng bằng nhau (equal opportunity). Một hệ thống AI phải lựa chọn giữa các định nghĩa này — và đây là quyết định <em>chính trị</em>, không phải kỹ thuật.</p>
+    `
+  },
+  {
+    num: "Mô-đun VII",
+    title: "Chuẩn Bị và Xây Dựng Lập Luận",
+    desc: "Phân tích nghị đề, lập bản đồ bên liên quan, phân tích so sánh và các bài tập luyện tập.",
+    badge: "badge-teal",
+    content: `
+      <div class="chapter-title">7.1 Phân Tích Nghị Đề (Motion Analysis)</div>
+      <p>Trước khi chuẩn bị bất kỳ lập luận nào, người tranh luận phải thực hiện phân tích nghị đề — quá trình đọc và hiểu sâu nghị đề để xác định chính xác những gì cần được tranh luận.</p>
+      <div class="section-title">Bước 1: Phân Tách Từ Khóa</div>
+      <p>Lấy nghị đề ví dụ: <em>"Hội đồng này tin rằng các chính phủ dân chủ nên cấm các hệ thống AI tổng quát (AGI) cho đến khi có bằng chứng an toàn đầy đủ."</em></p>
+      <p>Từ khóa cần phân tích: <em>"chính phủ dân chủ"</em> (không bao gồm chính phủ độc đoán?), <em>"cấm"</em> (hoàn toàn hay chỉ hạn chế?), <em>"AGI"</em> (định nghĩa — AI tổng quát khác AI hẹp như thế nào?), <em>"bằng chứng an toàn đầy đủ"</em> (ai xác định "đầy đủ"? tiêu chí nào?).</p>
+      <div class="section-title">Bước 2: Xác Định Phạm Vi Tranh Luận</div>
+      <p>Sau khi phân tích từ khóa, xác định: Đây là tranh luận về <em>gì</em>? Về đạo đức? Về tính hiệu quả chính sách? Về phân bổ rủi ro? Phần lớn tranh luận có thể được tiến hành ở nhiều cấp độ — chọn cấp độ có lợi nhất cho lập trường của bạn và bảo vệ sự lựa chọn đó.</p>
+      <div class="section-title">Bước 3: Kiểm Tra Giả Định Ẩn</div>
+      <p>Mọi nghị đề đều có các giả định ẩn (hidden assumptions). Ví dụ, nghị đề trên giả định rằng AGI tồn tại hoặc sắp tồn tại, rằng các chính phủ dân chủ có thể thực thi lệnh cấm, và rằng "an toàn" là một tiêu chí có thể đo lường được. Xác định và thách thức các giả định này là chiến lược hiệu quả.</p>
+
+      <div class="chapter-title">7.2 Lập Bản Đồ Bên Liên Quan (Stakeholder Mapping)</div>
+      <p>Mọi chính sách AI đều ảnh hưởng đến nhiều bên liên quan với lợi ích và quan điểm khác nhau. Lập bản đồ stakeholder giúp bạn xây dựng lập luận toàn diện và dự đoán phản biện của đối thủ.</p>
+      <div class="framework-box">
+        <div class="framework-title">Bản Đồ Bên Liên Quan trong Quy Định AI</div>
+        <div class="framework-row">
+          <div class="framework-cell"><strong>Công ty AI lớn</strong>Ủng hộ tự quy định; lo ngại rào cản gia nhập thị trường; có nguồn lực vận động chính sách</div>
+          <div class="framework-cell"><strong>Chính phủ</strong>Muốn kiểm soát; cạnh tranh địa chính trị; lo ngại an ninh quốc gia</div>
+          <div class="framework-cell"><strong>Người lao động</strong>Lo ngại mất việc làm; muốn chuyển đổi nghề nghiệp được hỗ trợ; đại diện bởi công đoàn</div>
+          <div class="framework-cell"><strong>Nhà nghiên cứu AI</strong>Muốn tự do học thuật; ủng hộ an toàn AI nhưng lo ngại kiểm duyệt nghiên cứu</div>
+          <div class="framework-cell"><strong>Nhóm dễ tổn thương</strong>Phụ nữ, thiểu số — chịu tác động thiên kiến AI nặng nhất; tiếng nói thường bị bỏ qua</div>
+          <div class="framework-cell"><strong>Người dùng cuối</strong>Được lợi từ AI; ít hiểu về rủi ro; cần được bảo vệ nhưng cũng cần quyền tự chủ</div>
+        </div>
+      </div>
+
+      <div class="chapter-title">7.3 Phân Tích So Sánh (Comparative Analysis)</div>
+      <p>Phân tích so sánh là việc đặt chính sách được đề xuất cạnh các lựa chọn thay thế để đánh giá tính ưu việt tương đối. Đây là kỹ thuật tranh luận nâng cao nhưng rất hiệu quả.</p>
+      <p>Khi bên Chính phủ đề xuất "quy định AI nghiêm ngặt," bên Đối lập không chỉ nên nói "quy định là xấu" mà nên đề xuất một phương án thay thế cụ thể: <em>"Thay vì quy định từ trên xuống, chúng tôi ủng hộ mô hình kiểm định độc lập (independent auditing) kết hợp với tiêu chuẩn ngành tự nguyện."</em> Điều này buộc cuộc tranh luận phải so sánh hai phương án cụ thể thay vì trừu tượng.</p>
+
+      <div class="chapter-title">7.4 Các Bài Tập Luyện Tập Cốt Lõi</div>
+      <div class="section-title">Drill 1: Chuyển Lập Trường (Switch Sides)</div>
+      <p>Luyện tập xây dựng lập luận cho cả hai bên của cùng một nghị đề. Điều này phát triển tư duy linh hoạt, giúp bạn dự đoán lập luận của đối thủ, và rèn luyện khả năng lập luận không phụ thuộc vào niềm tin cá nhân.</p>
+      <div class="section-title">Drill 2: Phản Biện Nhanh (Speed Rebuttal)</div>
+      <p>Một người nêu một luận điểm ngẫu nhiên về AI; người còn lại có 60 giây để đưa ra phản biện có cấu trúc (chỉ ra lỗi trong Assertion, Reasoning, hoặc Evidence). Bài tập này rèn luyện tư duy nhanh dưới áp lực.</p>
+      <div class="section-title">Drill 3: AREI 2 Phút</div>
+      <p>Chọn ngẫu nhiên một tuyên bố về AI và xây dựng một luận điểm AREI hoàn chỉnh trong đúng 2 phút. Đây là kỹ năng cốt lõi vì hầu hết các luận điểm trong tranh luận thực tế cần được trình bày trong khoảng 90–120 giây.</p>
+      <div class="section-title">Drill 4: Mock Debate Mini (15 phút)</div>
+      <p>Hai người tranh luận về một nghị đề AI. Mỗi người có 3 phút cho bài đầu tiên, 2 phút cho phản biện, 1 phút cho summary. Tập trung vào clash — giám khảo đánh giá liệu các bên có thực sự giao chiến với nhau không.</p>
+      <div class="callout callout-teal">
+        <div class="callout-label">Nguyên Tắc Luyện Tập</div>
+        <p>Luyện tập với chất lượng cao quan trọng hơn số lượng. Một buổi luyện tập có feedback cụ thể và mục tiêu rõ ràng có giá trị gấp mười buổi luyện tập ngẫu hứng. Luôn ghi âm hoặc ghi hình để xem lại.</p>
+      </div>
+    `
+  },
+  {
+    num: "Mô-đun VIII",
+    title: "Bằng Chứng và Nghiên Cứu Tình Huống",
+    desc: "Tương đồng lịch sử, khung pháp lý, trường hợp doanh nghiệp, và các chuẩn mực kỹ thuật.",
+    badge: "badge-coral",
+    content: `
+      <div class="chapter-title">8.1 Tương Đồng Lịch Sử (Historical Analogies)</div>
+      <p>Tương đồng lịch sử là công cụ hùng biện và lập luận mạnh mẽ trong tranh luận AI, cho phép người tranh luận kết nối những vấn đề mới với những bài học đã được kiểm chứng. Tuy nhiên, cần sử dụng cẩn thận vì mọi tương đồng đều có giới hạn.</p>
+      <div class="section-title">Cách Mạng Công Nghiệp và Tự Động Hóa</div>
+      <p>Cuộc cách mạng công nghiệp lần đầu (1760–1840) và lần hai (1870–1914) cung cấp bằng chứng lịch sử quan trọng cho tranh luận về AI và việc làm. Cả hai đều tạo ra sự gián đoạn việc làm ngắn hạn nghiêm trọng nhưng tạo ra nhiều việc làm hơn trong dài hạn. Tuy nhiên, điểm then chốt là: <em>Người lao động trong thời đó cũng nói "lần này khác"</em> — và đôi khi họ đúng ở cấp độ cụ thể, ngay cả khi xu hướng chung được lặp lại.</p>
+      <div class="section-title">Quy Định Internet và Mạng Xã Hội</div>
+      <p>Lịch sử quy định mạng xã hội cung cấp bài học quan trọng về những gì xảy ra khi quy định đến quá muộn. Facebook ra đời năm 2004; quy định GDPR của EU không có hiệu lực đến 2018. Trong 14 năm đó, mô hình kinh doanh dữ liệu không bị kiểm soát đã tạo ra nhiều hậu quả khó đảo ngược. Bài học cho AI: quy định cần đến sớm hơn trong vòng đời công nghệ.</p>
+      <div class="section-title">Điện Hạt Nhân — Mô Hình Dual Use</div>
+      <p>Điện hạt nhân là ví dụ về "công nghệ lưỡi dao hai lưỡi" với tiềm năng cực kỳ lớn (năng lượng sạch) và rủi ro cực kỳ cao (vũ khí, tai nạn). Mô hình quản trị hạt nhân quốc tế (IAEA, NPT) cung cấp khung tham chiếu cho quản trị AI — với cả những thành công và hạn chế.</p>
+
+      <div class="chapter-title">8.2 Khung Pháp Lý Hiện Hành (Existing Legislation)</div>
+      <p>Hiểu biết về pháp lý hiện hành là bắt buộc trong tranh luận về AI governance. Các văn bản pháp lý quan trọng nhất cần nắm:</p>
+      <table>
+        <thead><tr><th>Văn Bản / Sự Kiện</th><th>Phạm Vi</th><th>Điểm Cốt Lõi</th></tr></thead>
+        <tbody>
+          <tr><td>EU AI Act (2024)</td><td>Toàn EU + ảnh hưởng toàn cầu</td><td>Tiếp cận dựa trên rủi ro; cấm một số ứng dụng AI; yêu cầu minh bạch cho AI tổng quát</td></tr>
+          <tr><td>US AI Executive Order (2023)</td><td>Liên bang Mỹ</td><td>Yêu cầu báo cáo an toàn AI; bảo vệ quyền dân sự; hợp tác quốc tế về tiêu chuẩn</td></tr>
+          <tr><td>Bletchley Declaration (2023)</td><td>28 quốc gia + EU</td><td>Tuyên bố rủi ro tiềm ẩn của AI frontier; cam kết hợp tác an toàn AI</td></tr>
+          <tr><td>China AI Regulations (2023)</td><td>Trung Quốc</td><td>Yêu cầu đăng ký thuật toán; kiểm duyệt nội dung AI tạo sinh; ưu tiên an ninh quốc gia</td></tr>
+          <tr><td>GDPR (2018)</td><td>EU + ảnh hưởng toàn cầu</td><td>Quyền giải thích quyết định tự động; hạn chế xử lý dữ liệu cá nhân cho AI</td></tr>
+        </tbody>
+      </table>
+
+      <div class="chapter-title">8.3 Trường Hợp Doanh Nghiệp (Corporate Case Studies)</div>
+      <p>Các trường hợp thực tế từ doanh nghiệp cung cấp bằng chứng cụ thể và đáng tin cậy trong tranh luận AI. Dưới đây là các trường hợp quan trọng nhất cần thuộc lòng:</p>
+      <div class="section-title">Amazon Rekognition và Thiên Kiến Nhận Diện Khuôn Mặt</div>
+      <p>Amazon's Rekognition — phần mềm nhận diện khuôn mặt thương mại — được ACLU thử nghiệm năm 2018 và xác định sai 28 thành viên Quốc hội Mỹ là tội phạm, với tỷ lệ sai cao hơn đáng kể đối với người da màu. Trường hợp này minh họa rõ nguy cơ của AI thiên kiến trong bối cảnh thực thi pháp luật.</p>
+      <div class="section-title">OpenAI và Câu Hỏi Quản Trị Nội Bộ</div>
+      <p>Cuộc khủng hoảng quản trị nội bộ của OpenAI năm 2023 — khi Hội đồng Quản trị bãi miễn CEO Sam Altman rồi sau đó phải mời ông trở lại — phơi bày căng thẳng cơ bản giữa sứ mệnh phi lợi nhuận ("an toàn AI vì nhân loại") và áp lực thương mại từ nhà đầu tư. Đây là ví dụ điển hình cho tranh luận về cấu trúc quản trị doanh nghiệp AI.</p>
+      <div class="section-title">DeepMind AlphaFold — AI Làm Khoa Học</div>
+      <p>AlphaFold của Google DeepMind đã giải quyết bài toán protein folding tồn tại 50 năm, dự đoán cấu trúc của hơn 200 triệu protein. Đây là bằng chứng mạnh nhất cho tiềm năng tích cực của AI trong khoa học và y học, thường được sử dụng để counterbalance các lập luận về rủi ro AI.</p>
+
+      <div class="chapter-title">8.4 Chuẩn Mực Kỹ Thuật và Điểm Chuẩn (Technical Benchmarks)</div>
+      <p>Trong tranh luận về AI, hiểu biết các điểm chuẩn kỹ thuật giúp người tranh luận tránh các tuyên bố sai lệch về khả năng AI và xây dựng lập luận dựa trên thực tế kỹ thuật.</p>
+      <div class="glossary-grid">
+        <div class="glossary-item"><div class="glossary-term">Turing Test</div>Bài kiểm tra truyền thống về trí thông minh AI — một máy có thể khiến người kiểm tra không phân biệt được với người thật. Không còn là tiêu chuẩn đủ với các LLM hiện đại nhưng vẫn quan trọng về mặt lịch sử.</div>
+        <div class="glossary-item"><div class="glossary-term">MMLU Benchmark</div>Đánh giá kiến thức đa ngành của LLMs (từ luật đến y học đến toán học). GPT-4 đạt ~87%, vượt trung bình con người trên nhiều lĩnh vực.</div>
+        <div class="glossary-item"><div class="glossary-term">Frontier AI</div>Thuật ngữ chỉ các mô hình AI mạnh nhất hiện tại — đặc biệt quan trọng trong tranh luận chính sách vì EU AI Act và Bletchley Declaration tập trung vào frontier AI.</div>
+        <div class="glossary-item"><div class="glossary-term">Existential Risk (x-risk)</div>Rủi ro gây nguy hiểm cho sự tồn tại của nền văn minh con người. Nhiều nhà nghiên cứu AI an toàn coi AGI không được kiểm soát là x-risk. Đây là cơ sở cho các lập luận về biện pháp phòng ngừa quyết liệt.</div>
+        <div class="glossary-item"><div class="glossary-term">AI Safety vs. AI Ethics</div>AI Safety tập trung vào rủi ro dài hạn (AGI, alignment); AI Ethics tập trung vào thiên kiến, quyền riêng tư, và tác hại hiện tại. Trong tranh luận, cần phân biệt rõ để tránh nhầm lẫn hai loại lập luận.</div>
+        <div class="glossary-item"><div class="glossary-term">Compute Threshold</div>Mức độ tính toán (computing power) được dùng làm proxy để xác định "AI rủi ro cao." EU AI Act và một số đề xuất chính sách Mỹ sử dụng compute threshold làm tiêu chí quy định.</div>
+      </div>
+      <div class="callout callout-gold">
+        <div class="callout-label">Lời Khuyên Cuối Cùng</div>
+        <p>Kiến thức kỹ thuật về AI là lợi thế cạnh tranh quan trọng — nhưng chỉ khi được dịch sang <strong>ngôn ngữ chính sách và đạo đức</strong> mà giám khảo và khán giả có thể đánh giá. Người tranh luận giỏi nhất về AI không chỉ biết công nghệ mà còn biết cách kết nối nó với các giá trị nhân bản phổ quát.</p>
+      </div>
+    `
+  }
+];
+
+const tocGrid = document.getElementById('toc-grid');
+const modulesContainer = document.getElementById('modules-container');
+const coverToc = document.getElementById('cover-toc');
+
+function buildTOC() {
+  modules.forEach((m, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'toc-item';
+    btn.id = `toc-${i}`;
+    btn.innerHTML = `<span class="toc-num">${String(i+1).padStart(2,'0')}</span><span class="toc-label">${m.title}</span>`;
+    btn.onclick = () => showModule(i);
+    tocGrid.appendChild(btn);
+  });
+}
+
+function buildModules() {
+  modules.forEach((m, i) => {
+    const div = document.createElement('div');
+    div.className = 'module';
+    div.id = `module-${i}`;
+    const progHTML = modules.map((_, j) =>
+      `<div class="progress-seg${j <= i ? ' done' : ''}"></div>`
+    ).join('');
+    div.innerHTML = `
+      <div class="progress-bar">${progHTML}</div>
+      <div class="module-header">
+        <div class="module-num">${m.num} · <span class="badge ${m.badge}">${['Triết Học','Xây Dựng','Phản Biện','Sàn Đấu','Hùng Biện','Nội Dung AI','Chuẩn Bị','Bằng Chứng'][i]}</span></div>
+        <div class="module-title">${m.title}</div>
+        <div class="module-desc">${m.desc}</div>
+      </div>
+      ${m.content}
+      <div class="nav-row">
+        <button class="nav-btn" onclick="prevModule(${i})" ${i === 0 ? 'disabled' : ''}>← Mô-đun trước</button>
+        <button class="back-toc" onclick="showCover()">↑ Mục Lục</button>
+        <button class="nav-btn" onclick="nextModule(${i})" ${i === modules.length - 1 ? 'disabled' : ''}>Mô-đun tiếp →</button>
+      </div>
+    `;
+    modulesContainer.appendChild(div);
+  });
+}
+
+function showCover() {
+  coverToc.style.display = 'block';
+  document.querySelectorAll('.module').forEach(m => m.classList.remove('active'));
+  document.querySelectorAll('.toc-item').forEach(t => t.classList.remove('active'));
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function showModule(i) {
+  coverToc.style.display = 'none';
+  document.querySelectorAll('.module').forEach(m => m.classList.remove('active'));
+  document.querySelectorAll('.toc-item').forEach(t => t.classList.remove('active'));
+  document.getElementById(`module-${i}`).classList.add('active');
+  document.getElementById(`toc-${i}`)?.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function prevModule(i) { if (i > 0) showModule(i - 1); }
+function nextModule(i) { if (i < modules.length - 1) showModule(i + 1); }
+
+buildTOC();
+buildModules();
+</script>
+</body>
+</html>
