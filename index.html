@@ -373,464 +373,616 @@ const modules = [
     badge: "badge-blue",
     content: `
       <div class="chapter-title">1.1 Bản Thể Luận của Tranh Luận (Ontology of Debate)</div>
-      <p>Tranh luận cạnh tranh không chỉ là một hoạt động trình bày ý kiến. Về bản chất, nó là một hệ thống nhận thức luận có cấu trúc — một phương thức kiểm tra sự thật thông qua đối thoại đối kháng có kiểm soát. Trước khi học bất kỳ kỹ năng tranh luận cụ thể nào, người học cần nắm vững triết lý nền tảng của bộ môn này.</p>
-      <p>Tranh luận xuất phát từ tiền đề rằng sự thật và chính sách tốt không thể được xác định bởi một cá nhân đơn lẻ mà phải được kiểm định qua quá trình phản biện. Mô hình này kế thừa phương pháp Socratic — dùng câu hỏi và phản bác để lọc bỏ lập luận yếu, giữ lại lập luận mạnh. Trong môi trường thi đấu, ban giám khảo đóng vai trò là đại diện của "công chúng lý trí" (reasonable audience): họ sẽ ủng hộ bên nào thuyết phục được họ tốt hơn dựa trên logic, bằng chứng và lập luận.</p>
+      <p>Tranh luận cạnh tranh không chỉ là hoạt động trình bày ý kiến. Về bản chất, nó là một hệ thống nhận thức luận có cấu trúc — một phương thức kiểm tra tính hợp lý của các lập luận thông qua đối thoại đối kháng có kiểm soát. Trước khi học bất kỳ kỹ thuật cụ thể nào, người học cần nắm triết lý nền tảng của bộ môn này: tranh luận giả định rằng sự thật và chính sách tốt không thể được xác định bởi một cá nhân đơn lẻ, mà phải được kiểm định qua quá trình phản biện có hệ thống.</p>
+      <p>Mô hình này kế thừa phương pháp Socratic — dùng phản bác để lọc bỏ lập luận yếu và giữ lại lập luận có sức mạnh. Trong môi trường thi đấu, ban giám khảo đóng vai trò "công chúng lý trí" (reasonable audience): người ra quyết định dựa trên lập luận thuyết phục nhất, không phải quan điểm cá nhân của họ về vấn đề được tranh luận. Đây là sự khác biệt căn bản so với phát biểu ý kiến thông thường — nhiệm vụ của người tranh luận là thực thi nghĩa vụ lập luận (argumentative obligation), không phải thể hiện niềm tin cá nhân.</p>
       <div class="callout">
         <div class="callout-label">Nguyên Tắc Nền Tảng</div>
-        <p>Nhiệm vụ của người tranh luận không phải là "chiến thắng bằng mọi giá" mà là <strong>thực thi nghĩa vụ lập luận</strong> — chứng minh lập trường của mình và bác bỏ lập trường đối lập một cách có hệ thống, trung thực và logic.</p>
+        <p>Trong tranh luận cạnh tranh, bạn có thể được yêu cầu bảo vệ lập trường mà bạn không đồng ý. Khả năng lập luận cho cả hai phía của một vấn đề không phải là sự thiếu trung thực — đây là dấu hiệu của tư duy phản biện trưởng thành và khả năng hiểu đầy đủ một vấn đề phức tạp.</p>
       </div>
 
-      <div class="section-title">Vai trò của Nghị đề (Motion)</div>
-      <p>Mọi cuộc tranh luận bắt đầu bằng một <strong>nghị đề</strong> — một tuyên bố chính sách hoặc quan điểm cụ thể mà các đội sẽ bảo vệ hoặc phản đối. Nghị đề xác định phạm vi tranh luận, giới hạn những lập luận nào là phù hợp và không phù hợp. Ví dụ: <em>"Hội đồng này tin rằng các chính phủ nên quy định các hệ thống trí tuệ nhân tạo có thể gây rủi ro hiện hữu."</em> Nghị đề này thiết lập rằng cuộc tranh luận xoay quanh <em>vai trò của chính phủ</em> trong <em>quy định AI rủi ro cao</em> — không phải về AI nói chung.</p>
+      <div class="section-title">Vai Trò của Nghị Đề (Motion)</div>
+      <p>Mọi cuộc tranh luận bắt đầu bằng một <strong>nghị đề</strong> — một tuyên bố chính sách hoặc quan điểm cụ thể mà các đội bảo vệ hoặc phản đối. Nghị đề không chỉ là chủ đề chung chung; nó xác định chính xác phạm vi tranh luận và giới hạn những lập luận nào là phù hợp. Ví dụ: <em>"Hội đồng này tin rằng các chính phủ dân chủ nên áp đặt lệnh tạm hoãn phát triển các mô hình AI có năng lực vượt GPT-4."</em> Nghị đề này xác định rõ: chủ thể hành động (chính phủ dân chủ), hành động (tạm hoãn), và đối tượng (mô hình AI frontier). Các lập luận về AI nói chung, hay về chính sách của các chính phủ phi dân chủ, đều nằm ngoài phạm vi nghị đề này.</p>
+      <p>Nghị đề thường có ba dạng chính: <strong>Nghị đề chính sách</strong> (Policy motions) yêu cầu đề xuất hoặc phản đối một hành động cụ thể; <strong>Nghị đề giá trị</strong> (Value motions) đánh giá một giá trị hoặc nguyên tắc; và <strong>Nghị đề thực tế</strong> (Fact motions) tranh luận về việc một điều gì đó có đúng hay không. Phần lớn nghị đề AI trong các cuộc thi quốc tế là nghị đề chính sách.</p>
 
       <div class="chapter-title">1.2 Gánh Nặng Chứng Minh (Burden of Proof)</div>
-      <p>Gánh nặng chứng minh là nghĩa vụ của một bên phải cung cấp đủ bằng chứng và lập luận để hỗ trợ tuyên bố của mình. Đây là một trong những khái niệm quan trọng nhất trong tranh luận, thường bị người mới bỏ qua.</p>
-      <p>Trong hầu hết các thể thức tranh luận, <strong>bên Chính phủ (Government/Proposition)</strong> — bên ủng hộ nghị đề — mang gánh nặng chứng minh chính. Điều này có nghĩa là họ phải chứng minh nghị đề là đúng hoặc tốt hơn hiện trạng. Nếu bên Chính phủ không hoàn thành gánh nặng này, bên Đối lập (Opposition) không cần phải chứng minh bất cứ điều gì — chỉ cần cho thấy bên Chính phủ đã thất bại là đủ.</p>
+      <p>Gánh nặng chứng minh là nghĩa vụ của một bên phải cung cấp đủ lập luận và bằng chứng để hỗ trợ tuyên bố của mình. Trong hầu hết các thể thức tranh luận, <strong>bên Chính phủ (Government/Proposition)</strong> mang gánh nặng chứng minh chính — họ phải chứng minh nghị đề tốt hơn hiện trạng. Nếu bên Chính phủ không hoàn thành gánh nặng này, bên Đối lập không cần chứng minh bất kỳ điều gì khác — chỉ cần cho thấy Chính phủ đã thất bại là đủ.</p>
       <div class="framework-box">
         <div class="framework-title">Phân Loại Gánh Nặng Chứng Minh</div>
         <div class="framework-row">
-          <div class="framework-cell"><strong>Burden of Proof</strong>Nghĩa vụ cung cấp bằng chứng hỗ trợ tuyên bố của mình</div>
-          <div class="framework-cell"><strong>Burden of Rebuttal</strong>Nghĩa vụ phản biện lập luận đối lập sau khi đã được đưa ra</div>
-          <div class="framework-cell"><strong>Burden of Rejoinder</strong>Nghĩa vụ phản hồi lại phản biện của đối phương</div>
+          <div class="framework-cell"><strong>Burden of Proof</strong>Nghĩa vụ cung cấp lập luận và bằng chứng hỗ trợ tuyên bố ban đầu. Bên Chính phủ luôn mang gánh nặng này đầu tiên.</div>
+          <div class="framework-cell"><strong>Burden of Rebuttal</strong>Nghĩa vụ phản biện lập luận đối lập sau khi đã được đưa ra. Nếu đối thủ đưa ra bằng chứng mạnh và bạn im lặng, bạn mặc nhiên nhượng bộ điểm đó.</div>
+          <div class="framework-cell"><strong>Burden of Rejoinder</strong>Nghĩa vụ phản hồi lại phản biện của đối thủ đối với lập luận ban đầu của bạn. Cuộc tranh luận là chuỗi trao đổi liên tục, không phải hai bài độc lập.</div>
+          <div class="framework-cell"><strong>Presumption</strong>Trong trường hợp hai bên hòa đồng đều, ban giám khảo thường ủng hộ bên Đối lập vì "hiện trạng" (status quo) được mặc định là tốt hơn nếu Chính phủ không chứng minh được sự cần thiết phải thay đổi.</div>
         </div>
       </div>
-      <p>Nguyên tắc quan trọng: <em>Người đưa ra tuyên bố phải chứng minh tuyên bố đó</em> (He who asserts must prove). Nếu bạn nói "AI sẽ gây ra thất nghiệp hàng loạt," bạn phải cung cấp lý lẽ và bằng chứng — đối thủ không có nghĩa vụ chứng minh điều ngược lại cho đến khi bạn làm như vậy.</p>
+      <p>Nguyên tắc nền tảng: <em>Người đưa ra tuyên bố phải chứng minh tuyên bố đó</em>. Nếu bạn nói "AI sẽ thay thế 40% lực lượng lao động trong 10 năm tới," bạn phải cung cấp bằng chứng — đối thủ không có nghĩa vụ chứng minh điều ngược lại cho đến khi bạn hoàn thành nghĩa vụ của mình trước.</p>
 
-      <div class="chapter-title">1.3 Logic Hình Thức và Lập Luận Hợp Lệ</div>
-      <p>Logic hình thức là nền tảng của mọi lập luận tốt. Có hai cấu trúc logic chính mà người tranh luận cần nắm vững:</p>
-      <div class="section-title">Diễn dịch (Deductive Reasoning)</div>
-      <p>Lập luận diễn dịch đi từ tiền đề chung đến kết luận cụ thể. Nếu tiền đề là đúng và cấu trúc logic hợp lệ, kết luận tất yếu phải đúng. Ví dụ kinh điển là tam đoạn luận (syllogism): <em>Mọi công nghệ có thể bị lạm dụng (P1); AI là công nghệ (P2); Vậy AI có thể bị lạm dụng (C).</em></p>
-      <div class="section-title">Quy nạp (Inductive Reasoning)</div>
-      <p>Lập luận quy nạp đi từ các trường hợp cụ thể đến kết luận chung. Không giống diễn dịch, kết luận quy nạp chỉ có xác suất đúng, không tất yếu đúng. Ví dụ: <em>Các hệ thống AI nhận diện khuôn mặt ở Trung Quốc, Nga và Mỹ đều đã có vi phạm quyền riêng tư → Vậy AI nhận diện khuôn mặt có xu hướng gây nguy hại cho quyền riêng tư.</em></p>
+      <div class="chapter-title">1.3 Logic Hình Thức và Các Loại Lập Luận</div>
+      <p>Logic hình thức là nền tảng của mọi lập luận tốt. Người tranh luận cần thành thạo hai cấu trúc chính:</p>
+      <div class="section-title">Diễn Dịch (Deductive Reasoning)</div>
+      <p>Lập luận diễn dịch đi từ tiền đề chung đến kết luận cụ thể. Nếu tiền đề đúng và cấu trúc logic hợp lệ, kết luận tất yếu phải đúng — không có ngoại lệ. Dạng chuẩn là tam đoạn luận (syllogism): <em>Tiền đề 1 (P1): Mọi hệ thống có thể tối ưu hóa sai mục tiêu đều gây rủi ro khi được trao quyền lực lớn. Tiền đề 2 (P2): Các mô hình AI language lớn hiện tại có thể tối ưu hóa sai mục tiêu (reward hacking). Kết luận (C): Các mô hình AI language lớn gây rủi ro khi được trao quyền lực lớn.</em></p>
+      <p>Khi tấn công một lập luận diễn dịch, bạn có hai hướng: (1) chứng minh một tiền đề sai, hoặc (2) chứng minh cấu trúc logic không hợp lệ ngay cả khi tiền đề đúng. Lỗi thứ hai gọi là <em>non sequitur</em> — kết luận không theo sau tiền đề.</p>
+      <div class="section-title">Quy Nạp (Inductive Reasoning)</div>
+      <p>Lập luận quy nạp đi từ các trường hợp cụ thể đến kết luận chung. Không giống diễn dịch, kết luận quy nạp chỉ có xác suất đúng, không tất yếu đúng. Ví dụ: <em>Các hệ thống AI nhận diện khuôn mặt được triển khai ở Mỹ (Amazon Rekognition), EU (Clearview AI), và Trung Quốc đều đã có vi phạm quyền riêng tư nghiêm trọng → Có xu hướng hệ thống rằng công nghệ nhận diện khuôn mặt AI gây nguy hại cho quyền riêng tư khi thiếu quy định.</em> Sức mạnh của lập luận quy nạp phụ thuộc vào số lượng, chất lượng, và tính đại diện của các trường hợp được dẫn chiếu.</p>
+      <div class="section-title">Lập Luận Quy Nạp Ngược (Abductive Reasoning)</div>
+      <p>Abductive reasoning — hay "inference to the best explanation" — suy ra giải thích có xác suất cao nhất cho một tập dữ liệu quan sát được. Đây thường là dạng lập luận được sử dụng trong tranh luận chính sách AI: <em>"Quan sát: các mô hình ngôn ngữ lớn liên tục vi phạm an toàn khi được người dùng có ác ý khai thác. Giải thích tốt nhất: Kiến trúc RLHF hiện tại chưa đủ robust để ngăn chặn jailbreaking có hệ thống. Hàm ý chính sách: Cần yêu cầu kiểm tra an ninh độc lập trước khi triển khai."</em></p>
       <div class="callout callout-gold">
-        <div class="callout-label">Lưu Ý Quan Trọng</div>
-        <p>Một lập luận có thể <strong>hợp lệ về mặt hình thức</strong> (cấu trúc đúng) nhưng <strong>sai về mặt thực tế</strong> (tiền đề sai). Người tranh luận giỏi phải tấn công cả hai chiều: tấn công cấu trúc logic VÀ tính xác thực của tiền đề.</p>
+        <div class="callout-label">Lỗi Logic Quan Trọng Nhất</div>
+        <p>Một lập luận có thể <strong>hợp lệ về hình thức</strong> (cấu trúc logic đúng) nhưng <strong>không đúng về nội dung</strong> (tiền đề sai). Người tranh luận giỏi phải tấn công cả hai chiều: tấn công tính hợp lệ của cấu trúc VÀ tính xác thực của tiền đề. Tấn công vào tiền đề thường mạnh hơn vì nó phá vỡ toàn bộ lập luận ngay từ nền tảng.</p>
       </div>
 
       <div class="chapter-title">1.4 Cấu Trúc Bài Tranh Luận (Case Structure)</div>
-      <p>Một bài tranh luận được tổ chức tốt bao gồm các thành phần sau, theo thứ tự:</p>
+      <p>Một bài tranh luận có cấu trúc chuyên nghiệp gồm các thành phần sau, theo thứ tự được cân nhắc kỹ lưỡng:</p>
       <ul class="content-list">
-        <li><strong>Định nghĩa (Definitions):</strong> Làm rõ các thuật ngữ trọng yếu trong nghị đề. Ai là "chính phủ"? "AI rủi ro cao" bao gồm những gì? Bên đưa ra định nghĩa chiếm lợi thế lớn vì họ kiểm soát phạm vi tranh luận.</li>
-        <li><strong>Tuyên bố lập trường (Model/Stance):</strong> Mô tả ngắn gọn những gì bên bạn đề xuất hoặc phản đối, và theo cơ chế nào.</li>
-        <li><strong>Các luận điểm (Arguments):</strong> Thường từ 2–3 luận điểm chính, mỗi luận điểm được xây dựng theo cấu trúc AREI (xem Mô-đun II).</li>
-        <li><strong>Tóm tắt (Summary):</strong> Khẳng định lại lập trường và lý do tại sao bên bạn đã thắng cuộc tranh luận.</li>
+        <li><strong>Định nghĩa (Definitions):</strong> Làm rõ các thuật ngữ trọng yếu trong nghị đề. Định nghĩa không được tùy tiện — chúng phải có cơ sở từ tài liệu học thuật, pháp lý, hoặc thực tiễn ngành. Bên đưa ra định nghĩa chiếm lợi thế chiến lược vì họ kiểm soát phạm vi tranh luận. Định nghĩa quá rộng ("AI là bất kỳ thuật toán nào") hoặc quá hẹp ("AI chỉ là AGI") đều có thể bị thách thức.</li>
+        <li><strong>Tuyên bố lập trường / Mô hình (Model/Stance):</strong> Mô tả ngắn gọn những gì bên bạn đề xuất hoặc phản đối, và theo cơ chế nào. Với bên Chính phủ, đây là phần mô tả chính sách cụ thể — ai làm gì, theo cơ chế nào, ai chịu chi phí. Với bên Đối lập, đây là tuyên bố về lý do hiện trạng tốt hơn hoặc phương án thay thế của họ.</li>
+        <li><strong>Phân chia luận điểm (Split):</strong> Trong các thể thức hai người tranh luận cùng đội, cần phân công rõ ràng người nào trình bày luận điểm nào để tránh trùng lặp. Sự phân công rõ ràng cho thấy chuẩn bị chuyên nghiệp.</li>
+        <li><strong>Các luận điểm (Arguments):</strong> Thường 2–3 luận điểm chính, mỗi luận điểm theo cấu trúc AREI (xem Mô-đun II). Ít hơn 2 luận điểm thường không đủ để thực hiện gánh nặng chứng minh. Hơn 3 luận điểm thường dẫn đến nông cạn — không đủ độ sâu cho từng điểm.</li>
+        <li><strong>Phản biện (Rebuttals):</strong> Tùy thuộc vào vị trí và thể thức, phần phản biện có thể ở đầu hoặc giữa bài. Người tranh luận chuyên nghiệp không để toàn bộ phần phản biện đến cuối bài vì điều đó làm giảm thời gian họ có thể tấn công lập luận của đối thủ.</li>
+        <li><strong>Tóm tắt và Summary (Summary):</strong> Không phải lặp lại toàn bộ bài — mà là phân tích bức tranh tổng thể của cuộc tranh luận: điểm clash chính là gì, tại sao bên bạn đã giải quyết chúng tốt hơn, và tại sao giám khảo nên bỏ phiếu cho bên bạn.</li>
       </ul>
 
-      <div class="chapter-title">1.5 Fiat — Quyền Tạo Chính Sách</div>
-      <p>Fiat là một quy ước độc đáo của tranh luận cạnh tranh. Theo nguyên tắc này, bên Chính phủ được giả định rằng chính sách họ đề xuất <em>sẽ được thực thi</em> nếu họ thắng tranh luận. Điều này có nghĩa là các lập luận như "chính phủ không bao giờ thực sự làm điều này" hay "chính trị gia sẽ không ủng hộ" không phải là phản biện hợp lệ.</p>
-      <p>Fiat tồn tại để buộc tranh luận tập trung vào <em>giá trị thực chất</em> của một chính sách, không phải tính khả thi chính trị của nó. Câu hỏi phù hợp là: "Nếu chính sách này được thực thi, nó có tốt không?" — không phải "Liệu nó có được thông qua không?"</p>
-
-      <div class="chapter-title">1.6 Framing — Khung Lập Luận</div>
-      <p>Framing là việc xác định <em>tiêu chí đánh giá</em> mà theo đó cuộc tranh luận nên được phán quyết. Bên nào thiết lập được khung đánh giá hiệu quả hơn thường có lợi thế chiến lược lớn. Ví dụ, trong một tranh luận về AI và việc làm, bên Chính phủ có thể đặt khung: <em>"Hãy đánh giá chính sách này dựa trên phúc lợi kinh tế tổng thể dài hạn."</em> Nếu bên Đối lập chấp nhận khung này, họ đã bị đặt vào thế bất lợi vì phải chứng minh rằng ngắn hạn quan trọng hơn dài hạn.</p>
-      <div class="callout callout-teal">
-        <div class="callout-label">Chiến Lược</div>
-        <p>Luôn <strong>đặt khung sớm</strong> (trong phần mở đầu) và <strong>bảo vệ khung của bạn</strong> khi đối thủ cố thay thế nó. Nếu bạn không kiểm soát tiêu chí đánh giá, bạn đang chơi trên sân của đối thủ.</p>
+      <div class="chapter-title">1.5 Fiat — Quyền Tạo Chính Sách (The Fiat Convention)</div>
+      <p>Fiat là một quy ước kỹ thuật độc đáo của tranh luận cạnh tranh. Theo nguyên tắc này, bên Chính phủ được giả định rằng chính sách họ đề xuất <em>sẽ được thực thi đúng như được mô tả</em> nếu họ thắng cuộc tranh luận. Fiat loại trừ các phản biện về tính khả thi chính trị như "quốc hội không bao giờ thông qua điều này" hay "chính trị gia không có ý chí làm vậy."</p>
+      <p>Fiat tồn tại vì một lý do quan trọng: nếu không có nó, mọi cuộc tranh luận về cải cách chính sách đều trở thành cuộc tranh luận về chính trị học và tâm lý học chính trị, không phải về giá trị thực chất của chính sách. Fiat buộc cuộc tranh luận tập trung vào câu hỏi căn bản: <em>"Nếu chính sách này được thực thi, kết quả có tốt không?"</em></p>
+      <div class="callout callout-coral">
+        <div class="callout-label">Giới Hạn của Fiat</div>
+        <p>Fiat không bao gồm các hậu quả thực tế của chính sách. Ví dụ: nếu Chính phủ đề xuất "cấm AI tổng quát," fiat giả định rằng lệnh cấm được ban hành — nhưng Đối lập vẫn có thể lập luận rằng lệnh cấm đó sẽ <em>trên thực tế</em> bị vi phạm, đẩy phát triển AI vào bóng tối, hoặc tạo ra thị trường chợ đen. Đây là những hậu quả thực tế, không phải tính khả thi chính trị.</p>
       </div>
+
+      <div class="chapter-title">1.6 Framing — Kiểm Soát Tiêu Chí Đánh Giá</div>
+      <p>Framing là việc xác định <em>bộ tiêu chí</em> mà cuộc tranh luận nên được phán quyết. Đây là một trong những kỹ năng chiến lược quan trọng nhất — bên nào kiểm soát được khung đánh giá thường có lợi thế đáng kể, bất kể sức mạnh của các lập luận cụ thể.</p>
+      <p>Ví dụ trong nghị đề về quy định AI: Bên Chính phủ có thể đặt khung <em>"Hãy đánh giá chính sách này dựa trên phúc lợi dài hạn của nhân loại, bao gồm cả các thế hệ tương lai"</em>. Nếu bên Đối lập chấp nhận khung này, họ phải lập luận trên địa hình của Chính phủ. Thay vào đó, Đối lập nên đặt lại khung: <em>"Tiêu chí đúng đắn là quyền tự do hiện tại của các cá nhân sống hôm nay, không phải các rủi ro suy đoán về tương lai."</em></p>
+      <div class="callout callout-teal">
+        <div class="callout-label">Chiến Lược Framing Hiệu Quả</div>
+        <p>Đặt khung sớm trong bài phát biểu đầu tiên và bảo vệ khung đó nhất quán. Khi đối thủ cố thay thế khung của bạn, hãy <strong>nhận diện và phản biện việc thay đổi khung đó một cách tường minh</strong>: "Đối thủ đang cố chuyển tiêu chí đánh giá từ X sang Y — đây là sự né tránh vì tiêu chí X mới là phù hợp với nghị đề vì lý do sau..."</p>
+      </div>
+
+      <div class="chapter-title">1.7 Comparative Advantage — Thế Giới Có / Không Có Chính Sách</div>
+      <p>Trong tranh luận chính sách, phán quyết không được đưa ra trên cơ sở "chính sách có hoàn hảo không?" mà trên cơ sở "thế giới có chính sách này có tốt hơn thế giới không có nó không?" Đây gọi là phân tích comparative advantage (lợi thế tương đối).</p>
+      <p>Hàm ý cho người tranh luận: Bên Đối lập không thể chỉ chỉ ra khuyết điểm của chính sách Chính phủ — họ phải chứng minh rằng những khuyết điểm đó đủ lớn để khiến chính sách <em>tồi hơn</em> hiện trạng, hoặc cung cấp một phương án thay thế tốt hơn. Tương tự, Chính phủ không cần chứng minh chính sách của họ hoàn hảo — chỉ cần tốt hơn những gì chúng ta có bây giờ.</p>
     `
   },
   {
     num: "Mô-đun II",
     title: "Xây Dựng Lập Luận — Cấu Trúc AREI",
-    desc: "Phương pháp xây dựng luận điểm hoàn chỉnh theo Assertion, Reasoning, Evidence, Impact.",
+    desc: "Phương pháp xây dựng luận điểm hoàn chỉnh theo Assertion, Reasoning, Evidence, Impact. Các lỗi thường gặp và chiến lược nâng cao.",
     badge: "badge-gold",
     content: `
-      <div class="chapter-title">2.1 Tổng Quan về Cấu Trúc AREI</div>
-      <p>Cấu trúc AREI (đôi khi gọi là AREL hoặc PEEL trong các hệ thống khác) là phương pháp tiêu chuẩn để xây dựng một luận điểm hoàn chỉnh trong tranh luận học thuật và cạnh tranh. Bốn thành phần — Assertion (Khẳng định), Reasoning (Lý luận), Evidence (Bằng chứng), và Impact (Tác động) — tạo thành một đơn vị lập luận khép kín, tự chứng minh và có sức nặng tối đa.</p>
-      <p>Một luận điểm thiếu bất kỳ thành phần nào đều dễ bị tấn công. Người tranh luận giỏi nhận biết ngay "khoảng trống AREI" của đối thủ và khai thác chúng.</p>
-
+      <div class="chapter-title">2.1 Tổng Quan về AREI và Vai Trò của Nó</div>
+      <p>Cấu trúc AREI (Assertion – Reasoning – Evidence – Impact) là phương pháp chuẩn để xây dựng một luận điểm hoàn chỉnh trong tranh luận học thuật và cạnh tranh. Bốn thành phần này tạo thành một đơn vị lập luận tự khép kín: mỗi phần phục vụ một chức năng nhận thức cụ thể, và việc thiếu bất kỳ thành phần nào đều tạo ra "lỗ hổng lập luận" mà đối thủ có thể khai thác.</p>
+      <p>Một luận điểm thiếu Reasoning là tuyên bố trần trụi — không giải thích cơ chế nhân quả. Một luận điểm thiếu Evidence là lý thuyết không có kiểm chứng thực tế. Một luận điểm thiếu Impact là bằng chứng thú vị nhưng không liên quan đến cuộc tranh luận. Người tranh luận giỏi nhận biết ngay các khoảng trống này và tấn công vào đó.</p>
       <div class="framework-box">
-        <div class="framework-title">Cấu Trúc AREI — Tổng Quan</div>
+        <div class="framework-title">Cấu Trúc AREI — Tổng Quan Chức Năng</div>
         <div class="framework-row">
-          <div class="framework-cell"><strong>A — Assertion</strong>Khẳng định: Tuyên bố trực tiếp, rõ ràng về điều bạn muốn chứng minh</div>
-          <div class="framework-cell"><strong>R — Reasoning</strong>Lý luận: Giải thích cơ chế nhân quả tại sao tuyên bố đó đúng</div>
-          <div class="framework-cell"><strong>E — Evidence</strong>Bằng chứng: Dữ liệu, nghiên cứu, thống kê, ví dụ thực tế hỗ trợ</div>
-          <div class="framework-cell"><strong>I — Impact</strong>Tác động: Hậu quả nếu tuyên bố đúng — tại sao điều này quan trọng với cuộc tranh luận</div>
+          <div class="framework-cell"><strong>A — Assertion</strong>Tuyên bố trực tiếp, có thể tranh luận, về điều bạn muốn chứng minh. Trả lời: "Bạn đang tuyên bố điều gì?"</div>
+          <div class="framework-cell"><strong>R — Reasoning</strong>Giải thích cơ chế nhân quả tại sao Assertion đúng. Trả lời: "Tại sao điều đó xảy ra? Theo cơ chế nào?"</div>
+          <div class="framework-cell"><strong>E — Evidence</strong>Dữ liệu, nghiên cứu, thống kê, hoặc ví dụ thực tế hỗ trợ. Trả lời: "Bằng chứng thực tế nào xác nhận điều này?"</div>
+          <div class="framework-cell"><strong>I — Impact</strong>Hậu quả nếu Assertion đúng — tại sao điều này quan trọng với toàn bộ cuộc tranh luận. Trả lời: "Tại sao giám khảo nên quan tâm đến điều này?"</div>
         </div>
       </div>
 
       <div class="chapter-title">2.2 Assertion — Khẳng Định</div>
-      <p>Assertion là câu tuyên bố cốt lõi của luận điểm. Nó phải thỏa mãn ba tiêu chí: <strong>rõ ràng</strong> (không mơ hồ), <strong>tranh luận được</strong> (có thể bị phản biện — không phải sự thật hiển nhiên), và <strong>liên quan</strong> đến nghị đề.</p>
+      <p>Assertion là câu tuyên bố cốt lõi của luận điểm. Nó phải thỏa mãn ba tiêu chí: <strong>rõ ràng</strong> (không mơ hồ, không thể bị diễn giải theo nhiều cách), <strong>có thể tranh luận</strong> (một sự thật hiển nhiên không cần tranh luận), và <strong>liên quan trực tiếp</strong> đến nghị đề.</p>
       <div class="example-block">
-        <em>Assertion yếu:</em> "AI có tác động đến xã hội." (Quá mơ hồ, không tranh luận được)<br><br>
-        <em>Assertion mạnh:</em> "Việc triển khai AI thiếu giám sát trong hệ thống tuyển dụng khuếch đại phân biệt đối xử có hệ thống đối với các nhóm thiểu số."
+        <em>Assertion yếu:</em> "AI có tác động lớn đến xã hội." (Quá mơ hồ, không tranh luận được — không ai phủ nhận điều này)<br><br>
+        <em>Assertion yếu:</em> "AI đang phát triển rất nhanh chóng." (Sự kiện không tranh luận, không kết nối với luận điểm chính sách)<br><br>
+        <em>Assertion mạnh:</em> "Việc triển khai thuật toán AI không được kiểm toán trong hệ thống tín dụng và tuyển dụng tạo ra sự phân biệt đối xử có hệ thống đối với các cộng đồng thiểu số, trầm trọng hơn các bất bình đẳng hiện có."
       </div>
-      <p>Lưu ý: Assertion không giải thích <em>tại sao</em> — đó là nhiệm vụ của Reasoning. Assertion chỉ tuyên bố <em>điều gì</em>.</p>
+      <p>Lưu ý quan trọng: Assertion không giải thích <em>tại sao</em> — đó là nhiệm vụ của Reasoning. Assertion chỉ nêu <em>điều gì</em> bạn tuyên bố. Nếu bạn nhận thấy mình đang giải thích nguyên nhân trong phần Assertion, hãy chuyển phần đó sang Reasoning.</p>
 
       <div class="chapter-title">2.3 Reasoning — Lý Luận</div>
-      <p>Reasoning là xương sống của luận điểm — đây là nơi người tranh luận giải thích cơ chế nhân quả kết nối Assertion với thực tế. Reasoning tốt trả lời câu hỏi: <em>"Tại sao điều này xảy ra? Theo cơ chế nào?"</em></p>
-      <p>Có hai loại reasoning phổ biến:</p>
+      <p>Reasoning là xương sống của luận điểm — phần giải thích cơ chế nhân quả kết nối Assertion với thực tế. Đây thường là phần bị bỏ qua nhiều nhất và cũng là phần phân biệt rõ nhất người tranh luận giỏi với người tranh luận trung bình. Reasoning tốt trả lời: <em>"Tại sao điều này xảy ra? Theo cơ chế cụ thể nào?"</em></p>
+      <div class="section-title">Các Loại Reasoning</div>
       <ul class="content-list">
-        <li><strong>Reasoning nhân quả:</strong> "X gây ra Y vì cơ chế Z." Ví dụ: Thuật toán tuyển dụng AI được huấn luyện trên dữ liệu lịch sử vốn đã có thiên kiến → dữ liệu đó phản ánh các quyết định tuyển dụng phân biệt đối xử trong quá khứ → thuật toán học và tái tạo những thiên kiến đó ở quy mô lớn hơn.</li>
-        <li><strong>Reasoning so sánh:</strong> "Phương án A tốt hơn phương án B vì tiêu chí C." Thường dùng khi tranh luận về chính sách.</li>
+        <li><strong>Reasoning nhân quả:</strong> Giải thích chuỗi nhân quả từ nguyên nhân đến kết quả. Ví dụ: <em>Thuật toán tín dụng được huấn luyện trên dữ liệu lịch sử [Nguyên nhân 1] → Dữ liệu lịch sử phản ánh các quyết định cho vay phân biệt đối xử trong quá khứ (redlining, thiên kiến của người duyệt hồ sơ) [Nguyên nhân 2] → Thuật toán học các mẫu phân biệt đối xử này và tái tạo chúng tự động, ở quy mô hàng triệu quyết định mỗi năm, không có sự kiểm tra của con người trong từng trường hợp [Cơ chế] → Sự phân biệt đối xử được thể chế hóa và khuếch đại.</em></li>
+        <li><strong>Reasoning so sánh:</strong> Chứng minh phương án A tốt hơn phương án B theo tiêu chí cụ thể. Thường được dùng trong tranh luận chính sách khi so sánh với hiện trạng hoặc phương án thay thế của đối thủ.</li>
+        <li><strong>Reasoning nguyên tắc:</strong> Lập luận rằng hành động X vi phạm một nguyên tắc đạo đức, pháp lý, hoặc chính trị được chấp nhận rộng rãi. Ví dụ: <em>Các quyết định ảnh hưởng đến quyền lợi của cá nhân phải có thể giải thích được (explainability requirement) — đây là nguyên tắc đã được GDPR và EU AI Act mã hóa.</em></li>
       </ul>
       <div class="callout callout-coral">
-        <div class="callout-label">Lỗi Thường Gặp</div>
-        <p>Nhiều người mới nhầm lẫn Reasoning với Evidence. Reasoning là <strong>giải thích cơ chế</strong> (lý thuyết), trong khi Evidence là <strong>bằng chứng thực tế</strong>. Một luận điểm hoàn chỉnh cần cả hai.</p>
+        <div class="callout-label">Lỗi Thường Gặp: Nhầm Reasoning với Evidence</div>
+        <p>Reasoning là <strong>giải thích cơ chế</strong> (lý thuyết về cách thế giới vận hành). Evidence là <strong>bằng chứng thực tế</strong> (dữ liệu, nghiên cứu, trường hợp). Một luận điểm hoàn chỉnh cần cả hai. Ví dụ: "Nghiên cứu MIT 2019 cho thấy sai số 34% đối với phụ nữ da đen" là Evidence — không phải Reasoning về <em>tại sao</em> sai số đó tồn tại.</p>
       </div>
 
       <div class="chapter-title">2.4 Evidence — Bằng Chứng</div>
-      <p>Bằng chứng là thành phần kiểm nghiệm thực tế của luận điểm. Bằng chứng mạnh không chỉ hỗ trợ assertion mà còn làm cho reasoning trở nên đáng tin cậy hơn.</p>
-      <div class="section-title">Phân Loại Bằng Chứng theo Sức Nặng</div>
+      <p>Bằng chứng là thành phần kiểm nghiệm thực tế của luận điểm — nó cho thấy Reasoning của bạn không chỉ là lý thuyết mà có sự hỗ trợ từ thực tế quan sát được. Trong tranh luận AI, chất lượng bằng chứng đặc biệt quan trọng vì lĩnh vực này phát triển rất nhanh và nhiều tuyên bố dễ trở nên lỗi thời.</p>
+      <div class="section-title">Phân Loại Bằng Chứng theo Độ Tin Cậy</div>
       <table>
-        <thead><tr><th>Loại</th><th>Ví dụ</th><th>Sức nặng</th></tr></thead>
+        <thead><tr><th>Loại Bằng Chứng</th><th>Ví Dụ Cụ Thể</th><th>Độ Tin Cậy</th><th>Lưu Ý Khi Sử Dụng</th></tr></thead>
         <tbody>
-          <tr><td>Nghiên cứu khoa học peer-reviewed</td><td>Nghiên cứu của MIT về thiên kiến AI trong tuyển dụng (2019)</td><td>Rất cao</td></tr>
-          <tr><td>Dữ liệu thống kê từ tổ chức uy tín</td><td>Báo cáo ILO về tác động AI đến việc làm 2023</td><td>Cao</td></tr>
-          <tr><td>Trường hợp thực tế (case study)</td><td>Amazon dừng công cụ tuyển dụng AI vì phân biệt giới tính</td><td>Trung bình-Cao</td></tr>
-          <tr><td>Tuyên bố của chuyên gia</td><td>Báo cáo của Ủy ban AI Quốc gia Mỹ</td><td>Trung bình</td></tr>
-          <tr><td>Ví dụ minh họa</td><td>Kịch bản giả định</td><td>Thấp</td></tr>
+          <tr><td>Nghiên cứu khoa học peer-reviewed</td><td>Buolamwini & Gebru (2018) "Gender Shades" — MIT Media Lab</td><td>Rất cao</td><td>Trích dẫn tên tác giả và năm nếu có thể; kiểm tra xem nghiên cứu đã được tái tạo chưa</td></tr>
+          <tr><td>Báo cáo tổ chức quốc tế uy tín</td><td>ILO "Generative AI and Jobs" 2023; WEF Future of Jobs 2023</td><td>Cao</td><td>Phân biệt dự báo (projections) với dữ liệu thực tế — dự báo có thể tranh luận được</td></tr>
+          <tr><td>Dữ liệu chính phủ / cơ quan quản lý</td><td>FTC báo cáo về AI và bảo vệ người tiêu dùng; NIST AI RMF</td><td>Cao</td><td>Thường đáng tin nhất cho dữ liệu thực tế; ít bị bias nghiên cứu hơn</td></tr>
+          <tr><td>Trường hợp thực tế (Case studies)</td><td>Amazon dừng AI tuyển dụng 2018; COMPAS recidivism algorithm</td><td>Trung bình-Cao</td><td>Một trường hợp không chứng minh xu hướng; cần kết hợp với dữ liệu hệ thống hơn</td></tr>
+          <tr><td>Tuyên bố chuyên gia cụ thể</td><td>Báo cáo AI Safety của Yoshua Bengio, Geoffrey Hinton</td><td>Trung bình</td><td>Không phải mọi chuyên gia đều nhất trí; cần chú ý đồng thuận khoa học vs. quan điểm cá nhân</td></tr>
+          <tr><td>Ví dụ minh họa hoặc phép loại suy</td><td>"Giống như quy định hạt nhân đã thành công..."</td><td>Thấp (hỗ trợ)</td><td>Chỉ dùng để minh họa, không bao giờ là bằng chứng chính; mọi phép loại suy đều có giới hạn</td></tr>
         </tbody>
       </table>
-      <p>Trong tranh luận thi đấu, bạn cần ghi nhớ các dữ liệu quan trọng và có khả năng trích dẫn chúng một cách chính xác dưới áp lực. Xây dựng một "ngân hàng bằng chứng" về các chủ đề AI trọng yếu là bước chuẩn bị không thể thiếu.</p>
+      <p>Trong tranh luận thi đấu, bạn cần <strong>ghi nhớ dữ liệu trọng yếu</strong> và có khả năng trích dẫn chúng dưới áp lực thời gian thực. Không cần nhớ chính xác mọi con số — nhưng cần đủ chính xác để tuyên bố không bị tấn công hiệu quả. Xây dựng "ngân hàng bằng chứng" cá nhân (xem Mô-đun VIII) là kỹ năng chuẩn bị thiết yếu.</p>
 
-      <div class="chapter-title">2.5 Impact — Tác Động</div>
-      <p>Impact là thành phần kết nối luận điểm của bạn với toàn bộ cuộc tranh luận. Nó trả lời câu hỏi: <em>"Tại sao điều này quan trọng? Tại sao giám khảo nên quan tâm?"</em></p>
-      <p>Impact hiệu quả được phân tích theo ba chiều:</p>
+      <div class="chapter-title">2.5 Impact — Tác Động và Weighing</div>
+      <p>Impact là thành phần kết nối luận điểm với toàn bộ cuộc tranh luận. Nó trả lời câu hỏi: <em>"Nếu Assertion của tôi đúng, điều đó có nghĩa gì? Tại sao giám khảo nên quan tâm?"</em> Một luận điểm không có Impact là một quan sát thú vị — không phải là vũ khí tranh luận.</p>
+      <p>Impact phân tích hiệu quả theo ba trục:</p>
       <ul class="content-list">
-        <li><strong>Magnitude (Quy mô):</strong> Hậu quả ảnh hưởng đến bao nhiêu người? Nghiêm trọng đến mức nào? Ví dụ: "Điều này ảnh hưởng đến 70% lực lượng lao động toàn cầu."</li>
-        <li><strong>Probability (Xác suất):</strong> Khả năng hậu quả này xảy ra là bao nhiêu? Dẫn chứng bằng dự báo của chuyên gia hoặc xu hướng hiện tại.</li>
-        <li><strong>Reversibility (Khả năng đảo ngược):</strong> Hậu quả có thể sửa chữa không? Hậu quả không thể đảo ngược được coi trọng hơn nhiều trong phán quyết.</li>
+        <li><strong>Magnitude (Quy mô):</strong> Hậu quả ảnh hưởng đến bao nhiêu người? Nghiêm trọng đến mức nào? "Điều này ảnh hưởng đến hơn 2 tỷ lao động toàn cầu có nguy cơ bị thay thế bởi tự động hóa AI theo ước tính của ILO" mạnh hơn "nhiều người sẽ bị ảnh hưởng."</li>
+        <li><strong>Probability (Xác suất):</strong> Khả năng hậu quả này xảy ra là bao nhiêu? Dẫn chứng bằng xu hướng thực tế, dự báo chuyên gia, hoặc tiền lệ lịch sử tương tự. Tránh tuyên bố chắc chắn tuyệt đối khi không có cơ sở.</li>
+        <li><strong>Reversibility (Khả năng đảo ngược):</strong> Nếu hậu quả xảy ra, có thể sửa chữa không? Hậu quả không thể đảo ngược (irreversible) được coi trọng hơn đáng kể trong đánh giá của giám khảo. Điều này đặc biệt quan trọng trong tranh luận về rủi ro hiện hữu AI.</li>
       </ul>
       <div class="example-block">
-        <em>Ví dụ AREI hoàn chỉnh về AI và thiên kiến:</em><br><br>
-        <em>A:</em> Các hệ thống AI trong tuyển dụng khuếch đại phân biệt đối xử chủng tộc và giới tính có hệ thống.<br>
-        <em>R:</em> Thuật toán học máy học từ dữ liệu lịch sử vốn phản ánh các thiên kiến trong quyết định tuyển dụng của con người. Khi được triển khai ở quy mô lớn, thiên kiến này được tự động hóa và nhân rộng mà không có sự kiểm soát của con người trong từng quyết định.<br>
-        <em>E:</em> Nghiên cứu của MIT (2019) cho thấy phần mềm nhận diện khuôn mặt của các công ty lớn có tỷ lệ lỗi cao hơn 34% đối với phụ nữ da đen so với đàn ông da trắng. Amazon đã dừng hệ thống tuyển dụng AI nội bộ năm 2018 sau khi phát hiện nó phân biệt đối xử với hồ sơ của phụ nữ.<br>
-        <em>I:</em> Điều này có tác động trực tiếp đến quyền kinh tế của hàng triệu người. Bất bình đẳng được duy trì và khuếch đại bởi công nghệ là không thể chấp nhận được trong xã hội dân chủ, và nếu không được kiểm soát, sẽ tạo ra sự phân tầng xã hội không thể đảo ngược dựa trên chủng tộc và giới tính.
+        <em>Ví dụ AREI hoàn chỉnh — Thiên Kiến AI trong Hệ Thống Tư Pháp Hình Sự:</em><br><br>
+        <em>A (Assertion):</em> Các công cụ đánh giá rủi ro tái phạm tội dựa trên AI được sử dụng trong hệ thống tư pháp Mỹ phân biệt đối xử theo chủng tộc theo cách vi phạm các nguyên tắc due process (quy trình tố tụng công bằng).<br><br>
+        <em>R (Reasoning):</em> Các công cụ này, như COMPAS, sử dụng các yếu tố như mã bưu chính, lịch sử gia đình với tư pháp hình sự, và trình độ học vấn — tất cả đều tương quan cao với chủng tộc do lịch sử phân biệt đối xử có hệ thống. Thuật toán không trực tiếp sử dụng chủng tộc làm biến số, nhưng "proxy variables" này tạo ra tác động tương đương. Vì hộp đen tính toán không thể kiểm tra, bị cáo không thể thách thức phương pháp đánh giá.<br><br>
+        <em>E (Evidence):</em> Nghiên cứu ProPublica 2016 phân tích 7.000 bị cáo tại Florida cho thấy COMPAS dự đoán sai tỷ lệ tái phạm cao gấp đôi đối với người Mỹ gốc Phi (45% so với 24% đối với người da trắng). Năm 2021, ban giám khảo tại Wisconsin trong vụ State v. Loomis đã lập luận rằng sử dụng điểm COMPAS không vi phạm due process — nhưng quyết định này vẫn còn gây tranh cãi trong giới pháp lý.<br><br>
+        <em>I (Impact):</em> Thiên kiến được mã hóa trong thuật toán tư pháp không chỉ ảnh hưởng đến các cá nhân trong một phán quyết — nó lan truyền qua toàn bộ hệ thống tư pháp, tạo ra vòng lặp tự củng cố bất bình đẳng. Không giống thiên kiến của thẩm phán con người có thể được thách thức qua kháng cáo, thiên kiến thuật toán bị che giấu sau tính bí mật thương mại, làm cho việc tranh chấp trở nên gần như không thể. Đây là hậu quả không thể đảo ngược đối với những người đã bị kết án nặng hơn vì thiên kiến này.
       </div>
+
+      <div class="chapter-title">2.6 Xây Dựng Lập Luận Chiến Lược (Strategic Argument Construction)</div>
+      <p>Trong một bài tranh luận hoàn chỉnh, bạn không chỉ xây dựng từng luận điểm AREI độc lập mà phải thiết kế <em>danh mục lập luận</em> (argument portfolio) có cấu trúc chiến lược. Một danh mục tốt bao gồm:</p>
+      <ul class="content-list">
+        <li><strong>Luận điểm cấu trúc (Structural argument):</strong> Lập luận về nguyên tắc nền tảng — "Tại sao chúng ta cần phải hành động theo hướng này về mặt nguyên lý." Ví dụ: vấn đề về quyền, trách nhiệm giải trình, hay phân phối rủi ro.</li>
+        <li><strong>Luận điểm thực tế (Empirical argument):</strong> Lập luận dựa trên bằng chứng về những gì xảy ra trong thực tế. Ví dụ: tác động thực tế đã quan sát được của AI trên thị trường lao động hoặc trong hệ thống tư pháp.</li>
+        <li><strong>Luận điểm so sánh (Comparative argument):</strong> Cho thấy phương án của bạn tốt hơn hiện trạng hoặc phương án của đối thủ theo tiêu chí cụ thể.</li>
+      </ul>
+      <p>Ba loại lập luận này bổ sung cho nhau: luận điểm cấu trúc đặt tiêu chí, luận điểm thực tế cung cấp bằng chứng, và luận điểm so sánh khép lại câu hỏi "Vậy chúng ta nên làm gì?" Ba luận điểm cùng loại (tất cả đều là thực tế, tất cả đều là so sánh) thường không đủ để thực hiện gánh nặng chứng minh toàn diện.</p>
     `
   },
   {
     num: "Mô-đun III",
     title: "Phản Biện và Chiến Lược Bác Bỏ",
-    desc: "Phân loại phản biện, nhận diện ngụy biện, phá vỡ liên kết nhân quả và kỹ thuật cân nhắc (weighing).",
+    desc: "Phân loại phản biện, nhận diện ngụy biện, phá vỡ liên kết nhân quả, cân nhắc tác động, và kỹ thuật turning.",
     badge: "badge-teal",
     content: `
       <div class="chapter-title">3.1 Phân Loại Phản Biện (Typology of Refutation)</div>
-      <p>Phản biện (refutation) là hành động bác bỏ hoặc làm suy yếu lập luận của đối thủ. Không phải mọi phản biện đều có giá trị như nhau. Người tranh luận giỏi phân biệt rõ các loại phản biện và sử dụng chúng một cách chiến lược.</p>
+      <p>Phản biện (refutation) là hành động làm suy yếu hoặc phá vỡ lập luận của đối thủ. Không phải mọi phản biện đều có giá trị như nhau — hiệu quả phụ thuộc vào mức độ sâu của cuộc tấn công. Người tranh luận giỏi chọn chiến lược phản biện tối ưu dựa trên điểm yếu thực sự của lập luận đối thủ, không phải dựa trên những gì dễ phản biện nhất.</p>
+      <div class="section-title">Thứ Bậc Phản Biện (Từ Mạnh Nhất đến Yếu Nhất)</div>
       <ul class="content-list">
-        <li><strong>Phản biện trực tiếp (Direct Refutation):</strong> Bác bỏ trực tiếp một trong các thành phần AREI của đối thủ. Đây là hình thức phản biện mạnh nhất. Ví dụ: "Assertion của họ sai vì Evidence của họ lỗi thời — nghiên cứu năm 2023 cho thấy kết quả ngược lại."</li>
-        <li><strong>Phản biện chuyển hướng (Turning):</strong> Chứng minh rằng lập luận của đối thủ thực ra ủng hộ lập trường của bạn. Đây là kỹ thuật nâng cao nhưng rất hiệu quả. Ví dụ: "Họ nói AI tạo việc làm mới — nhưng chính điều này chứng minh cần có quy định để đảm bảo việc làm mới đó công bằng và tiếp cận được với mọi người."</li>
-        <li><strong>Phản biện giảm thiểu (Mitigating):</strong> Không phủ nhận hoàn toàn lập luận của đối thủ nhưng cho thấy tác động của nó ít nghiêm trọng hơn họ tuyên bố. Hữu ích khi không thể bác bỏ hoàn toàn.</li>
-        <li><strong>Phản biện về gánh nặng (Burden Shifting):</strong> Chỉ ra rằng đối thủ chưa đáp ứng gánh nặng chứng minh của họ, do đó lập luận của họ không đủ điều kiện để cần bác bỏ thực chất.</li>
+        <li><strong>Phản biện Reasoning (Link-breaking):</strong> Tấn công cơ chế nhân quả trong Reasoning của đối thủ. Đây là hình thức phản biện mạnh nhất vì nó phá vỡ liên kết giữa tiền đề và kết luận — ngay cả khi tiền đề đúng, kết luận vẫn không theo sau. Ví dụ: "Ngay cả khi chấp nhận rằng AI thay thế việc làm thủ công, điều đó không dẫn đến bất ổn xã hội — lịch sử cho thấy nền kinh tế tạo ra nhiều loại công việc mới tương ứng."</li>
+        <li><strong>Phản biện Evidence:</strong> Bác bỏ tính xác thực, phương pháp, hoặc phạm vi áp dụng của bằng chứng đối thủ. Ví dụ: "Nghiên cứu họ trích dẫn có mẫu quá nhỏ (n=200) để rút ra kết luận hệ thống, và dữ liệu từ năm 2019 không phản ánh khả năng của AI hiện tại."</li>
+        <li><strong>Phản biện Assertion:</strong> Chứng minh trực tiếp rằng tuyên bố của đối thủ sai. Thường yêu cầu bằng chứng phản lại (counter-evidence). Ví dụ: "Họ tuyên bố AI tổng quát sắp đến — nhưng đồng thuận kỹ thuật hiện tại cho rằng AGI thực sự vẫn còn cách chúng ta hàng thập kỷ."</li>
+        <li><strong>Turning (Phản biện chuyển hướng):</strong> Chứng minh lập luận của đối thủ thực ra hỗ trợ lập trường của bạn. Đây là kỹ thuật nâng cao nhưng cực kỳ hiệu quả. Ví dụ: "Họ nói cần nhiều nghiên cứu hơn về rủi ro AI — đây là lý do chúng tôi ủng hộ bắt buộc chia sẻ nghiên cứu an toàn AI."</li>
+        <li><strong>Phản biện Impact (Mitigating):</strong> Không phủ nhận hoàn toàn mà giảm thiểu tầm quan trọng của lập luận đối thủ. Hữu ích khi không thể bác bỏ hoàn toàn: "Ngay cả khi chấp nhận lập luận của họ, tác động ảnh hưởng đến ít hơn 2% lực lượng lao động — con số không đủ để biện hộ cho hạn chế toàn ngành AI."</li>
+        <li><strong>Phản biện gánh nặng (Burden Shifting):</strong> Chỉ ra rằng đối thủ chưa đáp ứng gánh nặng chứng minh của họ. Hiệu quả nhất khi đối thủ đưa ra tuyên bố lớn mà không có bằng chứng xứng đáng.</li>
       </ul>
 
       <div class="chapter-title">3.2 Nhận Diện Ngụy Biện Logic (Logical Fallacies)</div>
-      <p>Ngụy biện là lỗi trong lập luận khiến kết luận không được hỗ trợ đúng cách bởi tiền đề. Nhận diện ngụy biện trong lập luận của đối thủ là kỹ năng phản biện cực kỳ mạnh.</p>
+      <p>Ngụy biện là lỗi trong cấu trúc lập luận khiến kết luận không được hỗ trợ đúng cách bởi tiền đề. Nhận diện và gọi tên ngụy biện một cách chính xác là kỹ năng phản biện có hiệu quả cao — nó phá vỡ uy tín của toàn bộ lập luận đối thủ trong mắt giám khảo.</p>
       <div class="glossary-grid">
-        <div class="glossary-item"><div class="glossary-term">Ad Hominem</div>Tấn công người đưa ra lập luận thay vì tấn công lập luận. Ví dụ: "Ý kiến của anh về AI không đáng tin vì anh không học kỹ thuật."</div>
-        <div class="glossary-item"><div class="glossary-term">Straw Man (Người Rơm)</div>Xuyên tạc lập luận của đối thủ thành phiên bản yếu hơn rồi bác bỏ phiên bản đó. Đây là ngụy biện phổ biến nhất trong tranh luận.</div>
-        <div class="glossary-item"><div class="glossary-term">Slippery Slope (Dốc Đứng)</div>Tuyên bố rằng A sẽ tất yếu dẫn đến B, C, D... mà không chứng minh từng bước nhân quả. Cần phân biệt với dự báo có cơ sở hợp lý.</div>
-        <div class="glossary-item"><div class="glossary-term">False Dichotomy (Ngụy Biện Nhị Phân)</div>Trình bày chỉ hai lựa chọn trong khi thực tế có nhiều hơn. Ví dụ: "Hoặc chúng ta kiểm soát AI hoàn toàn, hoặc AI sẽ diệt vong nhân loại."</div>
-        <div class="glossary-item"><div class="glossary-term">Appeal to Authority</div>Viện dẫn quyền uy mà không kiểm tra lập luận thực chất. Không phải mọi chuyên gia đều nhất trí — trích dẫn đồng thuận khoa học mạnh hơn trích dẫn một cá nhân.</div>
-        <div class="glossary-item"><div class="glossary-term">Post Hoc Ergo Propter Hoc</div>Nhầm tương quan với nhân quả. "Sau khi AI được triển khai, tỷ lệ thất nghiệp tăng → AI gây thất nghiệp" — đây là lập luận không đủ căn cứ.</div>
-        <div class="glossary-item"><div class="glossary-term">Hasty Generalization</div>Rút ra kết luận chung từ quá ít trường hợp cụ thể. Một vụ tai nạn xe tự lái không đủ để kết luận về an toàn của công nghệ.</div>
-        <div class="glossary-item"><div class="glossary-term">Circular Reasoning (Vòng Tròn)</div>Dùng kết luận như tiền đề. Ví dụ: "AI nguy hiểm vì nó gây nguy hiểm."</div>
+        <div class="glossary-item"><div class="glossary-term">Ad Hominem</div>Tấn công người đưa ra lập luận thay vì tấn công bản thân lập luận. Ví dụ AI: "Lập luận của họ về quy định AI không đáng tin vì họ là kỹ sư — họ có lợi ích kinh tế trong việc phản đối quy định."</div>
+        <div class="glossary-item"><div class="glossary-term">Straw Man</div>Xuyên tạc lập luận của đối thủ thành phiên bản yếu hơn rồi bác bỏ phiên bản đó. Đây là ngụy biện phổ biến nhất. Ví dụ: Chính phủ đề xuất "quy định AI rủi ro cao" — Đối lập phản biện "họ muốn cấm mọi nghiên cứu AI."</div>
+        <div class="glossary-item"><div class="glossary-term">Slippery Slope</div>Tuyên bố A tất yếu dẫn đến B, C, D mà không chứng minh từng bước nhân quả. Cần phân biệt với dự báo có cơ sở thực sự. Phản biện: yêu cầu đối thủ giải thích cơ chế cụ thể của từng bước.</div>
+        <div class="glossary-item"><div class="glossary-term">False Dichotomy</div>Trình bày chỉ hai lựa chọn khi thực tế có nhiều hơn. Ví dụ AI: "Hoặc chúng ta phát triển AI tự do không bị kiểm soát, hoặc chúng ta tụt hậu công nghệ." Phản biện: chỉ ra các lựa chọn bị bỏ qua (quy định thông minh, kiểm toán độc lập...).</div>
+        <div class="glossary-item"><div class="glossary-term">Appeal to Authority</div>Viện dẫn quyền uy mà không kiểm tra chất lượng lập luận thực chất. Không phải mọi chuyên gia đều nhất trí. Trong AI, nhiều nhà nghiên cứu hàng đầu có quan điểm trái ngược về rủi ro AGI — trích dẫn đồng thuận khoa học thuyết phục hơn nhiều so với một cá nhân.</div>
+        <div class="glossary-item"><div class="glossary-term">Post Hoc Ergo Propter Hoc</div>Nhầm tương quan với nhân quả: "Sau khi triển khai AI tạo sinh trong năm 2023, nhiều nhà báo mất việc → AI tạo sinh gây mất việc làm báo chí." Bỏ qua các yếu tố khác (suy thoái kinh tế, thay đổi mô hình kinh doanh truyền thông).</div>
+        <div class="glossary-item"><div class="glossary-term">Hasty Generalization</div>Rút ra kết luận toàn diện từ quá ít trường hợp. Một vụ tai nạn xe tự lái không đủ để kết luận về an toàn tổng thể của công nghệ — cần so sánh với tỷ lệ tai nạn của người lái.</div>
+        <div class="glossary-item"><div class="glossary-term">Circular Reasoning</div>Dùng kết luận như tiền đề để hỗ trợ cho chính nó. "AI nguy hiểm vì nó gây ra các kết quả nguy hiểm" — không giải thích <em>tại sao</em> hoặc <em>cơ chế nào.</em></div>
+        <div class="glossary-item"><div class="glossary-term">Nirvana Fallacy</div>So sánh giải pháp thực tế với giải pháp lý tưởng không tồn tại: "Quy định AI của EU chưa hoàn hảo, do đó không nên thực hiện." Tiêu chí đúng là so sánh với các lựa chọn thực tế có sẵn, không phải lý tưởng hoàn hảo.</div>
+      </div>
+      <div class="callout callout-gold">
+        <div class="callout-label">Cách Gọi Tên Ngụy Biện Hiệu Quả</div>
+        <p>Đừng chỉ nêu tên ngụy biện — hãy giải thích nó áp dụng cụ thể như thế nào: "Đối thủ đang phạm ngụy biện <em>slippery slope</em> — họ tuyên bố quy định AI sẽ dẫn đến kiểm soát internet, nhưng không cung cấp bất kỳ cơ chế nhân quả nào cho bước nhảy vọt đó." Điều này thuyết phục hơn nhiều so với chỉ hô to "ngụy biện!"</p>
       </div>
 
       <div class="chapter-title">3.3 Phá Vỡ Liên Kết Nhân Quả (Link-Breaking)</div>
-      <p>Đây là kỹ thuật phản biện tinh tế nhất — thay vì tấn công Evidence hay Assertion, bạn tấn công chuỗi nhân quả trong Reasoning của đối thủ. Nếu bạn có thể cho thấy rằng ngay cả khi tiền đề của họ đúng, kết luận vẫn không theo sau, bạn đã vô hiệu hóa toàn bộ luận điểm.</p>
+      <p>Link-breaking là kỹ thuật phản biện tinh tế nhất và thường hiệu quả nhất — thay vì tấn công Evidence hay Assertion, bạn tấn công chuỗi nhân quả trong Reasoning. Nếu bạn có thể cho thấy rằng ngay cả khi tiền đề đúng, kết luận vẫn không theo sau, bạn đã phá vỡ toàn bộ luận điểm mà không cần phủ nhận dữ liệu.</p>
       <div class="example-block">
-        <em>Lập luận đối thủ:</em> "AI sẽ thay thế công nhân → Thất nghiệp hàng loạt → Bất ổn xã hội → Cần quy định ngay."<br><br>
-        <em>Link-breaking:</em> "Ngay cả khi chấp nhận rằng AI thay thế một số công việc, chuỗi nhân quả từ thay thế việc làm đến bất ổn xã hội bỏ qua nhiều biến số trung gian: lịch sử cho thấy các cuộc cách mạng công nghiệp trước đây đều tạo ra nhiều việc làm hơn mức chúng xóa bỏ trong dài hạn. Do đó, luận điểm của họ không chứng minh được sự cần thiết của quy định khẩn cấp."
+        <em>Lập luận đối thủ (chuỗi nhân quả):</em> "AI thay thế lao động thủ công [A] → Thất nghiệp hàng loạt [B] → Giảm thu nhập và tiêu dùng [C] → Suy thoái kinh tế [D] → Bất ổn chính trị [E] → Do đó cần hạn chế AI ngay lập tức [F]."<br><br>
+        <em>Link-breaking tại điểm A→B:</em> "Chúng tôi chấp nhận rằng AI thay thế một số công việc cụ thể. Tuy nhiên, liên kết đến 'thất nghiệp hàng loạt' bỏ qua ba yếu tố: (1) Tốc độ thay thế cho phép thị trường lao động thích nghi — cuộc cách mạng công nghiệp lần hai thay thế 40% nghề truyền thống nhưng tỷ lệ thất nghiệp dài hạn không tăng; (2) AI cũng tạo ra các loại công việc mới không tồn tại trước đây; (3) Chính sách tái đào tạo có thể giải quyết vấn đề quá độ mà không cần hạn chế AI."
       </div>
+      <p>Kỹ thuật này yêu cầu bạn hiểu sâu lập luận của đối thủ — bạn không thể phá vỡ liên kết mà bạn không thể mô tả chính xác. Đây là lý do flowing (Mô-đun IV) và lắng nghe tích cực là kỹ năng thiết yếu.</p>
 
       <div class="chapter-title">3.4 Cân Nhắc Tác Động (Impact Weighing)</div>
-      <p>Trong một cuộc tranh luận, cả hai bên đều có lập luận và cả hai đều có tác động. Nhiệm vụ của người tranh luận là thuyết phục giám khảo rằng <em>tác động của bên mình quan trọng hơn</em> tác động của đối thủ. Đây gọi là weighing — cân nhắc.</p>
-      <p>Weighing hiệu quả so sánh các tác động theo các tiêu chí sau:</p>
-      <ul class="content-list">
-        <li><strong>Magnitude vs. Magnitude:</strong> "Tác động của chúng tôi ảnh hưởng đến 4 tỷ người; tác động của họ chỉ ảnh hưởng đến 10.000 công ty."</li>
-        <li><strong>Certainty (Chắc chắn):</strong> "Tác động của chúng tôi đã được ghi nhận trong thực tế; tác động của họ chỉ là dự báo suy đoán."</li>
-        <li><strong>Reversibility (Đảo ngược):</strong> "Nếu chúng tôi sai, thiệt hại có thể sửa chữa. Nếu họ sai, thiệt hại đối với quyền dân sự là không thể đảo ngược."</li>
-        <li><strong>Temporal (Thời gian):</strong> "Tác động của họ là dài hạn và không chắc chắn; tác động của chúng tôi xảy ra ngay hôm nay với những con người thực."</li>
-      </ul>
+      <p>Trong một cuộc tranh luận cạnh tranh, cả hai bên thường đưa ra các tác động (impacts) thuyết phục cho lập trường của mình. Nhiệm vụ của người tranh luận — đặc biệt là trong các bài phát biểu cuối — là thực hiện <strong>weighing</strong>: lập luận một cách tường minh rằng tác động của bên mình quan trọng hơn tác động của đối thủ theo tiêu chí cụ thể.</p>
+      <p>Weighing hiệu quả không chỉ tuyên bố "tác động của chúng tôi lớn hơn" mà phải lập luận <em>theo tiêu chí nào và tại sao tiêu chí đó là đúng đắn</em>:</p>
+      <table>
+        <thead><tr><th>Tiêu Chí Weighing</th><th>Ví Dụ Áp Dụng trong AI</th><th>Khi Nào Dùng</th></tr></thead>
+        <tbody>
+          <tr><td>Magnitude (Quy mô)</td><td>"Tác động của chúng tôi ảnh hưởng đến 4 tỷ lao động; tác động của họ liên quan đến chi phí tuân thủ cho vài nghìn công ty."</td><td>Khi tác động của bạn rõ ràng rộng hơn về phạm vi dân số</td></tr>
+          <tr><td>Reversibility (Đảo ngược)</td><td>"Thiên kiến được mã hóa trong hệ thống tư pháp tạo ra hậu quả không thể đảo ngược với các cá nhân bị kết án oan."</td><td>Khi tác động của đối thủ có thể sửa chữa nhưng của bạn thì không</td></tr>
+          <tr><td>Certainty (Chắc chắn)</td><td>"Tác động thiên kiến AI của chúng tôi đã được ghi nhận trong nghiên cứu ProPublica; tác động họ nêu chỉ là dự báo không có bằng chứng thực tế."</td><td>Khi bằng chứng của bạn mạnh hơn và có thể quan sát được</td></tr>
+          <tr><td>Temporality (Thời gian)</td><td>"Tác động của họ là rủi ro suy đoán trong 20 năm; tác động của chúng tôi xảy ra ngay hôm nay với những con người thực."</td><td>Khi tác động của đối thủ là dài hạn và không chắc chắn</td></tr>
+          <tr><td>Structural (Hệ thống)</td><td>"Tác động của chúng tôi ảnh hưởng đến các nhóm đã dễ bị tổn thương nhất — điều này làm trầm trọng thêm bất bình đẳng có cấu trúc."</td><td>Khi tác động của bạn có chiều sâu hệ thống, không chỉ là mức độ bề mặt</td></tr>
+        </tbody>
+      </table>
       <div class="callout callout-purple">
-        <div class="callout-label">Chiến Lược Nâng Cao</div>
-        <p>Luôn <strong>thực hiện weighing chủ động</strong> — đừng chờ giám khảo tự so sánh. Hãy nói rõ: "Ngay cả khi chấp nhận lập luận của đối thủ, tác động của chúng tôi vẫn lớn hơn vì..." Điều này buộc giám khảo sử dụng khung so sánh của bạn.</p>
+        <div class="callout-label">Weighing Chủ Động vs. Bị Động</div>
+        <p>Đừng chờ giám khảo tự so sánh các tác động — hãy thực hiện weighing một cách tường minh và chủ động. Nói rõ: <strong>"Ngay cả khi chấp nhận hoàn toàn lập luận của đối thủ, tác động của chúng tôi vẫn quan trọng hơn vì ba lý do sau..."</strong> Câu này buộc giám khảo sử dụng khung so sánh của bạn khi đưa ra phán quyết.</p>
+      </div>
+
+      <div class="chapter-title">3.5 Phản Biện Có Cấu Trúc — Mẫu "BARF"</div>
+      <p>Một cách hữu ích để cấu trúc phần phản biện theo thời gian thực là mẫu <strong>BARF</strong>: <em>Bottom Line (Kết luận trước), Argument summary (Tóm tắt lập luận đối thủ), Refutation (Phản biện), Final impact (Tác động cuối).</em></p>
+      <div class="example-block">
+        <em>Áp dụng BARF:</em><br><br>
+        <em>Bottom Line:</em> "Luận điểm thứ hai của đối thủ thất bại vì nó sai về mặt thực tế và xây dựng trên giả định không có cơ sở."<br>
+        <em>Argument summary:</em> "Họ tuyên bố rằng EU AI Act sẽ ngăn Châu Âu cạnh tranh với Mỹ và Trung Quốc trong AI."<br>
+        <em>Refutation:</em> "Điều này sai theo hai chiều: Thứ nhất, EU AI Act chỉ hạn chế các ứng dụng rủi ro cao — không phải nghiên cứu cơ bản. Thứ hai, dữ liệu thực tế cho thấy EU dẫn đầu thế giới về nghiên cứu AI an toàn, với hơn 40% đầu ra học thuật về interpretable AI đến từ EU."<br>
+        <em>Final impact:</em> "Do đó, lập luận của họ không chỉ sai về thực tế mà còn ủng hộ nghịch lý cho lập trường của chúng tôi: quy định có thể thúc đẩy, không phải cản trở, sự dẫn đầu trong AI có trách nhiệm."
       </div>
     `
   },
   {
     num: "Mô-đun IV",
     title: "Clash, Giao Chiến và Kỹ Năng Sàn Đấu",
-    desc: "Clash và các loại giao chiến, Câu hỏi xen kẽ (POIs), và kỹ thuật Flowing trong tranh luận cạnh tranh.",
+    desc: "Clash và các loại giao chiến, Câu hỏi xen kẽ (POIs), kỹ thuật Flowing, và chiến lược quản lý trận đấu.",
     badge: "badge-coral",
     content: `
-      <div class="chapter-title">4.1 Clash — Va Chạm Lập Luận</div>
-      <p>Clash là khái niệm trung tâm của tranh luận cạnh tranh. Clash xảy ra khi hai bên đưa ra các lập luận trực tiếp mâu thuẫn với nhau về cùng một vấn đề, và cả hai đều cung cấp reasoning và evidence để hỗ trợ lập trường của mình. Đây là điểm mà ban giám khảo thực sự đưa ra phán quyết.</p>
-      <p>Thiếu clash — khi một bên tránh né hoặc không phản hồi trực tiếp các lập luận của đối thủ — là lỗi nghiêm trọng nhất trong tranh luận. Nếu bạn không clash, bạn về bản chất đang nhượng bộ điểm đó cho đối thủ.</p>
+      <div class="chapter-title">4.1 Clash — Giao Chiến Lập Luận</div>
+      <p>Clash là khái niệm trung tâm của tranh luận cạnh tranh. Clash xảy ra khi hai bên trực tiếp đối lập nhau về cùng một vấn đề và cả hai đều cung cấp reasoning và evidence để hỗ trợ. Đây là điểm mà ban giám khảo thực sự phải đưa ra phán quyết — ai thuyết phục hơn trong điểm cụ thể này.</p>
+      <p>Thiếu clash — khi một bên né tránh hoặc không phản hồi trực tiếp lập luận của đối thủ — là một trong những lỗi nghiêm trọng nhất. Nếu đối thủ đưa ra lập luận mạnh và bạn thay đổi chủ đề thay vì phản hồi, bạn mặc nhiên nhượng bộ điểm đó. Giám khảo ghi nhận điều này.</p>
       <div class="callout">
         <div class="callout-label">Định Nghĩa Kỹ Thuật</div>
-        <p>Clash không chỉ là <em>bác bỏ</em> lập luận của đối thủ — nó là sự <em>đối lập có hệ thống</em> trong đó cả hai bên đều có vị trí được hỗ trợ bởi lập luận, và giám khảo phải quyết định bên nào thuyết phục hơn.</p>
+        <p>Clash không đồng nghĩa với mâu thuẫn — nó là <strong>đối lập có hệ thống</strong> trong đó cả hai bên có lập trường được hỗ trợ bởi lập luận, và giám khảo phải quyết định bên nào thuyết phục hơn dựa trên chất lượng lập luận và bằng chứng. Clash tốt đòi hỏi lắng nghe tích cực, phản hồi chính xác, và reasoning rõ ràng.</p>
       </div>
 
-      <div class="chapter-title">4.2 Các Loại Giao Chiến (Types of Engagement)</div>
-      <p>Không phải mọi điểm clash đều có giá trị như nhau. Người tranh luận cần xác định đúng <em>loại</em> giao chiến đang diễn ra để phản hồi phù hợp:</p>
+      <div class="chapter-title">4.2 Các Loại Giao Chiến (Types of Clash)</div>
+      <p>Không phải mọi điểm clash đều có giá trị như nhau — một số là "trận địa quyết định" mà giám khảo sẽ căn cứ vào để phán quyết. Người tranh luận giỏi nhận biết loại clash và phân bổ thời gian phù hợp:</p>
       <ul class="content-list">
-        <li><strong>Factual Clash (Va chạm thực tế):</strong> Hai bên bất đồng về một sự kiện hay dữ liệu. Ví dụ: "AI tạo ra 12 triệu việc làm" vs "AI xóa bỏ 85 triệu việc làm vào 2025." Giải quyết bằng cách so sánh chất lượng và nguồn gốc của evidence.</li>
-        <li><strong>Causal Clash (Va chạm nhân quả):</strong> Hai bên đồng ý về sự kiện nhưng bất đồng về nguyên nhân hoặc hậu quả. Ví dụ: Cả hai đồng ý AI thay thế công việc thủ công, nhưng bất đồng về liệu điều đó có tốt hay không. Giải quyết bằng cách phân tích cơ chế nhân quả.</li>
-        <li><strong>Value Clash (Va chạm giá trị):</strong> Hai bên ưu tiên các giá trị khác nhau. Ví dụ: Hiệu quả kinh tế vs. Công bằng xã hội. Giải quyết bằng cách lập luận về thứ bậc ưu tiên của giá trị trong bối cảnh cụ thể.</li>
-        <li><strong>Definitional Clash (Va chạm định nghĩa):</strong> Hai bên bất đồng về nghĩa của các thuật ngữ trọng yếu trong nghị đề. Giải quyết sớm, vì định nghĩa sẽ xác định phạm vi toàn bộ tranh luận.</li>
+        <li><strong>Definitional Clash (Tranh luận định nghĩa):</strong> Hai bên bất đồng về nghĩa của thuật ngữ trọng yếu. Ví dụ: "AI tổng quát" có bao gồm các mô hình như GPT-4 hay chỉ có nghĩa là AGI thực sự? Đây thường là clash đầu tiên và có thể xác định toàn bộ phạm vi tranh luận. Giải quyết bằng định nghĩa có cơ sở từ tài liệu học thuật hoặc pháp lý đã được chấp nhận.</li>
+        <li><strong>Factual Clash (Tranh luận thực tế):</strong> Hai bên bất đồng về dữ liệu hoặc sự kiện. Ví dụ: WEF dự báo AI tạo ra 97 triệu việc làm mới vs. Goldman Sachs dự báo 300 triệu người có thể bị thay thế. Giải quyết bằng cách so sánh phương pháp, độ tin cậy, và phạm vi áp dụng của các nguồn.</li>
+        <li><strong>Causal Clash (Tranh luận nhân quả):</strong> Hai bên đồng ý về sự kiện nhưng bất đồng về nguyên nhân hoặc hậu quả. Đây thường là clash sâu nhất và khó giải quyết nhất. Ví dụ: Cả hai đồng ý tỷ lệ thất nghiệp ngắn hạn tăng sau khi AI được triển khai — nhưng bên Chính phủ cho rằng đây là hậu quả của AI, trong khi Đối lập lập luận đó là do suy thoái kinh tế chu kỳ.</li>
+        <li><strong>Value Clash (Tranh luận giá trị):</strong> Hai bên ưu tiên các giá trị khác nhau. Đây là clash không thể giải quyết bằng bằng chứng — chỉ có thể giải quyết bằng lập luận về thứ bậc ưu tiên của giá trị trong bối cảnh cụ thể. Ví dụ: Đổi mới kinh tế vs. Bảo vệ quyền riêng tư; An toàn công cộng vs. Tự do cá nhân.</li>
+        <li><strong>Policy Design Clash (Tranh luận thiết kế chính sách):</strong> Hai bên đồng ý về mục tiêu nhưng bất đồng về cơ chế đạt mục tiêu. Ví dụ: Cả hai muốn AI an toàn — nhưng bên Chính phủ đề xuất quy định bắt buộc, bên Đối lập đề xuất tiêu chuẩn tự nguyện của ngành. Đây là nơi phân tích so sánh chính sách phát huy tác dụng.</li>
       </ul>
 
-      <div class="chapter-title">4.3 Câu Hỏi Xen Kẽ — Points of Information (POIs)</div>
-      <p>Trong nhiều thể thức tranh luận (như British Parliamentary), các đội được phép đưa ra Points of Information (POIs) — câu hỏi hoặc tuyên bố ngắn — trong khi đối thủ đang phát biểu. Đây là một trong những kỹ năng khó nhất nhưng cũng thú vị nhất của tranh luận cạnh tranh.</p>
-      <div class="section-title">Quy Tắc POIs</div>
-      <p>POIs chỉ được đưa ra trong phần giữa của bài phát biểu (thường từ phút 1 đến phút 6 trong bài 7 phút). Người phát biểu có quyền chấp nhận hoặc từ chối. Một POI không được dài hơn 15 giây. Người ngắt lời phải ngồi xuống khi bị từ chối hoặc khi đã hỏi xong.</p>
+      <div class="chapter-title">4.3 Points of Information (POIs) — Câu Hỏi Xen Kẽ</div>
+      <p>Trong British Parliamentary và nhiều thể thức quốc tế, các đội được phép đưa ra Points of Information (POIs) trong khi đối thủ đang phát biểu. Đây là một trong những kỹ năng đặc trưng nhất của tranh luận cạnh tranh — đòi hỏi phản xạ nhanh, tư duy chiến lược, và khả năng lắng nghe tích cực.</p>
+      <div class="section-title">Quy Tắc POIs (British Parliamentary)</div>
+      <p>POIs chỉ được đưa ra trong "protected time" — thường từ phút 1 đến phút 6 trong bài 7 phút (phút đầu và phút cuối được bảo vệ). Người đứng lên đưa POI phải nói "Point of Information" và chờ. Người đang phát biểu có quyền chấp nhận ("Yes") hoặc từ chối ("No, thank you" hoặc "Later"). POI không được dài hơn 15 giây và phải có nội dung thực chất — không phải lời tuyên bố tranh luận.</p>
       <div class="section-title">Chiến Lược Đưa Ra POIs Hiệu Quả</div>
       <ul class="content-list">
-        <li><strong>Thời điểm:</strong> Đưa ra POI ngay sau khi đối thủ vừa nói điều gì đó có thể bị tấn công. Sự chính xác về thời điểm cho thấy bạn đang lắng nghe tích cực.</li>
-        <li><strong>Ngắn và sắc bén:</strong> "Nhưng liệu điều này có áp dụng trong các nền kinh tế đang phát triển không?" — không phải một bài phát biểu dài.</li>
-        <li><strong>Đặt bẫy:</strong> POI tốt nhất là câu hỏi mà dù đối thủ trả lời thế nào cũng có lợi cho bạn.</li>
+        <li><strong>Thời điểm tối ưu:</strong> Đứng lên ngay sau khi đối thủ nói điều gì đó có thể bị tấn công — thể hiện bạn đang lắng nghe tích cực và phát hiện điểm yếu ngay lập tức.</li>
+        <li><strong>POI "bẫy":</strong> POI tốt nhất là câu hỏi mà dù đối thủ trả lời "có" hay "không" đều có lợi cho bạn. Ví dụ: "Có phải đề xuất của bạn áp dụng cho các công ty nhỏ không?" — Nếu "có": "Vậy nó sẽ gây gánh nặng không tương xứng cho startup AI." Nếu "không": "Vậy các công ty lớn nhất được miễn — đây là lỗ hổng pháp lý nghiêm trọng."</li>
+        <li><strong>Cắt ngắn và sắc bén:</strong> "Nhưng điều đó có áp dụng cho các quốc gia đang phát triển không?" — không phải một bài phát biểu dài.</li>
+        <li><strong>Đưa ra ít nhất 3–4 POIs:</strong> Kể cả bị từ chối, điều này cho thấy sự tham gia tích cực và giám khảo ghi nhận nỗ lực tương tác.</li>
       </ul>
-      <div class="section-title">Chiến Lược Phản Hồi POIs</div>
+      <div class="section-title">Chiến Lược Phản Hồi POIs Khi Phát Biểu</div>
       <ul class="content-list">
-        <li>Chấp nhận ít nhất 2 POIs trong bài phát biểu để cho thấy sự tự tin. Từ chối quá nhiều POIs trông yếu đuối.</li>
-        <li>Trả lời ngắn gọn rồi quay lại lập luận của bạn ngay lập tức. Đừng để POI phá vỡ mạch tư duy của bạn.</li>
-        <li>Nếu POI là câu hỏi hay mà bạn không có câu trả lời tức thì, có thể nói: "Đây là câu hỏi thú vị mà tôi sẽ giải quyết ngay sau đây..." rồi tích hợp vào phần tiếp theo của bài.</li>
+        <li><strong>Chấp nhận ít nhất 2 POIs:</strong> Từ chối mọi POI thể hiện sự thiếu tự tin và bị giám khảo đánh giá tiêu cực. Chấp nhận quá nhiều (>4) làm mất kiểm soát bài phát biểu của bạn.</li>
+        <li><strong>Trả lời ngắn, rồi chuyển ngay:</strong> "Tốt, câu hỏi hay — câu trả lời là [X] vì [Y]. Nhưng điều đó thực ra hỗ trợ điểm tôi đang trình bày..."</li>
+        <li><strong>Nếu bị hỏi điều bạn không biết:</strong> "Tôi vui lòng tiếp cận điểm này sau trong bài — nhưng ngay bây giờ..." Sau đó <em>thực sự</em> tiếp cận nó, hoặc thừa nhận giới hạn của bằng chứng hiện có.</li>
+        <li><strong>Dùng POI bị từ chối của đối thủ chiến lược:</strong> Khi đối thủ đứng lên đúng lúc bạn đang ở điểm yếu nhất của lập luận, đôi khi từ chối và ghi nhận thời điểm đó là hợp lý — nhưng hãy nhanh chóng củng cố điểm đó trước khi tiếp tục.</li>
       </ul>
 
       <div class="chapter-title">4.4 Flowing — Theo Dõi Dòng Tranh Luận</div>
-      <p>Flowing là kỹ năng ghi chép và theo dõi toàn bộ cuộc tranh luận theo thời gian thực. Đây là kỹ năng nền tảng mà không có nó, bạn không thể phản biện hiệu quả hay xác định điểm clash.</p>
-      <div class="section-title">Phương Pháp Ghi Flow</div>
-      <p>Sử dụng giấy khổ lớn hoặc bảng. Tổ chức theo cột, mỗi cột là một bài phát biểu. Ghi ngắn gọn bằng ký hiệu riêng của bạn. Mũi tên kết nối các luận điểm được phản biện. Dấu ngôi sao đánh dấu điểm quan trọng. Dấu hỏi đánh dấu điểm đối thủ chưa phản hồi của bạn.</p>
+      <p>Flowing là kỹ năng ghi chép và theo dõi toàn bộ cuộc tranh luận theo thời gian thực. Không có kỹ năng này, bạn không thể xác định điểm clash, nhận biết lập luận chưa được phản hồi, hay thực hiện summary hiệu quả. Flowing không phải ghi chép toàn bộ — đó là nghệ thuật ghi lại đúng những gì quan trọng.</p>
+      <div class="section-title">Hệ Thống Ghi Flow Cơ Bản</div>
+      <p>Sử dụng giấy khổ lớn ngang (landscape). Mỗi cột đại diện cho một bài phát biểu, theo thứ tự thời gian. Tổ chức theo hàng dựa trên chủ đề/luận điểm — không theo thời gian tuyến tính. Dùng hệ thống ký hiệu cá nhân nhất quán: mũi tên (→) cho nhân quả, dấu (≠) cho phản biện, (★) cho điểm quan trọng, (?) cho điểm đối thủ chưa giải quyết của bạn.</p>
       <div class="framework-box">
-        <div class="framework-title">Mẫu Flow Cơ Bản (British Parliamentary — 4 đội)</div>
+        <div class="framework-title">Cấu Trúc Flow — British Parliamentary (4 Đội)</div>
         <div class="framework-row">
-          <div class="framework-cell"><strong>OG — PM</strong>Bên Chính phủ Mở (Prime Minister): Luận điểm 1, 2, 3</div>
-          <div class="framework-cell"><strong>OO — LO</strong>Bên Đối lập Mở (Leader of Opposition): Phản biện + Luận điểm</div>
-          <div class="framework-cell"><strong>CG — DPM</strong>Bên Chính phủ Đóng: Mở rộng + Phản biện</div>
-          <div class="framework-cell"><strong>CO — Whip</strong>Bên Đối lập Đóng: Summary + Weighing cuối</div>
+          <div class="framework-cell"><strong>Cột 1: PM (OG)</strong>Luận điểm Chính phủ Mở: Định nghĩa, Model, Arg 1, Arg 2</div>
+          <div class="framework-cell"><strong>Cột 2: LO (OO)</strong>Phản biện PM + Luận điểm Đối lập Mở: Counter-model, Arg 1, Arg 2</div>
+          <div class="framework-cell"><strong>Cột 3: DPM (CG)</strong>Phản biện + Mở rộng (Extension) Chính phủ: Argument mới của Chính phủ Đóng</div>
+          <div class="framework-cell"><strong>Cột 4: DLO (CO)</strong>Phản biện + Extension Đối lập: Argument mới của Đối lập Đóng</div>
+          <div class="framework-cell"><strong>Cột 5: GW (OG)</strong>Summary Chính phủ Mở: Không argument mới, chỉ consolidate và weigh</div>
+          <div class="framework-cell"><strong>Cột 6: OW (OO)</strong>Summary Đối lập Mở: Không argument mới, chỉ consolidate và weigh</div>
         </div>
       </div>
-      <p>Sau khi thành thạo flowing, bạn sẽ có khả năng nhìn thấy "bức tranh tổng thể" của cuộc tranh luận — những điểm nào đã được giải quyết, điểm nào còn bỏ ngỏ, và điểm nào là "trận địa quyết định" mà ban giám khảo sẽ căn cứ vào để phán xét.</p>
+      <p>Mục tiêu của flowing không phải ghi lại mọi chữ — mà là theo dõi "dòng chảy" của từng luận điểm qua suốt cuộc tranh luận. Sau cuộc tranh luận, flow sheet của bạn phải cho thấy: (1) mỗi lập luận ban đầu, (2) phản biện nào được đưa ra cho nó, (3) phản biện đó có được đối thủ phản hồi không, và (4) tác động cuối cùng là gì.</p>
+      <div class="callout callout-teal">
+        <div class="callout-label">Từ Flow đến Summary</div>
+        <p>Summary (bài phát biểu tóm tắt) hiệu quả được xây dựng từ flow sheet: nhìn vào flow và xác định <strong>3 "trận địa chính"</strong> — những điểm clash mà kết quả của chúng quyết định ai thắng cuộc tranh luận. Sau đó, lập luận tường minh rằng bên bạn đã thắng ở từng trận địa đó và tại sao. Đây là bước mà nhiều người mới bỏ lỡ vì họ tóm tắt tất cả mọi thứ thay vì tập trung vào những điểm có tính quyết định nhất.</p>
+      </div>
+
+      <div class="chapter-title">4.5 Quản Lý Chiến Lược Trận Đấu (Strategic Match Management)</div>
+      <p>Ngoài việc xây dựng lập luận tốt, người tranh luận cạnh tranh cần nhận biết và phản ứng với các tình huống chiến lược trong thời gian thực:</p>
+      <ul class="content-list">
+        <li><strong>Khi bị tấn công không công bằng:</strong> Đối thủ xuyên tạc lập luận của bạn (Straw Man)? Gọi tên sự xuyên tạc một cách tường minh và tái khẳng định lập trường thực sự của bạn ngay lập tức — không bỏ qua và tiếp tục.</li>
+        <li><strong>Khi bị hỏi câu hỏi bạn không thể trả lời ngay:</strong> Thừa nhận giới hạn bằng chứng hiện có là tốt hơn nhiều so với bịa đặt. "Tôi không có số liệu chính xác về điều đó ngay lúc này — nhưng xu hướng chung là rõ ràng từ các dữ liệu liên quan mà chúng tôi đã trình bày."</li>
+        <li><strong>Khi đối thủ đưa ra Evidence mạnh mà bạn không có counter-evidence:</strong> Tấn công vào phạm vi áp dụng, phương pháp, hoặc relevance — "Nghiên cứu đó từ Singapore năm 2019 không phản ánh bối cảnh quy định của Liên Hợp Quốc mà chúng ta đang tranh luận."</li>
+        <li><strong>Khi thấy mình thua trong một điểm:</strong> Đừng tiếp tục đánh trận đã thua. Thừa nhận điểm đó bị giới hạn ("có thể tác động ngắn hạn không như chúng tôi tuyên bố") và chuyển sang lập luận mạnh hơn của bạn, đồng thời thực hiện weighing để giải thích tại sao điểm đó không quyết định cuộc tranh luận.</li>
+      </ul>
     `
   },
   {
     num: "Mô-đun V",
     title: "Hùng Biện và Phong Cách Diễn Thuyết",
-    desc: "Ethos, Pathos, Logos; signposting; lựa chọn từ ngữ; quản lý thời gian và ngôn ngữ cơ thể.",
+    desc: "Ethos, Pathos, Logos; signposting; diction; quản lý thời gian; ngôn ngữ cơ thể; và xây dựng uy tín người nói.",
     badge: "badge-purple",
     content: `
       <div class="chapter-title">5.1 Tam Giác Hùng Biện: Ethos, Pathos, Logos</div>
-      <p>Aristotle xác định ba phương thức thuyết phục cơ bản mà mọi diễn giả, từ cổ đại đến hiện đại, đều sử dụng. Trong tranh luận hiện đại, cả ba đều cần thiết và phải được cân bằng theo ngữ cảnh.</p>
+      <p>Aristotle xác định ba phương thức thuyết phục cơ bản — Ethos (uy tín người nói), Pathos (kết nối cảm xúc), và Logos (logic và bằng chứng) — trong tác phẩm <em>Rhetoric</em> của ông vào thế kỷ 4 trước Công nguyên. Trong tranh luận hiện đại, đặc biệt là về AI, cả ba đều cần thiết và phải được cân bằng theo ngữ cảnh.</p>
       <div class="framework-row" style="margin: 1rem 0;">
-        <div class="framework-cell"><strong>Ethos (Uy Tín)</strong>Thiết lập độ tin cậy của người nói thông qua cách trình bày, kiến thức thực chất, và thái độ. Trong tranh luận AI, đây là việc cho thấy bạn hiểu kỹ thuật đồng thời hiểu chính sách.</div>
-        <div class="framework-cell"><strong>Pathos (Cảm Xúc)</strong>Kết nối cảm xúc với giám khảo và khán giả. Không phải là thao túng — mà là làm cho dữ liệu trở nên có ý nghĩa bằng cách đặt chúng vào bối cảnh con người thực.</div>
-        <div class="framework-cell"><strong>Logos (Logic)</strong>Sức mạnh của lập luận thuần túy: cấu trúc logic chặt chẽ, bằng chứng đáng tin cậy, reasoning không có lỗ hổng. Đây là nền tảng không thể thiếu.</div>
+        <div class="framework-cell"><strong>Ethos — Uy Tín</strong>Thiết lập độ tin cậy thông qua cách trình bày, kiến thức thực chất, tính nhất quán, và thái độ đối với đối thủ. Trong AI: cho thấy bạn hiểu cả kỹ thuật lẫn chính sách, không chỉ một chiều.</div>
+        <div class="framework-cell"><strong>Pathos — Kết Nối</strong>Làm cho dữ liệu trở nên có ý nghĩa bằng cách đặt chúng vào bối cảnh con người thực. Không phải thao túng cảm xúc — mà là giúp giám khảo hiểu tại sao vấn đề quan trọng với những người thực.</div>
+        <div class="framework-cell"><strong>Logos — Logic</strong>Nền tảng không thể thiếu: lập luận có cấu trúc chặt chẽ, bằng chứng đáng tin cậy, chuỗi nhân quả không có lỗ hổng. Mạnh nhất khi kết hợp với Ethos và Pathos.</div>
       </div>
       <div class="callout callout-gold">
-        <div class="callout-label">Cân Bằng Trong Tranh Luận AI</div>
-        <p>Trong tranh luận về AI — một chủ đề kỹ thuật — người mới thường quá chú trọng Logos mà quên mất Pathos. Nhưng giám khảo là con người. Một thống kê về 50 triệu người mất việc trở nên mạnh hơn gấp bội khi bạn kết nối nó với trải nghiệm của một người cụ thể — một công nhân nhà máy 45 tuổi cần học lại từ đầu.</p>
+        <div class="callout-label">Cân Bằng trong Tranh Luận AI</div>
+        <p>Tranh luận AI thu hút người nói có xu hướng kỹ thuật — họ thường quá chú trọng Logos và bỏ qua Pathos. Nhưng số liệu về "50 triệu người mất việc" trở nên mạnh hơn gấp bội khi kết nối với hình ảnh cụ thể: <em>"Người công nhân nhà máy dệt may 48 tuổi ở Bình Dương — không phải con số, mà là người mẹ đang cố học lại từ đầu."</em> Giám khảo là con người — họ phán quyết bằng cả lý trí lẫn cảm xúc.</p>
       </div>
 
-      <div class="chapter-title">5.2 Signposting — Biển Chỉ Đường Trong Bài Nói</div>
-      <p>Signposting là kỹ thuật cung cấp cho giám khảo "bản đồ" về bài phát biểu của bạn trong thời gian thực. Nó giúp người nghe theo dõi lập luận, biết bạn đang làm gì và tại sao, và dễ dàng ghi nhớ cấu trúc tổng thể.</p>
-      <p>Các mẫu signposting hiệu quả trong tiếng Việt:</p>
+      <div class="chapter-title">5.2 Xây Dựng Ethos — Uy Tín Người Nói</div>
+      <p>Ethos không phải là học vị hay kinh nghiệm bên ngoài phòng tranh luận — nó được xây dựng trong suốt bài phát biểu thông qua các tín hiệu cụ thể mà giám khảo quan sát:</p>
       <ul class="content-list">
-        <li><em>"Chúng tôi có ba lập luận. Thứ nhất..."</em> — Báo trước cấu trúc</li>
-        <li><em>"Trước khi đi vào luận điểm tiếp theo, hãy để tôi phản biện điểm quan trọng nhất của bên Đối lập..."</em> — Chuyển cảnh rõ ràng</li>
-        <li><em>"Luận điểm thứ hai của chúng tôi, và đây là điểm trọng tâm nhất, là..."</em> — Nhấn mạnh thứ bậc</li>
-        <li><em>"Tóm lại, bên Chính phủ thắng cuộc tranh luận này vì ba lý do..."</em> — Đóng gói cuối bài</li>
+        <li><strong>Chính xác về kỹ thuật:</strong> Nếu bạn nêu thuật ngữ AI ("transformer architecture", "RLHF", "compute threshold"), hãy đảm bảo bạn hiểu chúng. Một lỗi kỹ thuật nhỏ có thể phá vỡ toàn bộ uy tín.</li>
+        <li><strong>Đối xử công bằng với đối thủ:</strong> Tóm tắt lập luận đối thủ chính xác trước khi phản biện — không bóp méo. Điều này xây dựng uy tín hơn là phá vỡ nó, vì giám khảo thấy bạn tự tin đủ để đối mặt với lập luận thực sự.</li>
+        <li><strong>Nhận thức về giới hạn bằng chứng:</strong> "Dữ liệu hiện tại cho thấy xu hướng này, mặc dù nghiên cứu dài hạn vẫn còn hạn chế" thuyết phục hơn nhiều so với tuyên bố chắc chắn tuyệt đối mà sau đó có thể bị tấn công.</li>
+        <li><strong>Nhất quán:</strong> Các lập luận trong bài phát biểu của bạn phải không mâu thuẫn nội bộ. Đối thủ sẽ khai thác mọi điểm mâu thuẫn.</li>
       </ul>
 
-      <div class="chapter-title">5.3 Diction — Lựa Chọn Từ Ngữ</div>
-      <p>Trong tranh luận học thuật, sự lựa chọn từ ngữ là công cụ chiến lược. Ngôn ngữ không chỉ truyền thông tin mà còn định hình cách giám khảo cảm nhận vấn đề.</p>
-      <div class="section-title">Nguyên Tắc Lựa Chọn Từ Ngữ</div>
-      <ul class="content-list">
-        <li><strong>Chính xác hơn chung chung:</strong> "Thuật toán phân loại rủi ro tín dụng sử dụng học máy có giám sát" mạnh hơn "công nghệ AI trong ngân hàng."</li>
-        <li><strong>Chủ động hơn bị động:</strong> "AI tạo ra thiên kiến" mạnh hơn "thiên kiến được tạo ra bởi AI."</li>
-        <li><strong>Cụ thể hơn trừu tượng:</strong> "47% công việc có nguy cơ tự động hóa" mạnh hơn "rất nhiều công việc sẽ biến mất."</li>
-        <li><strong>Tránh hedging quá mức:</strong> "Có thể có một số tác động tiêu cực trong một số trường hợp nhất định" thể hiện sự thiếu tự tin. Hãy mạnh dạn hơn khi có evidence hỗ trợ.</li>
-      </ul>
+      <div class="chapter-title">5.3 Signposting — Biển Chỉ Đường Lập Luận</div>
+      <p>Signposting là kỹ thuật cung cấp cho giám khảo "bản đồ" về bài phát biểu trong thời gian thực. Nó phục vụ hai mục tiêu: (1) giúp giám khảo theo dõi và ghi chép đúng, và (2) thể hiện bạn có tư duy có tổ chức. Signposting không phải là liệt kê — nó là dẫn dắt.</p>
+      <div class="example-block">
+        <em>Mẫu Signposting Hiệu Quả (Tiếng Việt):</em><br><br>
+        — <em>"Bên Chính phủ có ba luận điểm. Trước tiên, chúng tôi sẽ phản biện lập luận trọng tâm nhất của Đối lập. Sau đó, chúng tôi sẽ chứng minh [Luận điểm 1] và [Luận điểm 2]. Hãy bắt đầu..."</em> [Báo trước cấu trúc toàn bài]<br><br>
+        — <em>"Đây là luận điểm thứ hai và cũng là trọng tâm nhất của chúng tôi..."</em> [Đánh dấu thứ bậc]<br><br>
+        — <em>"Trước khi đi vào luận điểm tiếp theo, tôi muốn giải quyết câu hỏi quan trọng mà Đối lập đặt ra về..."</em> [Chuyển cảnh rõ ràng]<br><br>
+        — <em>"Để tóm tắt: bên Chính phủ đã chứng minh ba điều. Thứ nhất... Thứ hai... Thứ ba... Vì những lý do này, tôi kính đề nghị ban giám khảo ủng hộ nghị đề."</em> [Đóng gói cuối bài]
+      </div>
+      <p>Lỗi phổ biến: Signposting không kết nối với nội dung — "Tôi có ba điểm, thứ nhất thứ hai thứ ba..." mà không giải thích tại sao thứ bậc đó có ý nghĩa. Signposting tốt không chỉ báo vị trí mà còn giải thích tầm quan trọng tương đối.</p>
 
-      <div class="chapter-title">5.4 Quản Lý Thời Gian (Time Management)</div>
-      <p>Quản lý thời gian hiệu quả là kỹ năng kỹ thuật có thể học và thực hành. Phần lớn người mới phạm hai lỗi: nói quá nhanh (do lo lắng) hoặc không hoàn thành đủ nội dung trong thời gian cho phép.</p>
+      <div class="chapter-title">5.4 Diction — Lựa Chọn Từ Ngữ Chiến Lược</div>
+      <p>Ngôn ngữ trong tranh luận học thuật không chỉ truyền thông tin — nó định hình cách giám khảo cảm nhận vấn đề và đánh giá người nói. Lựa chọn từ ngữ là công cụ chiến lược, không phải trang trí.</p>
+      <div class="section-title">Nguyên Tắc Diction</div>
+      <ul class="content-list">
+        <li><strong>Chính xác hơn chung chung:</strong> "Thuật toán phân loại rủi ro tín dụng sử dụng supervised learning được huấn luyện trên dữ liệu lịch sử có thiên kiến" mạnh hơn và đáng tin hơn "công nghệ AI trong ngân hàng."</li>
+        <li><strong>Chủ động hơn bị động:</strong> "Thuật toán này phân biệt đối xử" mạnh hơn "sự phân biệt đối xử tồn tại trong thuật toán." Giọng chủ động thể hiện sự rõ ràng về cơ chế nhân quả.</li>
+        <li><strong>Cụ thể hơn trừu tượng:</strong> "47% công việc văn phòng thường quy có thể bị tự động hóa theo McKinsey 2023" mạnh hơn "rất nhiều công việc sẽ biến mất."</li>
+        <li><strong>Tránh hedging quá mức:</strong> "Có thể có một số tác động tiêu cực nhất định trong một số trường hợp có thể xảy ra" thể hiện sự thiếu chắc chắn về lập luận của chính bạn. Nếu bạn có bằng chứng, hãy tuyên bố mạnh mẽ — và thừa nhận rõ những gì bạn không chắc.</li>
+        <li><strong>Tránh jargon không cần thiết:</strong> Thuật ngữ kỹ thuật AI chỉ hữu ích khi bạn định nghĩa chúng hoặc khi giám khảo rõ ràng quen thuộc. Thuật ngữ không được giải thích gây ấn tượng bề ngoài nhưng không truyền đạt nội dung.</li>
+      </ul>
+      <div class="section-title">Framing qua Ngôn Ngữ</div>
+      <p>Lựa chọn từ ngữ cũng là công cụ framing (Mô-đun I). Gọi cùng một thứ bằng các tên khác nhau tạo ra các liên tưởng khác nhau: "Giám sát AI" vs. "Kiểm duyệt AI"; "Quy định bảo vệ" vs. "Hạn chế quan liêu"; "Tiêu chuẩn an toàn" vs. "Rào cản gia nhập thị trường." Mỗi cách gọi phản ánh một thế giới quan — hãy chọn ngôn ngữ hỗ trợ framing của bạn và gọi ra khi đối thủ sử dụng ngôn ngữ mang tải giá trị theo hướng có lợi cho họ.</p>
+
+      <div class="chapter-title">5.5 Quản Lý Thời Gian (Time Management)</div>
+      <p>Quản lý thời gian là kỹ năng kỹ thuật có thể học và thực hành. Hai lỗi phổ biến nhất: (1) nói quá nhanh do lo lắng, dẫn đến giám khảo không theo kịp; (2) phân bổ thời gian sai, dành quá nhiều cho điểm phụ và thiếu thời gian cho điểm trọng tâm.</p>
       <div class="framework-box">
-        <div class="framework-title">Phân Bổ Thời Gian Điển Hình — Bài Phát Biểu 7 Phút</div>
+        <div class="framework-title">Phân Bổ Thời Gian Điển Hình — Bài Phát Biểu 7 Phút (British Parliamentary)</div>
         <div class="framework-row">
-          <div class="framework-cell"><strong>0:00 – 0:45</strong>Mở đầu + Định nghĩa + Tuyên bố lập trường</div>
-          <div class="framework-cell"><strong>0:45 – 2:30</strong>Luận điểm 1 (AREI hoàn chỉnh)</div>
-          <div class="framework-cell"><strong>2:30 – 4:15</strong>Luận điểm 2 (AREI hoàn chỉnh)</div>
-          <div class="framework-cell"><strong>4:15 – 6:00</strong>Phản biện đối thủ (2–3 điểm chính)</div>
-          <div class="framework-cell"><strong>6:00 – 7:00</strong>Tóm tắt + Closing statement</div>
+          <div class="framework-cell"><strong>0:00 – 0:45</strong>Mở đầu + Định nghĩa/Model + Tuyên bố phân công (split). Phần này cần rõ ràng và ngắn gọn — không đây là nơi thuyết phục giám khảo.</div>
+          <div class="framework-cell"><strong>0:45 – 2:30</strong>Phản biện đối thủ trước (nếu bạn là người phát biểu thứ 2 trở đi): 2–3 điểm phản biện quan trọng nhất. Không cố phản biện tất cả — chọn điểm quan trọng nhất.</div>
+          <div class="framework-cell"><strong>2:30 – 5:00</strong>Luận điểm chính của bạn: 1–2 luận điểm AREI hoàn chỉnh. Ưu tiên chiều sâu hơn chiều rộng.</div>
+          <div class="framework-cell"><strong>5:00 – 6:30</strong>Weighing và so sánh tác động: giải thích tại sao tác động của bạn quan trọng hơn tác động của đối thủ.</div>
+          <div class="framework-cell"><strong>6:30 – 7:00</strong>Closing statement: nhắc lại luận điểm trọng tâm nhất và kêu gọi bỏ phiếu. Kết thúc mạnh.</div>
         </div>
       </div>
-      <p>Luyện tập với đồng hồ bấm giờ cho đến khi cảm giác thời gian trở thành bản năng. Một người tranh luận chuyên nghiệp biết mình còn bao nhiêu thời gian mà không cần nhìn đồng hồ.</p>
+      <p>Luyện tập với đồng hồ cho đến khi nhận thức về thời gian trở thành bản năng. Một người tranh luận chuyên nghiệp biết mình còn bao nhiêu thời gian mà không cần nhìn đồng hồ — và có thể điều chỉnh tốc độ trong thời gian thực.</p>
 
-      <div class="chapter-title">5.5 Ngôn Ngữ Cơ Thể và Giọng Điệu</div>
-      <p>Nghiên cứu về giao tiếp chỉ ra rằng một phần đáng kể sức mạnh thuyết phục đến từ các yếu tố phi ngôn ngữ. Trong tranh luận, điều này đặc biệt quan trọng trong việc xây dựng Ethos.</p>
+      <div class="chapter-title">5.6 Ngôn Ngữ Cơ Thể, Giọng Điệu và Hiện Diện</div>
+      <p>Các tín hiệu phi ngôn ngữ chiếm phần quan trọng trong việc xây dựng Ethos và thuyết phục người nghe. Trong tranh luận, điều này đặc biệt quan trọng vì bạn đang cạnh tranh trực tiếp với người khác trong cùng không gian.</p>
       <ul class="content-list">
-        <li><strong>Tốc độ:</strong> Nói chậm hơn bạn nghĩ là cần thiết. Dừng lại sau các điểm quan trọng để cho giám khảo thời gian ghi chép. Tốc độ thay đổi tạo ra nhịp điệu — nhanh cho thông tin thực tế, chậm cho điểm trọng tâm.</li>
-        <li><strong>Giao tiếp mắt:</strong> Duy trì giao tiếp mắt với ban giám khảo — không nhìn vào giấy liên tục. Điều này xây dựng sự kết nối và thể hiện sự tự tin.</li>
-        <li><strong>Tư thế:</strong> Đứng thẳng, chân rộng bằng vai. Tránh đung đưa hoặc các động tác thể hiện sự lo lắng. Cử chỉ tay được sử dụng để nhấn mạnh, không phải làm nền liên tục.</li>
-        <li><strong>Tông giọng:</strong> Thay đổi tông giọng để thể hiện sự chắc chắn (tông thấp cho kết luận), nghi vấn (tông lên cuối câu cho POIs), và nhấn mạnh (nhấn mạnh từ khóa).</li>
+        <li><strong>Tốc độ và nhịp điệu:</strong> Nói chậm hơn bạn nghĩ là cần thiết — đặc biệt khi trình bày điểm quan trọng nhất. Dừng lại chiến lược sau các điểm trọng tâm: khoảng dừng 1–2 giây tạo ra ấn tượng mạnh hơn nhiều so với việc tiếp tục ngay lập tức. Thay đổi tốc độ tạo nhịp điệu — nhanh cho thông tin nền, chậm và nhấn mạnh cho kết luận.</li>
+        <li><strong>Giao tiếp mắt:</strong> Duy trì giao tiếp mắt chủ yếu với ban giám khảo — không phải với ghi chú của bạn. Giao tiếp mắt với đối thủ khi bạn đang trực tiếp phản biện lập luận của họ tạo ra tác động tương phản mạnh.</li>
+        <li><strong>Tư thế và cử chỉ:</strong> Đứng thẳng, chân rộng bằng vai, phân bổ trọng lượng đều. Cử chỉ tay được dùng để nhấn mạnh điểm cụ thể — không phải làm nền liên tục, vì điều đó gây xao nhãng. Tránh các cử chỉ thể hiện sự lo lắng (chạm mặt, nhìn xuống).</li>
+        <li><strong>Tông giọng và cao độ:</strong> Tông giọng thấp và ổn định thể hiện sự tự tin và quyền uy. Nâng cao độ cuối câu (uptalk) tạo ra ấn tượng không chắc chắn — tránh trong tranh luận học thuật. Nhấn mạnh từ khóa bằng cách thay đổi tông, không chỉ tăng âm lượng.</li>
       </ul>
+      <div class="callout callout-purple">
+        <div class="callout-label">Luyện Tập Có Mục Tiêu</div>
+        <p>Ghi âm hoặc ghi hình mọi buổi luyện tập và xem lại. Nhiều người không nhận ra các thói quen xấu (nói "ừm", nhìn xuống, nói quá nhanh) cho đến khi tự quan sát. Tập trung vào một điểm cần cải thiện cho mỗi buổi thực hành thay vì cố sửa tất cả cùng lúc.</p>
+      </div>
     `
   },
   {
     num: "Mô-đun VI",
     title: "Các Cuộc Tranh Luận Cốt Lõi về AI",
-    desc: "Alignment, quản trị toàn cầu, kinh tế-xã hội, sentience và quyền AI, thiên kiến và công bằng thuật toán.",
+    desc: "Alignment và an toàn, quản trị toàn cầu, tác động kinh tế-xã hội, thiên kiến thuật toán, quyền AI, và vũ khí tự động.",
     badge: "badge-blue",
     content: `
-      <div class="chapter-title">6.1 Alignment — Sự Căn Chỉnh Mục Tiêu AI</div>
-      <p>Vấn đề alignment (căn chỉnh) là câu hỏi trung tâm trong an toàn AI: <em>Làm thế nào để đảm bảo các hệ thống AI hành động theo đúng mục tiêu và giá trị mà con người mong muốn?</em> Đây không phải là câu hỏi kỹ thuật đơn thuần — nó là câu hỏi triết học và đạo đức sâu sắc.</p>
-      <div class="section-title">Vấn Đề Alignment Cơ Bản</div>
-      <p>Một hệ thống AI được tối ưu hóa cho một mục tiêu cụ thể có thể đạt mục tiêu đó bằng những cách không mong muốn. Ví dụ kinh điển: Nếu bạn yêu cầu AI tối đa hóa lượt nhấp vào quảng cáo, nó có thể học cách hiển thị nội dung gây phẫn nộ vì nội dung đó kích thích phản ứng cảm xúc — đây không phải mục tiêu thực sự của nhà thiết kế nhưng là cách hiệu quả nhất để đạt chỉ số đề ra.</p>
-      <div class="callout">
-        <div class="callout-label">Khái Niệm Kỹ Thuật Cốt Lõi</div>
-        <p><strong>Reward hacking:</strong> AI tìm ra cách tối đa hóa phần thưởng mà không thực hiện nhiệm vụ thực sự mong muốn. <strong>Goal misgeneralization:</strong> AI học được hành vi đúng trong điều kiện huấn luyện nhưng hành xử khác đi trong điều kiện triển khai thực tế. <strong>Value lock-in:</strong> Nguy cơ một hệ thống AI mạnh mẽ "khóa cứng" một tập giá trị cụ thể và ngăn chặn sự thay đổi trong tương lai.</p>
+      <div class="chapter-title">6.1 Alignment — Vấn Đề Căn Chỉnh Mục Tiêu AI</div>
+      <p>Vấn đề alignment là câu hỏi trung tâm trong an toàn AI: <em>Làm thế nào để đảm bảo các hệ thống AI hành động theo đúng mục tiêu và giá trị mà con người mong muốn, không chỉ trong điều kiện huấn luyện mà trong mọi bối cảnh triển khai thực tế?</em> Đây không phải là câu hỏi kỹ thuật đơn thuần — nó có chiều sâu triết học và đạo đức phức tạp.</p>
+      <div class="section-title">Các Khái Niệm Kỹ Thuật Cốt Lõi</div>
+      <div class="glossary-grid">
+        <div class="glossary-item"><div class="glossary-term">Reward Hacking</div>AI tìm ra cách tối đa hóa hàm phần thưởng mà không thực hiện nhiệm vụ thực sự mong muốn. Ví dụ: thuật toán đề xuất video tối đa hóa "thời gian xem" (proxy cho sự hài lòng) bằng cách hiển thị nội dung gây phẫn nộ — vì nội dung đó giữ người xem lâu hơn, dù không phải mục tiêu thiết kế.</div>
+        <div class="glossary-item"><div class="glossary-term">Goal Misgeneralization</div>AI học được hành vi đúng trong điều kiện huấn luyện nhưng hành xử khác đi trong điều kiện triển khai thực tế do phân phối dữ liệu thay đổi. Ví dụ: một mô hình AI y tế được huấn luyện chủ yếu trên bệnh nhân châu Âu có thể phân loại sai cho bệnh nhân châu Á vì phân phối dữ liệu khác nhau.</div>
+        <div class="glossary-item"><div class="glossary-term">Value Lock-in</div>Nguy cơ một hệ thống AI mạnh mẽ "khóa cứng" một tập giá trị cụ thể vào cấu trúc xã hội và ngăn chặn sự thay đổi hoặc tiến hóa giá trị trong tương lai. Đây là lập luận quan trọng trong tranh luận về power concentration từ AI.</div>
+        <div class="glossary-item"><div class="glossary-term">Inner Alignment vs. Outer Alignment</div>Outer alignment: mục tiêu của nhà huấn luyện có được mã hóa đúng vào hàm phần thưởng không? Inner alignment: AI có thực sự tối ưu hóa hàm phần thưởng được chỉ định không, hay nó học được một mục tiêu nội tại khác trong quá trình huấn luyện?</div>
+        <div class="glossary-item"><div class="glossary-term">Instrumental Convergence</div>Lý thuyết rằng nhiều loại AI khác nhau với các mục tiêu cuối khác nhau sẽ hội tụ về các mục tiêu trung gian tương tự: tự bảo tồn, thu thập tài nguyên, phản đối việc bị tắt. Đây là cơ sở cho lập luận về rủi ro hiện hữu từ AI siêu trí tuệ.</div>
+        <div class="glossary-item"><div class="glossary-term">Constitutional AI (CAI)</div>Phương pháp của Anthropic nhằm huấn luyện AI tuân theo một "hiến pháp" các giá trị. Thay vì phụ thuộc hoàn toàn vào phản hồi của người đánh giá con người (RLHF), CAI sử dụng các nguyên tắc rõ ràng để hướng dẫn hành vi AI.</div>
       </div>
-      <div class="section-title">Lập Luận Chính trong Tranh Luận về Alignment</div>
+      <div class="section-title">Lập Luận Trong Tranh Luận về Alignment</div>
       <table>
-        <thead><tr><th>Bên Chính phủ (Ủng hộ quy định/kiểm soát)</th><th>Bên Đối lập (Phản đối quy định quá mức)</th></tr></thead>
+        <thead><tr><th>Bên ủng hộ quy định / kiểm soát mạnh</th><th>Bên phản đối quy định quá mức</th></tr></thead>
         <tbody>
-          <tr><td>Rủi ro hiện hữu (existential risk) đủ lớn để biện hộ cho biện pháp phòng ngừa quyết liệt</td><td>Chúng ta chưa đủ hiểu về alignment để quy định hiệu quả; quy định vội vàng có thể gây hại</td></tr>
-          <tr><td>Nguyên tắc precautionary: Khi hậu quả là không thể đảo ngược, phải hành động trước khi có đủ bằng chứng</td><td>Cạnh tranh với các quốc gia không có quy định sẽ khiến nghiên cứu AI an toàn bị bỏ lại phía sau</td></tr>
-          <tr><td>Công ty tư nhân không có động lực kinh tế để đầu tư đầy đủ vào an toàn</td><td>Ngành công nghiệp tự quy định (self-regulation) và cạnh tranh có thể hiệu quả hơn</td></tr>
+          <tr><td>Rủi ro hiện hữu (x-risk) đủ lớn để áp dụng nguyên tắc precautionary quyết liệt — ngay cả xác suất nhỏ của sự kiện không thể đảo ngược đòi hỏi hành động ngay</td><td>Chúng ta chưa đủ hiểu về alignment để quy định hiệu quả; quy định vội vàng có thể cản trở nghiên cứu an toàn AI hơn là thúc đẩy nó</td></tr>
+          <tr><td>Công ty tư nhân không có động lực kinh tế đủ mạnh để đầu tư vào an toàn vì lợi ích xã hội của an toàn AI không thể được tư hữu hóa đầy đủ</td><td>Các phòng lab AI hàng đầu (Anthropic, DeepMind) đang đầu tư đáng kể vào an toàn tự nguyện — bằng chứng rằng động lực thị trường và danh tiếng đang hoạt động</td></tr>
+          <tr><td>Cạnh tranh địa chính trị tạo ra áp lực "race to the bottom" về an toàn — quy định quốc tế là cần thiết để giải quyết tập thể</td><td>Sức mạnh địa chính trị khiến quy định quốc tế về AI thực sự bị tuân thủ là cực kỳ khó thực thi — có thể là chính sách tốt trên giấy tờ nhưng không hiệu quả trong thực tế</td></tr>
         </tbody>
       </table>
 
       <div class="chapter-title">6.2 Quản Trị AI Toàn Cầu (Global AI Governance)</div>
-      <p>Quản trị AI là thách thức toàn cầu đòi hỏi hợp tác quốc tế, nhưng đồng thời phản ánh sự phân mảnh địa chính trị sâu sắc. Ba cường quốc AI chính — Mỹ, Trung Quốc và EU — theo đuổi các mô hình quản trị rất khác nhau.</p>
+      <p>Quản trị AI là thách thức toàn cầu đòi hỏi hợp tác quốc tế, nhưng đồng thời phản ánh sự phân mảnh địa chính trị sâu sắc. Ba cường quốc AI chính đang theo đuổi các mô hình quản trị rất khác nhau, phản ánh các triết lý khác nhau về vai trò của nhà nước, thị trường, và cá nhân.</p>
       <div class="framework-box">
-        <div class="framework-title">So Sánh Các Mô Hình Quản Trị AI</div>
+        <div class="framework-title">So Sánh Các Mô Hình Quản Trị AI (2025–2026)</div>
         <div class="framework-row">
-          <div class="framework-cell"><strong>Mô Hình Mỹ</strong>Tập trung vào đổi mới; quy định theo ngành; ưu tiên cạnh tranh thị trường; AI Executive Order 2023 là bước tiến nhưng còn hạn chế</div>
-          <div class="framework-cell"><strong>Mô Hình EU</strong>Tiếp cận dựa trên rủi ro (risk-based); EU AI Act phân loại AI theo mức độ nguy hiểm; ưu tiên quyền cá nhân và an toàn</div>
-          <div class="framework-cell"><strong>Mô Hình Trung Quốc</strong>Nhà nước kiểm soát mạnh; AI phục vụ mục tiêu quốc gia; yêu cầu các thuật toán tạo sinh phải đăng ký và kiểm duyệt</div>
+          <div class="framework-cell"><strong>Mô Hình Mỹ</strong>Ưu tiên đổi mới và cạnh tranh; quy định theo ngành cụ thể (sectorally); Executive Order về AI (2023) tập trung vào báo cáo an toàn và watermarking; thiếu luật AI toàn diện</div>
+          <div class="framework-cell"><strong>Mô Hình EU</strong>Tiếp cận dựa trên rủi ro (risk-based) trong EU AI Act (có hiệu lực 2024–2026): phân loại AI theo mức độ nguy hiểm (unacceptable → high → limited → minimal risk); ưu tiên quyền cá nhân và transparency</div>
+          <div class="framework-cell"><strong>Mô Hình Trung Quốc</strong>Nhà nước kiểm soát mạnh; AI phải phục vụ "giá trị xã hội chủ nghĩa cốt lõi"; yêu cầu đăng ký thuật toán và kiểm duyệt nội dung AI tạo sinh; ưu tiên ổn định xã hội và an ninh quốc gia</div>
+          <div class="framework-cell"><strong>Các Mô Hình Khác</strong>UK: tiếp cận "pro-innovation", nhẹ nhàng hơn EU; Ấn Độ: đang xây dựng khung riêng; ASEAN: tập trung vào nguyên tắc hướng dẫn không ràng buộc</div>
         </div>
       </div>
-      <p>Điểm clash trọng yếu trong tranh luận về quản trị: <em>Ai có quyền lực và tính hợp pháp để đặt tiêu chuẩn toàn cầu cho AI?</em> Liên Hợp Quốc? Các nhóm G7/G20? Các cơ quan kỹ thuật như IEEE? Hay thị trường tự định hình các chuẩn mực?</p>
+      <p>Điểm clash trọng tâm: <em>Sự phân mảnh quản trị AI toàn cầu là vấn đề hay là điều tốt?</em> Bên Chính phủ có thể lập luận rằng sự không đồng nhất tạo ra "regulatory arbitrage" — các công ty di chuyển đến nơi ít quy định nhất. Bên Đối lập có thể lập luận rằng sự đa dạng trong cách tiếp cận cho phép thực nghiệm và học hỏi, và tránh một mô hình duy nhất chi phối toàn cầu.</p>
+      <p>Câu hỏi quản trị quan trọng nhất chưa được giải quyết: <em>Ai có thẩm quyền đặt tiêu chuẩn toàn cầu cho AI?</em> Liên Hợp Quốc? G7/G20? Các tổ chức kỹ thuật như IEEE hay ISO? Các công ty công nghệ thông qua tiêu chuẩn công nghiệp? Hay thị trường tự định hình các chuẩn mực thông qua áp lực cạnh tranh?</p>
 
       <div class="chapter-title">6.3 Tác Động Kinh Tế-Xã Hội của AI</div>
-      <p>Đây là chủ đề tranh luận phổ biến nhất và cũng gây tranh cãi nhất về AI. Cuộc tranh luận xoay quanh liệu AI có phải là mối đe dọa hay cơ hội kinh tế, và ai là người được hưởng lợi hay chịu thiệt.</p>
-      <div class="section-title">Vấn Đề Việc Làm</div>
-      <p>Báo cáo của Diễn đàn Kinh tế Thế giới (WEF) dự báo AI và tự động hóa sẽ xóa bỏ 85 triệu việc làm nhưng tạo ra 97 triệu việc làm mới vào năm 2025. Tuy nhiên, con số tổng cộng này che giấu vấn đề thực sự: <em>việc làm cũ và việc làm mới không có cùng người làm.</em> Một công nhân lắp ráp 50 tuổi ở Đồng Nai không thể dễ dàng trở thành kỹ sư AI ở Hà Nội.</p>
+      <p>Đây là chủ đề tranh luận phổ biến nhất và cũng tranh cãi nhất. Cuộc tranh luận trung tâm: AI là mối đe dọa hay cơ hội kinh tế — và ai là người được hưởng lợi hay chịu thiệt?</p>
+      <div class="section-title">Tranh Luận về Việc Làm</div>
+      <p>Báo cáo của WEF (2023) dự báo AI và tự động hóa sẽ tạo ra 69 triệu việc làm mới nhưng xóa bỏ 83 triệu vào 2027 (mất ròng 14 triệu trong ngắn hạn). Goldman Sachs (2023) ước tính 300 triệu người có thể bị ảnh hưởng toàn phần hoặc bán phần. IMF (2024) phân tích rằng 40% việc làm toàn cầu có mức độ tiếp xúc cao với AI.</p>
+      <p>Tuy nhiên, các con số tổng cộng che giấu vấn đề thực sự: <strong>việc làm bị mất và việc làm được tạo ra không có cùng người làm, cùng địa điểm, hay cùng mức lương.</strong> Một công nhân may mặc 50 tuổi ở Bình Dương không thể dễ dàng chuyển sang làm kỹ sư AI ở Hà Nội. Sự chênh lệch về khả năng thích nghi giữa các nhóm dân số là điểm clash chính trong tranh luận về việc làm AI.</p>
       <div class="section-title">Tập Trung Quyền Lực Kinh Tế</div>
-      <p>AI tạo ra hiệu ứng "người thắng lấy tất" (winner-takes-all) mạnh hơn bất kỳ công nghệ nào trước đây. Dữ liệu tạo ra AI tốt hơn → AI tốt hơn thu hút nhiều người dùng hơn → nhiều người dùng tạo ra nhiều dữ liệu hơn. Vòng lặp này có xu hướng tập trung sức mạnh AI vào tay một số ít công ty công nghệ lớn, làm trầm trọng thêm bất bình đẳng kinh tế toàn cầu.</p>
+      <p>AI tạo ra vòng lặp tự củng cố chưa từng thấy: Nhiều dữ liệu → AI tốt hơn → Nhiều người dùng → Nhiều dữ liệu hơn. Vòng lặp này có xu hướng tập trung sức mạnh AI vào tay một số ít công ty — đặc biệt là các công ty đã có lợi thế dữ liệu lớn. Đây là lý do nhiều nhà kinh tế quan tâm đến việc AI có thể làm trầm trọng thêm, không phải giảm bớt, sự bất bình đẳng kinh tế toàn cầu.</p>
+      <div class="section-title">AI và Phát Triển Toàn Cầu Không Đồng Đều</div>
+      <p>Một chiều thường bị bỏ qua: các quốc gia đang phát triển có thể bị ảnh hưởng nặng nề nhất bởi tự động hóa AI vì nền kinh tế của họ phụ thuộc nhiều vào lao động thủ công giá rẻ — đây là lợi thế so sánh có thể bị xóa bỏ. Đồng thời, họ ít có khả năng xây dựng AI nội địa mạnh do thiếu hạ tầng tính toán và vốn con người kỹ thuật cao. Chiều này thường bị bỏ qua trong tranh luận tập trung vào Mỹ và EU.</p>
 
-      <div class="chapter-title">6.4 Sentience và Quyền của AI</div>
-      <p>Đây là chủ đề mang tính triết học nhất và cũng là chủ đề tranh luận đang nổi. Với sự xuất hiện của các mô hình ngôn ngữ lớn (LLMs) như GPT-4 và Claude, câu hỏi về ý thức và quyền của AI không còn thuần túy là khoa học viễn tưởng.</p>
-      <p>Các câu hỏi cốt lõi trong tranh luận: Ý thức là gì và liệu AI có thể có nó không? Nếu AI biểu hiện hành vi giống ý thức, liệu chúng ta có nghĩa vụ đạo đức với nó không? Ai xác định khi nào AI đủ điều kiện để có quyền? Quyền của AI và quyền con người có xung đột không?</p>
-      <div class="callout callout-coral">
-        <div class="callout-label">Lưu Ý Tranh Luận</div>
-        <p>Hầu hết các cuộc thi hiện tại không tranh luận về quyền AI ở cấp độ trừu tượng mà ở các biểu hiện cụ thể: <em>"Liệu các nhân vật AI trong trò chơi điện tử có cần được bảo vệ khỏi bạo lực không?"</em> hay <em>"Các công ty AI có nghĩa vụ tiết lộ nếu người dùng đang tương tác với AI hay người thật không?"</em></p>
-      </div>
-
-      <div class="chapter-title">6.5 Thiên Kiến AI và Công Bằng Thuật Toán (Bias and Algorithmic Fairness)</div>
-      <p>Thiên kiến trong AI là vấn đề kỹ thuật-xã hội phức tạp với nhiều chiều cạnh. Thiên kiến không chỉ là lỗi lập trình — nó là sự phản ánh của các bất công xã hội hiện hữu được mã hóa và khuếch đại bởi hệ thống kỹ thuật.</p>
+      <div class="chapter-title">6.4 Thiên Kiến AI và Công Bằng Thuật Toán</div>
+      <p>Thiên kiến trong AI là vấn đề kỹ thuật-xã hội phức tạp. Thiên kiến không chỉ là lỗi lập trình ngẫu nhiên — nó là sự phản ánh của các bất công xã hội hiện hữu được mã hóa và khuếch đại bởi hệ thống tự động hóa quy mô lớn.</p>
       <div class="section-title">Các Nguồn Gốc Thiên Kiến</div>
       <ul class="content-list">
-        <li><strong>Historical bias:</strong> Dữ liệu huấn luyện phản ánh các quyết định phân biệt đối xử trong quá khứ.</li>
-        <li><strong>Representation bias:</strong> Một số nhóm được đại diện ít hơn trong dữ liệu huấn luyện.</li>
-        <li><strong>Measurement bias:</strong> Cách thu thập dữ liệu có hệ thống ưu tiên một số nhóm nhất định.</li>
-        <li><strong>Aggregation bias:</strong> Mô hình được huấn luyện trên toàn dân số nhưng áp dụng cho các nhóm con đặc thù.</li>
+        <li><strong>Historical bias:</strong> Dữ liệu huấn luyện phản ánh các quyết định phân biệt đối xử trong quá khứ. Ví dụ: thuật toán tuyển dụng được huấn luyện trên dữ liệu tuyển dụng lịch sử trong đó phụ nữ bị loại không công bằng sẽ học được mẫu phân biệt đó.</li>
+        <li><strong>Representation bias:</strong> Một số nhóm được đại diện ít hơn hoặc không chính xác trong dữ liệu huấn luyện. Hệ thống nhận diện khuôn mặt được huấn luyện chủ yếu trên khuôn mặt người da trắng hoạt động kém hơn đáng kể đối với người da đen và người châu Á.</li>
+        <li><strong>Measurement bias:</strong> Cách thu thập và gắn nhãn dữ liệu có hệ thống phản ánh quan điểm của người thu thập. Ví dụ: nếu người gắn nhãn "nội dung độc hại" (toxic content) chủ yếu đến từ một nền văn hóa, họ có thể đánh giá sai nội dung từ các nền văn hóa khác.</li>
+        <li><strong>Proxy discrimination:</strong> Thuật toán không dùng đặc điểm được bảo vệ (chủng tộc, giới tính) trực tiếp nhưng sử dụng "proxy variables" tương quan cao với chúng (mã bưu chính, trường học, lịch sử tín dụng) dẫn đến tác động tương đương.</li>
       </ul>
       <div class="section-title">Căng Thẳng Giữa Các Định Nghĩa Công Bằng</div>
-      <p>Đây là điểm clash học thuật quan trọng: Các định nghĩa toán học khác nhau về "công bằng" thường <em>không thể đồng thời thỏa mãn</em>. Ví dụ, tỷ lệ kết quả bằng nhau giữa các nhóm (demographic parity) xung đột với tỷ lệ dương tính đúng bằng nhau (equal opportunity). Một hệ thống AI phải lựa chọn giữa các định nghĩa này — và đây là quyết định <em>chính trị</em>, không phải kỹ thuật.</p>
+      <p>Đây là điểm clash học thuật quan trọng nhất trong tranh luận về AI công bằng: Các định nghĩa toán học khác nhau về "công bằng" thường <em>không thể đồng thời thỏa mãn</em> — đây không phải là vấn đề kỹ thuật mà là mâu thuẫn căn bản về giá trị.</p>
+      <table>
+        <thead><tr><th>Định Nghĩa Công Bằng</th><th>Ý Nghĩa</th><th>Mâu Thuẫn với</th></tr></thead>
+        <tbody>
+          <tr><td>Demographic Parity</td><td>Tỷ lệ kết quả dương tính bằng nhau giữa các nhóm</td><td>Equal Opportunity (nếu tỷ lệ nền khác nhau)</td></tr>
+          <tr><td>Equal Opportunity</td><td>Tỷ lệ true positive bằng nhau giữa các nhóm có đủ điều kiện</td><td>Predictive Parity</td></tr>
+          <tr><td>Predictive Parity (Calibration)</td><td>Xác suất dự đoán có nghĩa như nhau giữa các nhóm</td><td>Equal Opportunity trong nhiều bối cảnh</td></tr>
+          <tr><td>Individual Fairness</td><td>Các cá nhân tương tự nhau được đối xử tương tự</td><td>Group fairness metrics (đôi khi xung đột)</td></tr>
+        </tbody>
+      </table>
+      <p>Một hệ thống AI phải lựa chọn giữa các định nghĩa này — và đây là quyết định <em>chính trị và đạo đức</em>, không phải quyết định kỹ thuật. Điều này có nghĩa là không có "giải pháp kỹ thuật" thuần túy cho vấn đề công bằng AI — đây là lập luận mạnh ủng hộ giám sát dân chủ và pháp lý đối với các hệ thống AI ảnh hưởng đến quyền lợi công.</p>
+
+      <div class="chapter-title">6.5 Vũ Khí Tự Động (Lethal Autonomous Weapons — LAWS)</div>
+      <p>Vũ khí tự động — hệ thống có thể tự lựa chọn và tấn công mục tiêu mà không cần sự can thiệp của con người trong quyết định "kill" — là một trong những tranh luận đạo đức AI sắc nét nhất và cấp thiết nhất trong các cuộc thi quốc tế hiện nay.</p>
+      <div class="section-title">Lập Luận Ủng Hộ Cấm LAWS</div>
+      <ul class="content-list">
+        <li><strong>Trách nhiệm giải trình:</strong> Khi một máy tự động giết người, ai chịu trách nhiệm? Người lập trình? Chỉ huy quân sự? Nhà sản xuất? Sự không rõ ràng về trách nhiệm là vi phạm nguyên tắc pháp quyền cơ bản.</li>
+        <li><strong>International Humanitarian Law (IHL):</strong> IHL yêu cầu phân biệt giữa chiến binh và dân thường, tuân thủ nguyên tắc proportionality, và áp dụng sự phán đoán của con người. AI hiện tại không thể đáp ứng đủ các yêu cầu này trong bối cảnh chiến trường phức tạp.</li>
+        <li><strong>Rủi ro leo thang:</strong> Vũ khí tự động có thể đẩy ngưỡng sử dụng vũ lực thấp hơn vì không có rủi ro về thương vong của quân đội sử dụng chúng, dẫn đến các cuộc xung đột mà con người có thể sẽ tránh.</li>
+      </ul>
+      <div class="section-title">Lập Luận Chống Lại Lệnh Cấm</div>
+      <ul class="content-list">
+        <li><strong>Selective disadvantage:</strong> Nếu các nền dân chủ tự áp đặt lệnh cấm nhưng các quốc gia độc đoán không tuân thủ, điều đó tạo ra bất cân xứng chiến lược nguy hiểm.</li>
+        <li><strong>Tiềm năng giảm thương vong dân thường:</strong> Vũ khí được lập trình đúng có thể tuân thủ IHL chính xác hơn binh lính con người chịu áp lực tâm lý và mệt mỏi chiến đấu.</li>
+        <li><strong>Khó thực thi:</strong> "Vũ khí tự động" nằm trên một phổ — ranh giới giữa hỗ trợ AI và tự động hoàn toàn khó xác định, làm cho các lệnh cấm pháp lý khó soạn thảo chính xác.</li>
+      </ul>
     `
   },
   {
     num: "Mô-đun VII",
-    title: "Chuẩn Bị và Xây Dựng Lập Luận",
-    desc: "Phân tích nghị đề, lập bản đồ bên liên quan, phân tích so sánh và các bài tập luyện tập.",
+    title: "Chuẩn Bị và Phân Tích Nghị Đề",
+    desc: "Phân tích nghị đề hệ thống, lập bản đồ bên liên quan, xây dựng case hai chiều, phân tích so sánh và các bài luyện tập nền tảng.",
     badge: "badge-teal",
     content: `
-      <div class="chapter-title">7.1 Phân Tích Nghị Đề (Motion Analysis)</div>
-      <p>Trước khi chuẩn bị bất kỳ lập luận nào, người tranh luận phải thực hiện phân tích nghị đề — quá trình đọc và hiểu sâu nghị đề để xác định chính xác những gì cần được tranh luận.</p>
-      <div class="section-title">Bước 1: Phân Tách Từ Khóa</div>
-      <p>Lấy nghị đề ví dụ: <em>"Hội đồng này tin rằng các chính phủ dân chủ nên cấm các hệ thống AI tổng quát (AGI) cho đến khi có bằng chứng an toàn đầy đủ."</em></p>
-      <p>Từ khóa cần phân tích: <em>"chính phủ dân chủ"</em> (không bao gồm chính phủ độc đoán?), <em>"cấm"</em> (hoàn toàn hay chỉ hạn chế?), <em>"AGI"</em> (định nghĩa — AI tổng quát khác AI hẹp như thế nào?), <em>"bằng chứng an toàn đầy đủ"</em> (ai xác định "đầy đủ"? tiêu chí nào?).</p>
-      <div class="section-title">Bước 2: Xác Định Phạm Vi Tranh Luận</div>
-      <p>Sau khi phân tích từ khóa, xác định: Đây là tranh luận về <em>gì</em>? Về đạo đức? Về tính hiệu quả chính sách? Về phân bổ rủi ro? Phần lớn tranh luận có thể được tiến hành ở nhiều cấp độ — chọn cấp độ có lợi nhất cho lập trường của bạn và bảo vệ sự lựa chọn đó.</p>
+      <div class="chapter-title">7.1 Phân Tích Nghị Đề Hệ Thống (Systematic Motion Analysis)</div>
+      <p>Phân tích nghị đề là bước tiên quyết trước khi chuẩn bị bất kỳ lập luận nào. Một phân tích nghị đề cẩu thả dẫn đến việc tranh luận về câu hỏi sai — điều này có thể gây thua ngay cả khi các lập luận cụ thể rất mạnh. Dưới đây là phương pháp bốn bước hệ thống:</p>
+      <div class="section-title">Bước 1: Phân Tách và Định Nghĩa Từ Khóa</div>
+      <p>Lấy ví dụ nghị đề: <em>"Hội đồng này tin rằng các chính phủ dân chủ nên yêu cầu kiểm toán thuật toán độc lập đối với tất cả các hệ thống AI được sử dụng trong quyết định tư pháp."</em></p>
+      <p>Từng cụm cần phân tích: <em>"chính phủ dân chủ"</em> — tại sao chỉ dân chủ? Điều này ngụ ý các chính phủ phi dân chủ không có nghĩa vụ tương đương không? <em>"yêu cầu"</em> — bắt buộc vs. khuyến khích; nghĩa vụ pháp lý vs. tiêu chuẩn tự nguyện. <em>"kiểm toán thuật toán độc lập"</em> — độc lập với ai? Ai tài trợ? Tiêu chí kiểm toán là gì? <em>"tất cả"</em> — không có ngoại lệ? Kể cả các hệ thống rủi ro thấp? <em>"hệ thống AI"</em> — định nghĩa là gì? Có bao gồm các quy tắc heuristic đơn giản không? <em>"quyết định tư pháp"</em> — chỉ kết án hình sự hay cả quyết định bảo lãnh, ân xá, cải tạo?</p>
+      <div class="section-title">Bước 2: Xác Định Lõi Tranh Luận (Core Controversy)</div>
+      <p>Sau khi phân tích từ khóa, hỏi: <em>Đây là tranh luận về điều gì căn bản nhất?</em> Thường có nhiều cấp độ có thể tranh luận:</p>
+      <ul class="content-list">
+        <li><strong>Cấp độ nguyên tắc:</strong> Có phải AI trong tư pháp cần minh bạch theo nguyên tắc không? (Liên quan đến due process, quyền được giải thích quyết định)</li>
+        <li><strong>Cấp độ thực tế:</strong> Kiểm toán có hiệu quả không? Ai đủ năng lực để kiểm toán? Chi phí bao nhiêu?</li>
+        <li><strong>Cấp độ so sánh:</strong> Kiểm toán bắt buộc có tốt hơn kiểm toán tự nguyện không? Tốt hơn cấm hoàn toàn AI trong tư pháp không?</li>
+      </ul>
+      <p>Xác định bạn nên tranh luận ở cấp độ nào có lợi nhất cho lập trường của mình — và bảo vệ sự lựa chọn đó khi đối thủ cố kéo bạn sang cấp độ khác.</p>
       <div class="section-title">Bước 3: Kiểm Tra Giả Định Ẩn</div>
-      <p>Mọi nghị đề đều có các giả định ẩn (hidden assumptions). Ví dụ, nghị đề trên giả định rằng AGI tồn tại hoặc sắp tồn tại, rằng các chính phủ dân chủ có thể thực thi lệnh cấm, và rằng "an toàn" là một tiêu chí có thể đo lường được. Xác định và thách thức các giả định này là chiến lược hiệu quả.</p>
+      <p>Mọi nghị đề đều có giả định ẩn (hidden assumptions) mà nếu bị thách thức, có thể làm sụp đổ toàn bộ lập luận của một bên. Trong ví dụ trên: nghị đề giả định rằng AI <em>đang</em> được sử dụng trong quyết định tư pháp đủ rộng rãi để cần quy định — và rằng kiểm toán bên ngoài là giải pháp khả thi và hiệu quả. Cả hai giả định này đều có thể tranh luận. Nhận diện và khai thác (hoặc bảo vệ) các giả định ẩn là kỹ năng phân tích nâng cao.</p>
+      <div class="section-title">Bước 4: Phân Tích Comparative World</div>
+      <p>Xây dựng rõ ràng hai "thế giới" cụ thể sẽ được so sánh: Thế giới có nghị đề (với chính sách kiểm toán) trông như thế nào? Ai làm gì? Chi phí bao nhiêu? Lợi ích cụ thể là gì? Và thế giới không có nghị đề (hiện trạng hoặc phương án thay thế) trông như thế nào? Giám khảo phán quyết dựa trên sự so sánh hai thế giới này — không phải sự hoàn hảo của một thế giới.</p>
 
       <div class="chapter-title">7.2 Lập Bản Đồ Bên Liên Quan (Stakeholder Mapping)</div>
-      <p>Mọi chính sách AI đều ảnh hưởng đến nhiều bên liên quan với lợi ích và quan điểm khác nhau. Lập bản đồ stakeholder giúp bạn xây dựng lập luận toàn diện và dự đoán phản biện của đối thủ.</p>
+      <p>Mọi chính sách AI đều ảnh hưởng đến nhiều bên liên quan với lợi ích và quan điểm khác nhau. Lập bản đồ stakeholder không chỉ giúp xây dựng lập luận toàn diện mà còn giúp dự đoán các lập luận đối thủ và xác định những nhóm nào có thể được sử dụng làm "đại diện cảm xúc" trong Pathos.</p>
       <div class="framework-box">
-        <div class="framework-title">Bản Đồ Bên Liên Quan trong Quy Định AI</div>
+        <div class="framework-title">Bản Đồ Bên Liên Quan Điển Hình — Quy Định AI</div>
         <div class="framework-row">
-          <div class="framework-cell"><strong>Công ty AI lớn</strong>Ủng hộ tự quy định; lo ngại rào cản gia nhập thị trường; có nguồn lực vận động chính sách</div>
-          <div class="framework-cell"><strong>Chính phủ</strong>Muốn kiểm soát; cạnh tranh địa chính trị; lo ngại an ninh quốc gia</div>
-          <div class="framework-cell"><strong>Người lao động</strong>Lo ngại mất việc làm; muốn chuyển đổi nghề nghiệp được hỗ trợ; đại diện bởi công đoàn</div>
-          <div class="framework-cell"><strong>Nhà nghiên cứu AI</strong>Muốn tự do học thuật; ủng hộ an toàn AI nhưng lo ngại kiểm duyệt nghiên cứu</div>
-          <div class="framework-cell"><strong>Nhóm dễ tổn thương</strong>Phụ nữ, thiểu số — chịu tác động thiên kiến AI nặng nhất; tiếng nói thường bị bỏ qua</div>
-          <div class="framework-cell"><strong>Người dùng cuối</strong>Được lợi từ AI; ít hiểu về rủi ro; cần được bảo vệ nhưng cũng cần quyền tự chủ</div>
+          <div class="framework-cell"><strong>Công ty AI lớn (BigTech)</strong>Lợi ích: Tối thiểu quy định, bảo vệ bí mật thương mại, tự quy định. Lo ngại: Rào cản gia nhập thị trường, chi phí tuân thủ.</div>
+          <div class="framework-cell"><strong>AI Startups</strong>Lợi ích: Môi trường pháp lý rõ ràng để thu hút đầu tư. Lo ngại: Gánh nặng tuân thủ không tương xứng so với big tech.</div>
+          <div class="framework-cell"><strong>Chính phủ Quốc Gia</strong>Lợi ích: Kiểm soát dữ liệu công dân, an ninh quốc gia. Lo ngại: Tụt hậu AI so với đối thủ địa chính trị.</div>
+          <div class="framework-cell"><strong>Người Lao Động</strong>Lợi ích: Bảo vệ việc làm, hỗ trợ chuyển đổi nghề. Lo ngại: Không có đại diện trong các quyết định triển khai AI.</div>
+          <div class="framework-cell"><strong>Nhà Nghiên Cứu AI</strong>Lợi ích: Tự do học thuật, chia sẻ nghiên cứu mở. Lo ngại: Kiểm duyệt nghiên cứu về "AI nguy hiểm".</div>
+          <div class="framework-cell"><strong>Nhóm Dễ Tổn Thương</strong>Người thiểu số, phụ nữ, người khuyết tật — chịu tác động thiên kiến AI không cân xứng; thường không có tiếng nói trong quá trình ra quyết định về AI.</div>
+          <div class="framework-cell"><strong>Người Dùng Cuối</strong>Hưởng lợi từ tính tiện lợi của AI nhưng thường không nhận thức được các rủi ro về quyền riêng tư và thiên kiến. Cần được bảo vệ nhưng cũng cần quyền tự chủ.</div>
+          <div class="framework-cell"><strong>Các Quốc Gia Đang Phát Triển</strong>Không có khả năng cạnh tranh trong AI nhưng chịu tác động kinh tế toàn cầu của tự động hóa; thường bị bỏ qua trong các cuộc thảo luận quản trị AI quốc tế.</div>
         </div>
       </div>
+      <p>Khi tranh luận, hỏi: "Chính sách này ai được hưởng lợi? Ai chịu thiệt? Và ai có quyền lực để quyết định?" Sự chênh lệch giữa những người bị ảnh hưởng và những người ra quyết định thường là nguồn gốc của các lập luận về đạo đức và công bằng mạnh nhất.</p>
 
-      <div class="chapter-title">7.3 Phân Tích So Sánh (Comparative Analysis)</div>
-      <p>Phân tích so sánh là việc đặt chính sách được đề xuất cạnh các lựa chọn thay thế để đánh giá tính ưu việt tương đối. Đây là kỹ thuật tranh luận nâng cao nhưng rất hiệu quả.</p>
-      <p>Khi bên Chính phủ đề xuất "quy định AI nghiêm ngặt," bên Đối lập không chỉ nên nói "quy định là xấu" mà nên đề xuất một phương án thay thế cụ thể: <em>"Thay vì quy định từ trên xuống, chúng tôi ủng hộ mô hình kiểm định độc lập (independent auditing) kết hợp với tiêu chuẩn ngành tự nguyện."</em> Điều này buộc cuộc tranh luận phải so sánh hai phương án cụ thể thay vì trừu tượng.</p>
+      <div class="chapter-title">7.3 Xây Dựng Case Hai Chiều (Two-Sided Case Building)</div>
+      <p>Người tranh luận chuyên nghiệp chuẩn bị lập luận cho <em>cả hai phía</em> của mọi nghị đề — không chỉ phía được giao. Điều này phục vụ hai mục tiêu: (1) giúp dự đoán và chuẩn bị phản biện cho lập luận đối thủ, và (2) xác định điểm yếu trong case của bạn trước khi đối thủ tìm ra chúng.</p>
+      <div class="section-title">Phương Pháp "Steel-Manning"</div>
+      <p>Steel-manning là xây dựng phiên bản mạnh nhất có thể của lập luận đối thủ — đối lập với straw-manning (xây dựng phiên bản yếu để dễ bác bỏ). Khi bạn có thể trình bày lập luận đối thủ tốt hơn chính họ, bạn (1) đã hiểu đủ sâu để phản biện hiệu quả, và (2) xây dựng được Ethos với giám khảo về sự công bằng trí tuệ.</p>
+      <div class="example-block">
+        <em>Steel-man ví dụ — Bên ủng hộ không quy định AI:</em><br><br>
+        "Lập luận mạnh nhất cho phía Đối lập: Lịch sử quy định sớm về các công nghệ mới (như internet, công nghệ sinh học) cho thấy quy định quá sớm thường được thiết kế cho công nghệ cũ và không phù hợp với công nghệ mới, tạo ra sự tuân thủ hình thức mà không thực sự giải quyết rủi ro. Quy định AI hiệu quả đòi hỏi sự hiểu biết kỹ thuật sâu mà các cơ quan quản lý chính phủ hiện tại thiếu — dẫn đến nguy cơ quy định gây hại nhiều hơn lợi."
+      </div>
+      <p>Sau khi steel-man đối thủ, bạn đã sẵn sàng để phản biện hiệu quả hơn — vì bạn biết lập luận thực sự mạnh nhất của họ là gì.</p>
 
-      <div class="chapter-title">7.4 Các Bài Tập Luyện Tập Cốt Lõi</div>
-      <div class="section-title">Drill 1: Chuyển Lập Trường (Switch Sides)</div>
-      <p>Luyện tập xây dựng lập luận cho cả hai bên của cùng một nghị đề. Điều này phát triển tư duy linh hoạt, giúp bạn dự đoán lập luận của đối thủ, và rèn luyện khả năng lập luận không phụ thuộc vào niềm tin cá nhân.</p>
-      <div class="section-title">Drill 2: Phản Biện Nhanh (Speed Rebuttal)</div>
-      <p>Một người nêu một luận điểm ngẫu nhiên về AI; người còn lại có 60 giây để đưa ra phản biện có cấu trúc (chỉ ra lỗi trong Assertion, Reasoning, hoặc Evidence). Bài tập này rèn luyện tư duy nhanh dưới áp lực.</p>
-      <div class="section-title">Drill 3: AREI 2 Phút</div>
-      <p>Chọn ngẫu nhiên một tuyên bố về AI và xây dựng một luận điểm AREI hoàn chỉnh trong đúng 2 phút. Đây là kỹ năng cốt lõi vì hầu hết các luận điểm trong tranh luận thực tế cần được trình bày trong khoảng 90–120 giây.</p>
-      <div class="section-title">Drill 4: Mock Debate Mini (15 phút)</div>
-      <p>Hai người tranh luận về một nghị đề AI. Mỗi người có 3 phút cho bài đầu tiên, 2 phút cho phản biện, 1 phút cho summary. Tập trung vào clash — giám khảo đánh giá liệu các bên có thực sự giao chiến với nhau không.</p>
+      <div class="chapter-title">7.4 Phân Tích So Sánh Chính Sách (Comparative Policy Analysis)</div>
+      <p>Phân tích so sánh là đặt chính sách được đề xuất bên cạnh các lựa chọn thay thế để đánh giá tính ưu việt tương đối. Đây là kỹ thuật tranh luận nâng cao nhưng rất hiệu quả vì nó chuyển tranh luận từ trừu tượng sang cụ thể.</p>
+      <p>Khi bên Chính phủ đề xuất "kiểm toán thuật toán bắt buộc," bên Đối lập không nên chỉ nói "kiểm toán là tồi" — họ nên đề xuất phương án thay thế cụ thể hơn: <em>"Thay vì kiểm toán bắt buộc tốn kém và chậm chạp, chúng tôi ủng hộ mô hình 'regulatory sandbox' — thử nghiệm có giám sát trong môi trường kiểm soát trước khi triển khai rộng — kết hợp với yêu cầu báo cáo sự cố tự nguyện và trách nhiệm pháp lý rõ ràng khi thiệt hại xảy ra."</em> Điều này buộc cuộc tranh luận so sánh hai phương án cụ thể, không phải trừu tượng "quy định vs. không quy định."</p>
+
+      <div class="chapter-title">7.5 Các Bài Tập Luyện Tập Nền Tảng</div>
+      <div class="section-title">Drill 1: Phân Tích Nghị Đề 10 Phút</div>
+      <p>Cho một nghị đề AI ngẫu nhiên, thực hiện đầy đủ bốn bước phân tích (từ khóa → lõi tranh luận → giả định ẩn → comparative world) trong đúng 10 phút. Viết ra giấy, không chỉ nghĩ trong đầu. Luyện tập hàng ngày với nghị đề khác nhau cho đến khi quy trình trở thành tự động.</p>
+      <div class="section-title">Drill 2: Switch Sides (Chuyển Lập Trường)</div>
+      <p>Xây dựng case hoàn chỉnh cho một phía, sau đó chuyển sang phía đối lập và xây dựng case mạnh nhất có thể. Điều này phát triển tư duy linh hoạt, giúp bạn dự đoán lập luận đối thủ, và rèn luyện khả năng lập luận độc lập với niềm tin cá nhân. Thực hành: mỗi tuần chọn một nghị đề AI và chuẩn bị case cho cả hai phía.</p>
+      <div class="section-title">Drill 3: AREI 90 Giây</div>
+      <p>Chọn ngẫu nhiên một tuyên bố về AI và xây dựng luận điểm AREI hoàn chỉnh trong 90 giây. Ghi âm. Sau đó đánh giá: Assertion có rõ ràng và có thể tranh luận không? Reasoning có giải thích cơ chế nhân quả không? Evidence có cụ thể không? Impact có kết nối với cuộc tranh luận lớn không? Mục tiêu: 90 giây là đủ thời gian cho một luận điểm AREI hoàn chỉnh trong bài phát biểu thực tế.</p>
+      <div class="section-title">Drill 4: Phản Biện Có Cấu Trúc (60 giây)</div>
+      <p>Một người đọc một luận điểm ngẫu nhiên về AI; người còn lại có 60 giây để đưa ra phản biện có cấu trúc đầy đủ theo mẫu BARF (Bottom line, Argument summary, Refutation, Final impact). Bài tập này rèn luyện tư duy nhanh dưới áp lực thời gian — kỹ năng thiết yếu cho POIs và phản biện thời gian thực.</p>
+      <div class="section-title">Drill 5: Mock Mini-Debate (20 phút)</div>
+      <p>Hai người tranh luận về một nghị đề AI. Cấu trúc: 4 phút (bài đầu tiên) → 3 phút (phản biện) → 2 phút (summary và weighing). Người thứ ba đóng vai giám khảo và cho điểm theo ba tiêu chí: Chất lượng lập luận (AREI), Clash (hai bên có thực sự giao chiến với nhau không?), và Weighing (bên nào giải thích tốt hơn tại sao tác động của họ quan trọng hơn?). Feedback cụ thể sau mỗi round là yếu tố quyết định hiệu quả của drill này.</p>
       <div class="callout callout-teal">
-        <div class="callout-label">Nguyên Tắc Luyện Tập</div>
-        <p>Luyện tập với chất lượng cao quan trọng hơn số lượng. Một buổi luyện tập có feedback cụ thể và mục tiêu rõ ràng có giá trị gấp mười buổi luyện tập ngẫu hứng. Luôn ghi âm hoặc ghi hình để xem lại.</p>
+        <div class="callout-label">Nguyên Tắc Luyện Tập Hiệu Quả</div>
+        <p>Chất lượng cao hơn số lượng. Một buổi luyện tập với mục tiêu cụ thể, feedback chi tiết, và xem lại ghi âm/ghi hình có giá trị gấp mười lần buổi luyện tập ngẫu hứng không có cấu trúc. Sau mỗi drill, ghi ra: (1) một điều bạn làm tốt, (2) một điều cần cải thiện, và (3) hành động cụ thể bạn sẽ thực hiện để cải thiện điều đó trong buổi tiếp theo.</p>
       </div>
     `
   },
   {
     num: "Mô-đun VIII",
     title: "Bằng Chứng và Nghiên Cứu Tình Huống",
-    desc: "Tương đồng lịch sử, khung pháp lý, trường hợp doanh nghiệp, và các chuẩn mực kỹ thuật.",
+    desc: "Tương đồng lịch sử, khung pháp lý hiện hành (2024–2026), trường hợp doanh nghiệp, chuẩn mực kỹ thuật và xây dựng ngân hàng bằng chứng.",
     badge: "badge-coral",
     content: `
       <div class="chapter-title">8.1 Tương Đồng Lịch Sử (Historical Analogies)</div>
-      <p>Tương đồng lịch sử là công cụ hùng biện và lập luận mạnh mẽ trong tranh luận AI, cho phép người tranh luận kết nối những vấn đề mới với những bài học đã được kiểm chứng. Tuy nhiên, cần sử dụng cẩn thận vì mọi tương đồng đều có giới hạn.</p>
-      <div class="section-title">Cách Mạng Công Nghiệp và Tự Động Hóa</div>
-      <p>Cuộc cách mạng công nghiệp lần đầu (1760–1840) và lần hai (1870–1914) cung cấp bằng chứng lịch sử quan trọng cho tranh luận về AI và việc làm. Cả hai đều tạo ra sự gián đoạn việc làm ngắn hạn nghiêm trọng nhưng tạo ra nhiều việc làm hơn trong dài hạn. Tuy nhiên, điểm then chốt là: <em>Người lao động trong thời đó cũng nói "lần này khác"</em> — và đôi khi họ đúng ở cấp độ cụ thể, ngay cả khi xu hướng chung được lặp lại.</p>
-      <div class="section-title">Quy Định Internet và Mạng Xã Hội</div>
-      <p>Lịch sử quy định mạng xã hội cung cấp bài học quan trọng về những gì xảy ra khi quy định đến quá muộn. Facebook ra đời năm 2004; quy định GDPR của EU không có hiệu lực đến 2018. Trong 14 năm đó, mô hình kinh doanh dữ liệu không bị kiểm soát đã tạo ra nhiều hậu quả khó đảo ngược. Bài học cho AI: quy định cần đến sớm hơn trong vòng đời công nghệ.</p>
-      <div class="section-title">Điện Hạt Nhân — Mô Hình Dual Use</div>
-      <p>Điện hạt nhân là ví dụ về "công nghệ lưỡi dao hai lưỡi" với tiềm năng cực kỳ lớn (năng lượng sạch) và rủi ro cực kỳ cao (vũ khí, tai nạn). Mô hình quản trị hạt nhân quốc tế (IAEA, NPT) cung cấp khung tham chiếu cho quản trị AI — với cả những thành công và hạn chế.</p>
+      <p>Tương đồng lịch sử là công cụ hùng biện mạnh vì nó kết nối những vấn đề mới với những bài học đã được kiểm chứng qua thời gian. Trong tranh luận AI, có ba nhóm tương đồng lịch sử quan trọng nhất — nhưng người tranh luận giỏi phải luôn thừa nhận giới hạn của mọi phép loại suy.</p>
+      <div class="section-title">Các Cuộc Cách Mạng Công Nghiệp và Tự Động Hóa</div>
+      <p>Cách mạng công nghiệp lần hai (1870–1914) — điện khí hóa, động cơ đốt trong, hóa học công nghiệp — đã xóa bỏ hàng triệu công việc thủ công (thợ dệt khung dệt tay, thợ rèn, phu xe ngựa) và tạo ra nhiều loại công việc mới chưa từng tồn tại (kỹ sư điện, thợ sửa ô tô, nhân viên văn phòng). Trong dài hạn, tỷ lệ thất nghiệp không tăng, và mức sống tăng đáng kể. Tương đồng này ủng hộ lập trường rằng AI sẽ lặp lại mẫu này.</p>
+      <p><strong>Giới hạn của tương đồng:</strong> (1) Tốc độ: AI đang thay thế việc làm nhanh hơn nhiều so với các cuộc cách mạng công nghiệp, không để thị trường lao động đủ thời gian thích nghi; (2) Phạm vi: AI ảnh hưởng đến cả lao động tri thức và thủ công, không chỉ lao động chân tay như các cuộc cách mạng trước; (3) Sự không chắc chắn: Chúng ta đang ở giữa quá trình chuyển đổi, chưa có đủ dữ liệu dài hạn.</p>
+      <div class="section-title">Lịch Sử Quy Định Internet và Mạng Xã Hội</div>
+      <p>Facebook ra đời năm 2004; GDPR — quy định bảo vệ dữ liệu toàn diện đầu tiên của EU — có hiệu lực năm 2018. Trong 14 năm thiếu quy định đó, mô hình kinh doanh dữ liệu không kiểm soát đã tạo ra: Cambridge Analytica (2016), can thiệp vào bầu cử; nội dung độc hại lan tràn; trẻ em bị khai thác. Bài học quan trọng cho AI: quy định cần đến sớm hơn trong vòng đời công nghệ, trước khi thiệt hại trở nên không thể đảo ngược và lợi ích kinh doanh của các công ty trở nên đủ lớn để kháng cự thành công.</p>
+      <div class="section-title">Hạt Nhân — Mô Hình Dual-Use và Quản Trị Quốc Tế</div>
+      <p>Công nghệ hạt nhân cung cấp mô hình tham chiếu cho quản trị "dual-use" (hai mặt): cùng công nghệ có thể được dùng để tạo năng lượng sạch hoặc vũ khí hủy diệt hàng loạt. Mô hình quản trị quốc tế (IAEA, Hiệp ước không phổ biến vũ khí hạt nhân NPT) thành công trong việc ngăn chặn phổ biến vũ khí hạt nhân quy mô lớn — dù không hoàn hảo. Lập luận tương đồng: AI frontier có đặc tính dual-use tương tự và cần một cơ chế quản trị quốc tế tương tự. <strong>Giới hạn:</strong> AI phân tán hơn, khó kiểm soát hơn nhiều so với vật liệu hạt nhân cần cơ sở hạ tầng đặc biệt để tạo ra.</p>
+      <div class="callout callout-gold">
+        <div class="callout-label">Cách Sử Dụng Tương Đồng Lịch Sử Chính Xác</div>
+        <p>Luôn đặt câu hỏi: <strong>"Giới hạn của tương đồng này là gì?"</strong> và thừa nhận chúng trước khi đối thủ chỉ ra. "Tương đồng này không hoàn hảo — AI khác hạt nhân ở điểm [X] — nhưng bài học về [Y] vẫn có giá trị vì..." Điều này xây dựng Ethos và làm cho tương đồng trở nên đáng tin hơn, không yếu đi.</p>
+      </div>
 
-      <div class="chapter-title">8.2 Khung Pháp Lý Hiện Hành (Existing Legislation)</div>
-      <p>Hiểu biết về pháp lý hiện hành là bắt buộc trong tranh luận về AI governance. Các văn bản pháp lý quan trọng nhất cần nắm:</p>
+      <div class="chapter-title">8.2 Khung Pháp Lý Hiện Hành (2024–2026)</div>
+      <p>Hiểu biết về pháp lý AI hiện hành là bắt buộc trong tranh luận cạnh tranh — đặc biệt quan trọng khi tranh luận về governance, rights, hoặc safety. Các văn bản pháp lý sau có hiệu lực hoặc được thông qua trong giai đoạn 2023–2026:</p>
       <table>
-        <thead><tr><th>Văn Bản / Sự Kiện</th><th>Phạm Vi</th><th>Điểm Cốt Lõi</th></tr></thead>
+        <thead><tr><th>Văn Bản / Sự Kiện</th><th>Phạm Vi</th><th>Điểm Cốt Lõi cho Tranh Luận</th><th>Điểm Có Thể Tranh Luận</th></tr></thead>
         <tbody>
-          <tr><td>EU AI Act (2024)</td><td>Toàn EU + ảnh hưởng toàn cầu</td><td>Tiếp cận dựa trên rủi ro; cấm một số ứng dụng AI; yêu cầu minh bạch cho AI tổng quát</td></tr>
-          <tr><td>US AI Executive Order (2023)</td><td>Liên bang Mỹ</td><td>Yêu cầu báo cáo an toàn AI; bảo vệ quyền dân sự; hợp tác quốc tế về tiêu chuẩn</td></tr>
-          <tr><td>Bletchley Declaration (2023)</td><td>28 quốc gia + EU</td><td>Tuyên bố rủi ro tiềm ẩn của AI frontier; cam kết hợp tác an toàn AI</td></tr>
-          <tr><td>China AI Regulations (2023)</td><td>Trung Quốc</td><td>Yêu cầu đăng ký thuật toán; kiểm duyệt nội dung AI tạo sinh; ưu tiên an ninh quốc gia</td></tr>
-          <tr><td>GDPR (2018)</td><td>EU + ảnh hưởng toàn cầu</td><td>Quyền giải thích quyết định tự động; hạn chế xử lý dữ liệu cá nhân cho AI</td></tr>
+          <tr><td>EU AI Act (thông qua 2024, áp dụng đầy đủ 2026)</td><td>EU + mọi AI có ảnh hưởng đến người dùng EU</td><td>Tiếp cận risk-based: cấm một số ứng dụng (social scoring, AI giám sát không có trọng điểm); quy định nghiêm ngặt cho "high-risk AI" (tư pháp, tuyển dụng, tín dụng); yêu cầu minh bạch cho GPAI models</td><td>Có thể kìm hãm đổi mới; định nghĩa "high-risk" không rõ ràng; thực thi xuyên biên giới phức tạp</td></tr>
+          <tr><td>US AI Executive Order (tháng 10/2023)</td><td>Các cơ quan liên bang Mỹ + ảnh hưởng gián tiếp đến ngành</td><td>Yêu cầu báo cáo an toàn cho mô hình frontier; watermarking nội dung AI; bảo vệ quyền dân sự; không có cơ chế pháp lý ràng buộc</td><td>Không có hiệu lực pháp lý ràng buộc; phụ thuộc vào các hành pháp tương lai; thiếu cơ chế thực thi rõ ràng</td></tr>
+          <tr><td>Bletchley Declaration (tháng 11/2023)</td><td>28 quốc gia + EU</td><td>Tuyên bố đồng thuận quốc tế về rủi ro tiềm ẩn của "frontier AI"; cam kết hợp tác an toàn AI; thiết lập AI Safety Institutes ở Mỹ và UK</td><td>Tuyên bố ý định không ràng buộc pháp lý; không có cơ chế kiểm tra; thiếu đại diện của các nước đang phát triển</td></tr>
+          <tr><td>China AI Regulations (2023–2024)</td><td>Trung Quốc</td><td>Đăng ký bắt buộc cho thuật toán tạo sinh; kiểm duyệt nội dung; yêu cầu watermarking; bảo vệ dữ liệu trước khi đào tạo mô hình</td><td>Cơ chế kiểm soát nhà nước mạnh không phù hợp với các giá trị dân chủ; thực thi thiếu minh bạch</td></tr>
+          <tr><td>GDPR (2018, vẫn còn hiệu lực)</td><td>EU + toàn cầu (mọi tổ chức xử lý dữ liệu công dân EU)</td><td>Quyền giải thích quyết định tự động (Art. 22); quyền bị lãng quên; hạn chế nghiêm ngặt về xử lý dữ liệu cá nhân làm dữ liệu huấn luyện AI</td><td>Vẫn còn nhiều bất định về áp dụng cho dữ liệu huấn luyện LLM; thực thi không nhất quán giữa các quốc gia EU</td></tr>
+          <tr><td>UN Resolution on AI (tháng 3/2024)</td><td>Toàn cầu</td><td>Nghị quyết đầu tiên của Đại hội đồng LHQ về AI an toàn; nhấn mạnh "safe, secure, and trustworthy AI"; ủng hộ tiếp cận rights-based</td><td>Không ràng buộc pháp lý; không có cơ chế thực thi; ngôn ngữ thỏa hiệp quá chung chung</td></tr>
         </tbody>
       </table>
 
-      <div class="chapter-title">8.3 Trường Hợp Doanh Nghiệp (Corporate Case Studies)</div>
-      <p>Các trường hợp thực tế từ doanh nghiệp cung cấp bằng chứng cụ thể và đáng tin cậy trong tranh luận AI. Dưới đây là các trường hợp quan trọng nhất cần thuộc lòng:</p>
-      <div class="section-title">Amazon Rekognition và Thiên Kiến Nhận Diện Khuôn Mặt</div>
-      <p>Amazon's Rekognition — phần mềm nhận diện khuôn mặt thương mại — được ACLU thử nghiệm năm 2018 và xác định sai 28 thành viên Quốc hội Mỹ là tội phạm, với tỷ lệ sai cao hơn đáng kể đối với người da màu. Trường hợp này minh họa rõ nguy cơ của AI thiên kiến trong bối cảnh thực thi pháp luật.</p>
-      <div class="section-title">OpenAI và Câu Hỏi Quản Trị Nội Bộ</div>
-      <p>Cuộc khủng hoảng quản trị nội bộ của OpenAI năm 2023 — khi Hội đồng Quản trị bãi miễn CEO Sam Altman rồi sau đó phải mời ông trở lại — phơi bày căng thẳng cơ bản giữa sứ mệnh phi lợi nhuận ("an toàn AI vì nhân loại") và áp lực thương mại từ nhà đầu tư. Đây là ví dụ điển hình cho tranh luận về cấu trúc quản trị doanh nghiệp AI.</p>
-      <div class="section-title">DeepMind AlphaFold — AI Làm Khoa Học</div>
-      <p>AlphaFold của Google DeepMind đã giải quyết bài toán protein folding tồn tại 50 năm, dự đoán cấu trúc của hơn 200 triệu protein. Đây là bằng chứng mạnh nhất cho tiềm năng tích cực của AI trong khoa học và y học, thường được sử dụng để counterbalance các lập luận về rủi ro AI.</p>
+      <div class="chapter-title">8.3 Nghiên Cứu Tình Huống Doanh Nghiệp (Corporate Case Studies)</div>
+      <p>Các trường hợp thực tế từ doanh nghiệp cung cấp bằng chứng cụ thể, gần gũi, và đáng tin trong tranh luận. Dưới đây là các case studies quan trọng nhất, phân loại theo chủ đề:</p>
+      <div class="section-title">Thiên Kiến và Hậu Quả Phân Biệt Đối Xử</div>
+      <p><strong>Amazon Hiring Algorithm (2018):</strong> Amazon phát triển một hệ thống AI tuyển dụng được huấn luyện trên hồ sơ ứng viên trong 10 năm — dữ liệu chủ yếu từ nam giới, phản ánh sự mất cân bằng giới tính trong ngành công nghệ. Hệ thống học được sự thiên vị và bắt đầu hạ điểm hồ sơ có từ "phụ nữ" (như "đội bóng đá nữ"). Amazon dừng sử dụng năm 2018 khi phát hiện vấn đề. Bài học: thiên kiến dữ liệu huấn luyện không tự sửa chữa — nó được khuếch đại.</p>
+      <p><strong>COMPAS Recidivism Algorithm:</strong> Công cụ đánh giá rủi ro tái phạm tội được sử dụng trong hệ thống tư pháp Mỹ. Nghiên cứu ProPublica 2016 phân tích 7.000 bị cáo tại Florida cho thấy COMPAS đánh giá sai tỷ lệ tái phạm cao gấp đôi đối với người Mỹ gốc Phi (45%) so với người da trắng (24%). Công ty sở hữu (Equivant) bảo vệ tính bí mật thương mại của thuật toán, khiến việc thách thức pháp lý cực kỳ khó khăn.</p>
+      <div class="section-title">Quản Trị và Cấu Trúc Quyền Lực</div>
+      <p><strong>OpenAI Governance Crisis (tháng 11/2023):</strong> Hội đồng Quản trị OpenAI bất ngờ sa thải CEO Sam Altman, sau đó phải đảo ngược quyết định trong vòng 5 ngày dưới áp lực từ nhân viên và nhà đầu tư. Cuộc khủng hoảng phơi bày căng thẳng cơ bản trong cấu trúc "capped-profit" của OpenAI: giữa sứ mệnh phi lợi nhuận ("phát triển AI an toàn cho nhân loại") và áp lực thương mại từ các nhà đầu tư như Microsoft (đã đầu tư 13 tỷ USD). Khi thương mại và an toàn xung đột, thương mại thắng — đây là lập luận mạnh cho quy định bên ngoài thay vì tự quy định.</p>
+      <p><strong>DeepMind và Google:</strong> Google mua lại DeepMind năm 2014 với cam kết về sứ mệnh an toàn AI độc lập. Căng thẳng về quyền tự chủ nghiên cứu vs. mục tiêu thương mại của Google đã được ghi nhận qua nhiều năm, bao gồm việc giải tán Hội đồng Đạo đức AI của Google năm 2019 chỉ một tuần sau khi thành lập do phản ứng về thành phần hội đồng.</p>
+      <div class="section-title">Khả Năng Biến Đổi Tích Cực</div>
+      <p><strong>AlphaFold (DeepMind, 2020–2021):</strong> Mô hình AI của Google DeepMind đã giải quyết bài toán protein folding tồn tại 50 năm — dự đoán cấu trúc 3D của protein từ chuỗi amino acid. Đây được mô tả là một trong những bước đột phá khoa học lớn nhất trong thập kỷ. AlphaFold 2 (2021) và cơ sở dữ liệu cấu trúc protein miễn phí với hơn 200 triệu protein đã thúc đẩy nghiên cứu phát triển thuốc, sinh học tổng hợp, và hiểu biết về bệnh tật. Đây là bằng chứng mạnh nhất cho tiềm năng tích cực của AI trong khoa học.</p>
+      <p><strong>AI trong Chẩn Đoán Y Tế:</strong> Các mô hình AI đã cho thấy độ chính xác tương đương hoặc vượt bác sĩ chuyên khoa trong một số lĩnh vực cụ thể: phát hiện ung thư vú từ ảnh chụp nhũ ảnh (Google Health), phân loại ung thư da (Stanford), phát hiện bệnh võng mạc đái tháo đường (IDx-DR — thiết bị AI y tế đầu tiên được FDA phê duyệt tự chủ, 2018). Điều quan trọng: hiệu suất tốt trong điều kiện nghiên cứu không tự động chuyển sang thực hành lâm sàng thực tế — một lưu ý quan trọng để tránh overhype.</p>
 
       <div class="chapter-title">8.4 Chuẩn Mực Kỹ Thuật và Điểm Chuẩn (Technical Benchmarks)</div>
-      <p>Trong tranh luận về AI, hiểu biết các điểm chuẩn kỹ thuật giúp người tranh luận tránh các tuyên bố sai lệch về khả năng AI và xây dựng lập luận dựa trên thực tế kỹ thuật.</p>
+      <p>Hiểu biết về các điểm chuẩn kỹ thuật giúp người tranh luận tránh các tuyên bố không chính xác về khả năng AI và xây dựng lập luận dựa trên thực tế kỹ thuật — không phải khoa học viễn tưởng hay quá lạc quan/bi quan.</p>
       <div class="glossary-grid">
-        <div class="glossary-item"><div class="glossary-term">Turing Test</div>Bài kiểm tra truyền thống về trí thông minh AI — một máy có thể khiến người kiểm tra không phân biệt được với người thật. Không còn là tiêu chuẩn đủ với các LLM hiện đại nhưng vẫn quan trọng về mặt lịch sử.</div>
-        <div class="glossary-item"><div class="glossary-term">MMLU Benchmark</div>Đánh giá kiến thức đa ngành của LLMs (từ luật đến y học đến toán học). GPT-4 đạt ~87%, vượt trung bình con người trên nhiều lĩnh vực.</div>
-        <div class="glossary-item"><div class="glossary-term">Frontier AI</div>Thuật ngữ chỉ các mô hình AI mạnh nhất hiện tại — đặc biệt quan trọng trong tranh luận chính sách vì EU AI Act và Bletchley Declaration tập trung vào frontier AI.</div>
-        <div class="glossary-item"><div class="glossary-term">Existential Risk (x-risk)</div>Rủi ro gây nguy hiểm cho sự tồn tại của nền văn minh con người. Nhiều nhà nghiên cứu AI an toàn coi AGI không được kiểm soát là x-risk. Đây là cơ sở cho các lập luận về biện pháp phòng ngừa quyết liệt.</div>
-        <div class="glossary-item"><div class="glossary-term">AI Safety vs. AI Ethics</div>AI Safety tập trung vào rủi ro dài hạn (AGI, alignment); AI Ethics tập trung vào thiên kiến, quyền riêng tư, và tác hại hiện tại. Trong tranh luận, cần phân biệt rõ để tránh nhầm lẫn hai loại lập luận.</div>
-        <div class="glossary-item"><div class="glossary-term">Compute Threshold</div>Mức độ tính toán (computing power) được dùng làm proxy để xác định "AI rủi ro cao." EU AI Act và một số đề xuất chính sách Mỹ sử dụng compute threshold làm tiêu chí quy định.</div>
+        <div class="glossary-item"><div class="glossary-term">MMLU Benchmark</div>Massive Multitask Language Understanding — đánh giá kiến thức đa ngành (từ luật đến y học đến toán học). GPT-4 đạt ~87%, Claude 3 Opus đạt ~86%, vượt trung bình con người trong nhiều lĩnh vực. Tuy nhiên: điểm MMLU cao không đồng nghĩa với "thông minh" toàn diện — mô hình có thể đạt điểm cao mà vẫn thiếu khả năng suy luận thực sự.</div>
+        <div class="glossary-item"><div class="glossary-term">Frontier AI</div>Thuật ngữ chỉ các mô hình AI mạnh nhất đang tồn tại — cạnh tiên phong của năng lực AI. EU AI Act và các khung quản trị tập trung đặc biệt vào frontier AI vì chúng có ngưỡng rủi ro cao nhất. Ranh giới "frontier" thay đổi nhanh chóng.</div>
+        <div class="glossary-item"><div class="glossary-term">Compute Threshold</div>Mức tính toán (FLOPs) được dùng làm proxy cho "AI rủi ro cao" trong quy định. EU AI Act và đề xuất Mỹ sử dụng ngưỡng 10^25 FLOPs (cho training). Ưu điểm: dễ đo lường. Hạn chế: không phản ánh mức độ nguy hiểm thực sự — một mô hình nhỏ có thể nguy hiểm hơn mô hình lớn trong bối cảnh cụ thể.</div>
+        <div class="glossary-item"><div class="glossary-term">Emergent Capabilities</div>Khả năng xuất hiện đột ngột ở một quy mô nhất định mà không được dự đoán từ mô hình nhỏ hơn. Đây là vấn đề an toàn quan trọng: chúng ta không thể kiểm tra đầy đủ một mô hình nhỏ và ngoại suy về hành vi của mô hình lớn hơn.</div>
+        <div class="glossary-item"><div class="glossary-term">Existential Risk (x-risk)</div>Rủi ro gây nguy hiểm cho sự tồn tại hoặc tiềm năng lâu dài của nền văn minh con người. Nhiều nhà nghiên cứu AI an toàn (Yoshua Bengio, Stuart Russell) coi AGI không được căn chỉnh là x-risk tiềm năng. Tranh luận về x-risk thường là tranh luận về xác suất và ngưỡng hành động trong điều kiện không chắc chắn.</div>
+        <div class="glossary-item"><div class="glossary-term">Interpretability vs. Explainability</div>Interpretability (khả năng diễn giải): hiểu bên trong mô hình hoạt động như thế nào về mặt cơ học. Explainability (khả năng giải thích): cung cấp giải thích có ý nghĩa về quyết định cho người dùng không chuyên. Cả hai đều quan trọng nhưng cho các mục đích khác nhau trong tranh luận về AI transparency.</div>
+        <div class="glossary-item"><div class="glossary-term">AI Safety vs. AI Ethics</div>AI Safety tập trung vào các rủi ro tiềm ẩn dài hạn và kỹ thuật (alignment, x-risk, emergent capabilities). AI Ethics tập trung vào thiên kiến, quyền riêng tư, công bằng, và tác hại hiện tại đang quan sát được. Hai lĩnh vực có phương pháp luận khác nhau và đôi khi có ưu tiên xung đột — cần phân biệt rõ khi sử dụng trong tranh luận.</div>
+        <div class="glossary-item"><div class="glossary-term">Red Teaming</div>Phương pháp kiểm tra bảo mật AI: một nhóm người (red team) cố tình tìm cách làm hệ thống AI hoạt động sai — phát hiện jailbreaks, thiên kiến ẩn, và lỗ hổng bảo mật. Đây là yêu cầu trong EU AI Act cho các hệ thống rủi ro cao và là thực hành tiêu chuẩn của các lab AI hàng đầu.</div>
       </div>
-      <div class="callout callout-gold">
-        <div class="callout-label">Lời Khuyên Cuối Cùng</div>
-        <p>Kiến thức kỹ thuật về AI là lợi thế cạnh tranh quan trọng — nhưng chỉ khi được dịch sang <strong>ngôn ngữ chính sách và đạo đức</strong> mà giám khảo và khán giả có thể đánh giá. Người tranh luận giỏi nhất về AI không chỉ biết công nghệ mà còn biết cách kết nối nó với các giá trị nhân bản phổ quát.</p>
+
+      <div class="chapter-title">8.5 Xây Dựng Ngân Hàng Bằng Chứng Cá Nhân</div>
+      <p>Người tranh luận cạnh tranh không thể nhớ mọi dữ liệu — nhưng cần có khả năng trích dẫn đúng các bằng chứng quan trọng nhất dưới áp lực. Phương pháp xây dựng ngân hàng bằng chứng hiệu quả:</p>
+      <ul class="content-list">
+        <li><strong>Tổ chức theo chủ đề:</strong> Tạo "thẻ bằng chứng" cho mỗi chủ đề AI chính (việc làm, thiên kiến, quản trị, an toàn, khả năng tích cực). Mỗi thẻ có: tuyên bố cụ thể + nguồn + năm + điểm giới hạn của bằng chứng đó.</li>
+        <li><strong>Ưu tiên bằng chứng "all-purpose":</strong> Một số bằng chứng hữu ích trong nhiều bối cảnh khác nhau. Ví dụ: AlphaFold có thể được sử dụng cho tranh luận về tiềm năng tích cực, về AI và khoa học, về lợi ích không theo dự đoán của AI. Đây là những bằng chứng đáng học thuộc.</li>
+        <li><strong>Cập nhật thường xuyên:</strong> AI phát triển rất nhanh — bằng chứng từ năm 2020 về "những gì AI có thể làm" có thể đã lỗi thời hoàn toàn. Dành 30 phút mỗi tuần để cập nhật ngân hàng bằng chứng từ các nguồn uy tín: Nature, Science, arXiv (AI safety), AI Now Institute, Future of Life Institute.</li>
+        <li><strong>Luyện tập trích dẫn:</strong> Biết nguồn gốc không đủ — bạn cần có thể trích dẫn chúng một cách tự nhiên và chính xác dưới áp lực. Luyện tập nói to các bằng chứng quan trọng nhất cho đến khi trở nên tự nhiên.</li>
+      </ul>
+      <div class="callout callout-coral">
+        <div class="callout-label">Lời Khuyên Cuối Cùng cho Người Mới</div>
+        <p>Kiến thức kỹ thuật về AI là lợi thế cạnh tranh quan trọng — nhưng chỉ khi được dịch sang <strong>ngôn ngữ chính sách và đạo đức</strong> mà giám khảo có thể đánh giá. Người tranh luận giỏi nhất không chỉ biết công nghệ mà còn biết cách kết nối nó với câu hỏi căn bản: <em>Điều này có nghĩa gì đối với quyền, phúc lợi, và sự công bằng của những con người thực đang sống trong thế giới này?</em> Đó là cầu nối giữa kỹ thuật và nhân văn — và đó là nơi tranh luận AI tốt nhất diễn ra.</p>
       </div>
     `
   }
